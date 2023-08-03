@@ -275,10 +275,15 @@
         main {
         padding: 5px;
         }
-        .containerinfo{
-          flex-direction: column;
-          width: 100%;
-        }
+        .containerinfo {
+        width: 100%;
+        flex-wrap: wrap;
+      }
+
+      .containerinfo > * {
+          flex-basis: calc(50% - 10px);
+      }
+
         .button-containercalendario{
           flex-direction: column;
         }
