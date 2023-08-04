@@ -421,6 +421,7 @@
   font-weight: 700;
   background-color: #45b7e5;
   color: white;
+  margin-bottom: 10px;
 
 }
 
@@ -442,7 +443,7 @@
 /* Estilo do conteúdo das abas */
 .tabcontent {
   display: none;
-  padding: 6px 20px;
+  padding: 0 20px;
   border-top: none;
   height: 200px;
   max-width: 960px;
@@ -452,44 +453,19 @@
   border-radius: 0 0 5px 5px;
   overflow-y: auto;
   text-align: justify;
-  margin-bottom: 20px;
   color: #242527;
   position: relative; /* Posicionamento relativo para o pseudo-elemento */
-
 }
 
-.scroll-container::before{
-  position: absolute;
-  top: 56px;
-  content: "";
-  display: flex;
-  height: 10px; /* Altura do efeito de desvanecimento */
-  width: 100%;
-  background: #f2f3f8; /* Gradiente de transparência para a cor de fundo */
-  pointer-events: none; /* Permite interação através do elemento */
-  z-index: 6;
-}
 .scroll-container {
   position: relative;
   max-width: 960px;
   margin: 0 auto;
+  background-color: #f2f3f8;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
 
-}
-.scroll-container::after {
-  position: absolute;
-  bottom: 0;  
-  content: "";
-  display: flex;
-  height: 10px; /* Altura do efeito de desvanecimento */
-  width: 100%;
-  background: #f2f3f8; /* Gradiente de transparência para a cor de fundo */
-  pointer-events: none; /* Permite interação através do elemento */
-  border-radius: 0 0 5px 5px;
-
-}
-
-.hide-fade {
-  display: none;
 }
 
 .tabcontent::-webkit-scrollbar {
