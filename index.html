@@ -19,7 +19,6 @@
 
         ::-webkit-scrollbar-thumb {
         background: rgba(0, 0, 0, 0.253);
-        border-radius: 50px;
         border: 3px solid white;
         }
 
@@ -152,7 +151,6 @@
         }
 
         .containerprofessores::-webkit-scrollbar-thumb {
-        border-radius: 50px;
         border: 3px solid #f2f3f8;
         }
 
@@ -442,7 +440,7 @@
   display: none;
   padding: 6px 20px;
   border-top: none;
-  height: 300px;
+  height: 200px;
   max-width: 960px;
   margin: auto;
   box-sizing: border-box;
@@ -452,6 +450,42 @@
   text-align: justify;
   margin-bottom: 20px;
   color: #242527;
+  position: relative; /* Posicionamento relativo para o pseudo-elemento */
+
+}
+
+.scroll-container::before{
+  position: absolute;
+  top: 56px;
+  content: "";
+  display: flex;
+  height: 10px; /* Altura do efeito de desvanecimento */
+  width: 100%;
+  background: #f2f3f8; /* Gradiente de transparência para a cor de fundo */
+  pointer-events: none; /* Permite interação através do elemento */
+  z-index: 6;
+}
+.scroll-container {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+
+}
+.scroll-container::after {
+  position: absolute;
+  bottom: 0;  
+  content: "";
+  display: flex;
+  height: 10px; /* Altura do efeito de desvanecimento */
+  width: 100%;
+  background: #f2f3f8; /* Gradiente de transparência para a cor de fundo */
+  pointer-events: none; /* Permite interação através do elemento */
+  border-radius: 0 0 5px 5px;
+
+}
+
+.hide-fade {
+  display: none;
 }
 
 .tabcontent::-webkit-scrollbar {
@@ -464,7 +498,6 @@
 
   .tabcontent::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.253);
-  border-radius: 50px;
   border: 3px solid #f2f3f8;;
   }
     </style>
@@ -503,26 +536,29 @@
         </div>
     </section>
     <section>
-      <div class="tab">
-          <button class="tablinks" onclick="openTab(event, 'Curso')">Sobre o curso</button>
-          <button class="tablinks" onclick="openTab(event, 'FAM')">Sobre a FAM</button>
+      <div class="scroll-container">
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Curso')">Sobre o curso</button>
+            <button class="tablinks" onclick="openTab(event, 'FAM')">Sobre a FAM</button>
+        </div>
+        
+          <div id="Curso" class="tabcontent">
+            
+            <p>Maecenas pretium elit ut orci tempor tristique. Aliquam laoreet lacus eu massa sollicitudin ornare. Nunc consectetur urna sed vehicula pellentesque. Suspendisse suscipit turpis sit amet molestie sagittis. Proin est est, eleifend vitae placerat in, egestas ac nibh. Nullam nec fringilla justo. Nunc maximus nisl tincidunt felis consectetur, in tincidunt felis rutrum. Praesent pellentesque ullamcorper ipsum, ultrices fermentum ante sagittis quis. Integer justo dolor, consequat a gravida vel, viverra eu dolor. Quisque at sapien vel nibh placerat semper ac ut turpis. Integer pharetra justo elit, eu pellentesque erat auctor vitae. In vehicula velit non orci imperdiet dapibus. Pellentesque mauris ipsum, egestas efficitur pharetra vitae, finibus ac justo. Sed nec lectus ac neque ultrices posuere. Nullam quam ligula, molestie ut libero id, tristique lobortis neque.
+
+              Etiam feugiat per. Ut eget quam erat.</p>
+          </div>
+          
+          <div id="FAM" class="tabcontent">
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et sollicitudin metus. Donec aliquet est nisl, ac porttitor tellus fringilla eget. Fusce blandit nisl vitae vehicula rutrum. Proin cursus cursus nisi at auctor. Curabitur aliquam ac leo ac lobortis. Proin quis vehicula sem, ut placerat mi. Sed lacinia eget magna eget convallis. Cras consequat, diam quis rutrum pretium, erat metus egestas mi, ullamcorper commodo est est eu felis. Maecenas gravida dignissim purus sed ultricies. Cras ut orci quam.
+
+                Duis feugiat ex non lorem aliquet ornare. Mauris nec accumsan nibh. Proin eleifend lacus et tincidunt feugiat. Etiam imperdiet rutrum tortor, at cursus lacus pretium eget. Maecenas interdum et enim id sollicitudin. Maecenas eleifend tellus a lectus imperdiet, vel hendrerit mauris iaculis. Aenean tristique augue malesuada, lobortis nulla et, laoreet velit. Sed hendrerit, urna ut placerat ornare, ipsum turpis pulvinar neque, at sagittis dolor lectus sit amet arcu. Nulla quis finibus erat. Mauris elementum dui pretium mi varius, id laoreet tortor fringilla. Quisque ipsum massa, molestie et elit ac, feugiat aliquet arcu. Pellentesque sollicitudin arcu at mi aliquam aliquam. Aenean vitae ornare justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et sollicitudin metus. Donec aliquet est nisl, ac porttitor tellus fringilla eget. Fusce blandit nisl vitae vehicula rutrum. Proin cursus cursus nisi at auctor. Curabitur aliquam ac leo ac lobortis. Proin quis vehicula sem, ut placerat mi. Sed lacinia eget magna eget convallis. Cras consequat, diam quis rutrum pretium, erat metus egestas mi, ullamcorper commodo est est eu felis. Maecenas gravida dignissim purus sed ultricies. Cras ut orci quam.
+
+                Duis feugiat ex non lorem aliquet ornare. Mauris nec accumsan nibh. Proin eleifend lacus et tincidunt feugiat. Etiam imperdiet rutrum tortor, at cursus lacus pretium eget. Maecenas interdum et enim id sollicitudin. Maecenas eleifend tellus a lectus imperdiet, vel hendrerit mauris iaculis. Aenean tristique augue malesuada, lobortis nulla et, laoreet velit. Sed hendrerit, urna ut placerat ornare, ipsum turpis pulvinar neque, at sagittis dolor lectus sit amet arcu. Nulla quis finibus erat. Mauris elementum dui pretium mi varius, id laoreet tortor fringilla. Quisque ipsum massa, molestie et elit ac, feugiat aliquet arcu. Pellentesque sollicitudin arcu at mi aliquam aliquam. Aenean vitae ornare justo.</p>
+          
+          </div>
       </div>
-        
-        <div id="Curso" class="tabcontent">
-          
-          <p>Maecenas pretium elit ut orci tempor tristique. Aliquam laoreet lacus eu massa sollicitudin ornare. Nunc consectetur urna sed vehicula pellentesque. Suspendisse suscipit turpis sit amet molestie sagittis. Proin est est, eleifend vitae placerat in, egestas ac nibh. Nullam nec fringilla justo. Nunc maximus nisl tincidunt felis consectetur, in tincidunt felis rutrum. Praesent pellentesque ullamcorper ipsum, ultrices fermentum ante sagittis quis. Integer justo dolor, consequat a gravida vel, viverra eu dolor. Quisque at sapien vel nibh placerat semper ac ut turpis. Integer pharetra justo elit, eu pellentesque erat auctor vitae. In vehicula velit non orci imperdiet dapibus. Pellentesque mauris ipsum, egestas efficitur pharetra vitae, finibus ac justo. Sed nec lectus ac neque ultrices posuere. Nullam quam ligula, molestie ut libero id, tristique lobortis neque.
-
-            Etiam feugiat per. Ut eget quam erat.</p>
-        </div>
-        
-        <div id="FAM" class="tabcontent">
-          
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et sollicitudin metus. Donec aliquet est nisl, ac porttitor tellus fringilla eget. Fusce blandit nisl vitae vehicula rutrum. Proin cursus cursus nisi at auctor. Curabitur aliquam ac leo ac lobortis. Proin quis vehicula sem, ut placerat mi. Sed lacinia eget magna eget convallis. Cras consequat, diam quis rutrum pretium, erat metus egestas mi, ullamcorper commodo est est eu felis. Maecenas gravida dignissim purus sed ultricies. Cras ut orci quam.
-
-              Duis feugiat ex non lorem aliquet ornare. Mauris nec accumsan nibh. Proin eleifend lacus et tincidunt feugiat. Etiam imperdiet rutrum tortor, at cursus lacus pretium eget. Maecenas interdum et enim id sollicitudin. Maecenas eleifend tellus a lectus imperdiet, vel hendrerit mauris iaculis. Aenean tristique augue malesuada, lobortis nulla et, laoreet velit. Sed hendrerit, urna ut placerat ornare, ipsum turpis pulvinar neque, at sagittis dolor lectus sit amet arcu. Nulla quis finibus erat. Mauris elementum dui pretium mi varius, id laoreet tortor fringilla. Quisque ipsum massa, molestie et elit ac, feugiat aliquet arcu. Pellentesque sollicitudin arcu at mi aliquam aliquam. Aenean vitae ornare justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et sollicitudin metus. Donec aliquet est nisl, ac porttitor tellus fringilla eget. Fusce blandit nisl vitae vehicula rutrum. Proin cursus cursus nisi at auctor. Curabitur aliquam ac leo ac lobortis. Proin quis vehicula sem, ut placerat mi. Sed lacinia eget magna eget convallis. Cras consequat, diam quis rutrum pretium, erat metus egestas mi, ullamcorper commodo est est eu felis. Maecenas gravida dignissim purus sed ultricies. Cras ut orci quam.
-
-              Duis feugiat ex non lorem aliquet ornare. Mauris nec accumsan nibh. Proin eleifend lacus et tincidunt feugiat. Etiam imperdiet rutrum tortor, at cursus lacus pretium eget. Maecenas interdum et enim id sollicitudin. Maecenas eleifend tellus a lectus imperdiet, vel hendrerit mauris iaculis. Aenean tristique augue malesuada, lobortis nulla et, laoreet velit. Sed hendrerit, urna ut placerat ornare, ipsum turpis pulvinar neque, at sagittis dolor lectus sit amet arcu. Nulla quis finibus erat. Mauris elementum dui pretium mi varius, id laoreet tortor fringilla. Quisque ipsum massa, molestie et elit ac, feugiat aliquet arcu. Pellentesque sollicitudin arcu at mi aliquam aliquam. Aenean vitae ornare justo.</p>
-        </div>
   </section>
     <section>
         <div class="titulo">Nossos profissionais</div>
