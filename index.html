@@ -392,6 +392,10 @@
     margin-right: 2px;
   }
 
+  div.cursos p{
+    margin: 0;
+  }
+
     </style>
 </head>
 <body>
@@ -421,7 +425,8 @@
                 <div class="texto-baixo">MEC</div>
             </div>
             <div class="caixainfo">
-                <div class="texto-cima"><a class="piquininha">R$ </a>740,00*</div>
+                <div class="texto-cima"><a class="piquininha">R$ </a>
+                  <div id="produtofinalcursos"></div>*</div>
                 <div class="texto-baixo">Mensais</div>
             </div>
         </div>
@@ -441,10 +446,37 @@
       </section>
 </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-    <script>
-      const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQH-5xZmTNIodFoD19mUspRd7kW7HDrRQ5QnCf41Y3BIqjlP4fFyESgfE90HyCTveLQm1ySS28xzs7q/pub?output=csv';
-
+        <script>
+      const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vREDH7BTr9H2Um4BgNp45XYW1ybvS1qBIWACK2eElc7pmra17fwwcVBp3Um-GD6_wOF_N_FquXS1Rx9/pub?output=csv';
+    
       Papa.parse(url, {
+  download: true,
+  header: true,
+  complete: function(results) {
+    var data = results.data;
+    var contentDiv = document.createElement('div');
+    contentDiv.className = 'containercursos';
+
+    data.filter(row => row['Cursos'] === 'Administração').forEach(row => {
+      var cardDiv = document.createElement('div');
+      cardDiv.className = 'cursos';
+      
+      // Agora, apenas pegamos o valor associado ao curso
+      cardDiv.innerHTML = `<p>${row['Valor']}</p>`;
+      
+      contentDiv.appendChild(cardDiv);
+      });
+
+
+    var meuLocal = document.getElementById('produtofinalcursos');
+    meuLocal.appendChild(contentDiv);
+  }
+});
+    </script>
+    <script>
+      const url2 = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQH-5xZmTNIodFoD19mUspRd7kW7HDrRQ5QnCf41Y3BIqjlP4fFyESgfE90HyCTveLQm1ySS28xzs7q/pub?output=csv';
+
+      Papa.parse(url2, {
         download: true,
         header: true,
         complete: function(results) {
