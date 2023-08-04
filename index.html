@@ -1,368 +1,373 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Por curso</title>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-        @import url('https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Por curso</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
 
-        ::-webkit-scrollbar {
-        width: 8px;
-        }
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css');
 
-        ::-webkit-scrollbar-track {
-        background-color: white;
-        }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
 
-        ::-webkit-scrollbar-thumb {
-        background: rgba(0, 0, 0, 0.253);
-        }
+    ::-webkit-scrollbar-track {
+      background-color: white;
+    }
 
-        body {
-        margin: 0;
-        padding: 0;
-        height: 1500px;
-        font-family: 'Source Sans 3', sans-serif;
+    ::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.253);
+    }
 
-        }
+    body {
+      margin: 0;
+      padding: 0;
+      height: 1500px;
+      font-family: 'Source Sans 3', sans-serif;
 
-        h1 {
-        color: white;
-        }
+    }
 
-        h2 {
-        color: #45b7e5;
-        font-weight: 400;
-        font-size: 20px;
-        }
+    h1 {
+      color: white;
+    }
 
-        #top-header {
-        width: 100%;
-        height: 400px;
-        background: url(https://i.postimg.cc/Q8g4LqQ5/headway-5-Qg-Iuu-Bx-Kw-M-unsplash.jpg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
+    h2 {
+      color: #45b7e5;
+      font-weight: 400;
+      font-size: 20px;
+    }
 
-        }
+    #top-header {
+      width: 100%;
+      height: 400px;
+      background: url(https://i.postimg.cc/Q8g4LqQ5/headway-5-Qg-Iuu-Bx-Kw-M-unsplash.jpg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
 
-        #sticky-header {
-        background: #1b3556;
-        height: 100px;
-        width: 100%;
-        position: relative;
-        top: 0;
-        transition: all 0.3s;
-        z-index: 10;
+    }
 
-        }
+    #sticky-header {
+      background: #1b3556;
+      height: 100px;
+      width: 100%;
+      position: relative;
+      top: 0;
+      transition: all 0.3s;
+      z-index: 10;
 
-        .header-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 960px;
-        margin: auto;
-        height: 100%;
-        z-index: 9;
-        }
+    }
 
-        .title-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 960px;
+      margin: auto;
+      height: 100%;
+      z-index: 9;
+    }
 
-        #sticky-header.sticky {
-        position: sticky;
-        }
+    .title-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-        #sticky-header.shrink {
-        height: 60px;
-        }
+    #sticky-header.sticky {
+      position: sticky;
+    }
 
-        #sticky-header h1,
-        #sticky-header h2 {
-        margin: 0;
-        margin-left: 20px;
-        padding: 0;
-        line-height: 0.9;
-        text-align: left;
-        transition: all 0.3s;
-        }
+    #sticky-header.shrink {
+      height: 60px;
+    }
 
-        .inscreva-btn {
-        background-color: #f9e20f;
-        color: #1b3556;
-        border: none;
-        padding: 5px 20px;
-        cursor: pointer;
-        transition: 0.5s;
-        margin-right: 20px;
-        font-family: 'Source Sans 3', sans-serif;
-        font-size: 18px;
-        font-weight: 500;
-        border-radius: 5px;
-        }
+    #sticky-header h1,
+    #sticky-header h2 {
+      margin: 0;
+      margin-left: 20px;
+      padding: 0;
+      line-height: 0.9;
+      text-align: left;
+      transition: all 0.3s;
+    }
 
-        #sticky-header.shrink h1,
-        #sticky-header.shrink h2 {
-        transform: scale(0.8);
-        line-height: 0.75;
-        margin-left: 0px;
-        }
+    .inscreva-btn {
+      background-color: #f9e20f;
+      color: #1b3556;
+      border: none;
+      padding: 5px 20px;
+      cursor: pointer;
+      transition: 0.5s;
+      margin-right: 20px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      border-radius: 5px;
+    }
 
-        .sticky {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        }
+    #sticky-header.shrink h1,
+    #sticky-header.shrink h2 {
+      transform: scale(0.8);
+      line-height: 0.75;
+      margin-left: 0px;
+    }
 
-        main {
-        padding: 20px;
-        }
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
 
-        .containerprofessores {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: start;
-        overflow-x: auto;
-        overflow-y: hidden;
-        background-color: white;
-        max-width: 960px;
-        margin-left: 20px;
-        margin-right: 15px;
-        margin: 0 auto;
-        position: relative;
-        border-radius: 0 0 5px 5px;
-        margin-bottom: 20px;
-        background-color: #f2f3f8;
-        z-index: 1;
+    main {
+      padding: 20px;
+    }
 
-        }
+    .containerprofessores {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: start;
+      overflow-x: auto;
+      overflow-y: hidden;
+      background-color: white;
+      max-width: 960px;
+      margin-left: 20px;
+      margin-right: 15px;
+      margin: 0 auto;
+      position: relative;
+      border-radius: 0 0 5px 5px;
+      margin-bottom: 20px;
+      background-color: #f2f3f8;
+      z-index: 1;
 
-        .containerprofessores::-webkit-scrollbar-track {
-        background-color: transparent;
-        }
+    }
 
-        .containerprofessores::-webkit-scrollbar-thumb {
-        border: 3px solid #f2f3f8;
-        border-radius: 50px;
-        }
-        
-        .containerprofessores::-webkit-scrollbar {
-        height: 10px;
-        }
+    .containerprofessores::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
 
-        .professores:first-child {
-        margin-left: 20px;
-        }
+    .containerprofessores::-webkit-scrollbar-thumb {
+      border: 3px solid #f2f3f8;
+      border-radius: 50px;
+    }
+
+    .containerprofessores::-webkit-scrollbar {
+      height: 10px;
+    }
+
+    .professores:first-child {
+      margin-left: 20px;
+    }
 
 
-        .professores:last-child {
-        margin-right: 20px;
-        }
+    .professores:last-child {
+      margin-right: 20px;
+    }
 
-        .professores {
-        background-color: #ffffff;
-        border-radius: 10px 0 10px 0;
-        display: inline-block;
-        height: 440px;
-        margin: 20px 10px 20px 10px;
-        position: relative;
-        border: 2px solid #ffffff;
-        }
+    .professores {
+      background-color: #ffffff;
+      border-radius: 10px 0 10px 0;
+      display: inline-block;
+      height: 440px;
+      margin: 20px 10px 20px 10px;
+      position: relative;
+      border: 2px solid #ffffff;
+    }
 
-        .professores h3 {
-        color: #777a7e;
-        font-weight: 400;
-        font-size: 14px;
-        }
+    .professores h3 {
+      color: #777a7e;
+      font-weight: 400;
+      font-size: 14px;
+    }
 
-        .professores h2 {
-        color: #1b3556;
-        }
+    .professores h2 {
+      color: #1b3556;
+    }
 
-        .professores h2,
-        .professores h3 {
-        margin: 0;
-        padding: 20px;
-        margin-top: -30px;
-        text-align: center;
-        font-family: 'Source Sans 3', sans-serif;
-        }
+    .professores h2,
+    .professores h3 {
+      margin: 0;
+      padding: 20px;
+      margin-top: -30px;
+      text-align: center;
+      font-family: 'Source Sans 3', sans-serif;
+    }
 
-        .professores img {
-        width: 250px;
-        margin: 20px;
-        height: 230px;
-        border-radius: 5px 0 5px 0;
-        object-fit: cover;
-        object-position: top;
-        border: 2px solid #1b3556;
-        }
+    .professores img {
+      width: 250px;
+      margin: 20px;
+      height: 230px;
+      border-radius: 5px 0 5px 0;
+      object-fit: cover;
+      object-position: top;
+      border: 2px solid #1b3556;
+    }
 
-        .professorescurriculo {
-        padding: 20px;
-        margin: 0 20px 0 20px;
-        border-top: 2px solid #eee;
-        text-align: center;
-        }
+    .professorescurriculo {
+      padding: 20px;
+      margin: 0 20px 0 20px;
+      border-top: 2px solid #eee;
+      text-align: center;
+    }
 
-        .professorescurriculo-links {
-        color: #666;
-        text-decoration: none;
-        font-family: 'Source Sans 3', sans-serif;
-        display: inline-block;
+    .professorescurriculo-links {
+      color: #666;
+      text-decoration: none;
+      font-family: 'Source Sans 3', sans-serif;
+      display: inline-block;
 
-        }
+    }
 
-        .professorescurriculo-links:hover {
-        color: #1b3556;
-        }
+    .professorescurriculo-links:hover {
+      color: #1b3556;
+    }
 
-        .professorescurriculo i {
-        font-size: 18px;
-        margin-right: 5px;
-        }
+    .professorescurriculo i {
+      font-size: 18px;
+      margin-right: 5px;
+    }
 
-        .titulo {
-        box-sizing: border-box;
-        font-family: 'Source Sans 3', sans-serif;
-        font-size: 26px;
-        font-weight: 700;
-        max-width: 960px;
-        margin: 0 auto;
-        padding-left: 20px;
-        padding-top: 20px;
-        color: #242527;
-        background-color: #f2f3f8;
-        border-radius: 5px 5px 0 0;
+    .titulo {
+      box-sizing: border-box;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      max-width: 960px;
+      margin: 0 auto;
+      padding-left: 20px;
+      padding-top: 20px;
+      color: #242527;
+      background-color: #f2f3f8;
+      border-radius: 5px 5px 0 0;
 
-        }
-        .titulo2 {
-        box-sizing: border-box;
-        font-family: 'Source Sans 3', sans-serif;
-        font-size: 26px;
-        font-weight: 700;
-        max-width: 960px;
-        margin: 0 auto;
-        margin-bottom: 10px;
-        padding-left: 20px;
-        padding-top: 20px;
-        color: #242527;
+    }
 
-        }
+    .titulo2 {
+      box-sizing: border-box;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      max-width: 960px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      padding-left: 20px;
+      padding-top: 20px;
+      color: #242527;
+
+    }
 
     @media only screen and (max-width: 600px) {
-        .containerprofessores::-webkit-scrollbar-track {
-            border-radius: 50px;
-        }
+      .containerprofessores::-webkit-scrollbar-track {
+        border-radius: 50px;
+      }
 
-        .containerprofessores::-webkit-scrollbar-track {
-            background-color: #f2f3f8;
-        }
+      .containerprofessores::-webkit-scrollbar-track {
+        background-color: #f2f3f8;
+      }
 
-        .titulo_h1 {
-            font-size: 35px;
-        }
+      .titulo_h1 {
+        font-size: 35px;
+      }
 
-        #top-header {
-            background-position: 50% 50%;
-            /* Ajuste esses valores para enquadrar a imagem como desejar */
+      #top-header {
+        background-position: 50% 50%;
+        /* Ajuste esses valores para enquadrar a imagem como desejar */
 
-        }
+      }
 
-        h1 {
-            font-size: 22px;
-        }
+      h1 {
+        font-size: 22px;
+      }
 
-        h2{
-            font-size: 17px;
-        }
+      h2 {
+        font-size: 17px;
+      }
 
-        .containerinfo {
+      .containerinfo {
         width: 100%;
         flex-wrap: wrap;
       }
 
-      .containerinfo > * {
-          flex-basis: calc(50% - 10px);
+      .containerinfo>* {
+        flex-basis: calc(50% - 10px);
       }
 
-        .button-containercalendario{
-          flex-direction: column;
-        }
+      .button-containercalendario {
+        flex-direction: column;
+      }
     }
 
     .button-containercalendario {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 960px;
-    margin: 0 auto;
-    gap: 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 960px;
+      margin: 0 auto;
+      gap: 20px;
     }
 
     .um {
-    color: white;
-    background-color: #5d378d;
+      color: white;
+      background-color: #5d378d;
     }
 
     .um:hover {
-    color: #242527;
-    background-color: white;
-    box-shadow: inset 0 0 0 2px #5d378d;
+      color: #242527;
+      background-color: white;
+      box-shadow: inset 0 0 0 2px #5d378d;
     }
 
     .dois {
-    background-color: #1b3556;
-    color: white;
+      background-color: #1b3556;
+      color: white;
     }
 
     .dois:hover {
-    color: #242527;
-    background-color: white;
-    box-shadow: inset 0 0 0 2px #1b3556;
+      color: #242527;
+      background-color: white;
+      box-shadow: inset 0 0 0 2px #1b3556;
     }
 
     .responsive-button {
-    border: none;
-    padding: 20px 20px;
-    cursor: pointer;
-    transition: 0.5s;
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    border-radius: 5px;
-    flex: 1 0 auto;
-    text-align: center;
+      border: none;
+      padding: 20px 20px;
+      cursor: pointer;
+      transition: 0.5s;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      border-radius: 5px;
+      flex: 1 0 auto;
+      text-align: center;
     }
 
-  .containerinfo {
-  display: flex;
-  justify-content: space-between;
-  max-width: 960px;
-  margin: 20px auto;
-  margin-top: 0;
+    .containerinfo {
+      display: flex;
+      justify-content: space-between;
+      max-width: 960px;
+      margin: 20px auto;
+      margin-top: 0;
 
-  gap: 20px;
-  }
+      gap: 20px;
+    }
 
-  .caixainfo {
+    .caixainfo {
       width: 100%;
       height: 100px;
       display: flex;
       flex-direction: column;
       border-radius: 5px;
-  }
+    }
 
 
-  .texto-cima, .texto-baixo {
+    .texto-cima,
+    .texto-baixo {
       height: 50%;
       display: flex;
       justify-content: center;
@@ -370,233 +375,496 @@
       text-align: center;
       padding: 5px;
 
-  }
+    }
 
-  .texto-cima {
+    .texto-cima {
       background-color: #f2f3f8;
       border-radius: 5px;
       border-radius: 5px 5px 0 0;
       font-weight: 600;
       font-size: 120%;
-  }
+    }
 
-  .texto-baixo{
-    border-radius: 5px;
-    background-color: #1b3556;
-    border-radius: 0 0 5px 5px;
-    color: white;
-  }
-  .piquininha{
-    font-size: xx-small;
-    margin-right: 2px;
-  }
+    .texto-baixo {
+      border-radius: 5px;
+      background-color: #1b3556;
+      border-radius: 0 0 5px 5px;
+      color: white;
+    }
 
-  div.cursos p{
-    margin: 0;
-  }
-/* Estilo das abas */
-.tab {
-  display: flex;
-  overflow: hidden;
-  max-width: 960px;
-  margin: auto;
-  box-sizing: border-box;
-  border-radius: 5px 5px 0 0;
-}
+    .piquininha {
+      font-size: xx-small;
+      margin-right: 2px;
+    }
 
-/* Estilo dos botões das abas */
-.tab button {
-  flex-grow: 1;
-  background-color: inherit;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-  text-align: center;
-  box-sizing: border-box;
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: larger;
-  font-weight: 700;
-  background-color: #45b7e5;
-  color: white;
-  margin-bottom: 10px;
+    div.cursos p {
+      margin: 0;
+    }
 
-}
+    /* Estilo das abas */
+    .tab {
+      display: flex;
+      overflow: hidden;
+      max-width: 960px;
+      margin: auto;
+      box-sizing: border-box;
+      border-radius: 5px 5px 0 0;
+    }
 
-/* Altera a cor de fundo dos botões ao passar o mouse */
-.tab button:hover {
-  background-color: #1b3556;
-}
+    /* Estilo dos botões das abas */
+    .tab button {
+      flex-grow: 1;
+      background-color: inherit;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+      text-align: center;
+      box-sizing: border-box;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: larger;
+      font-weight: 700;
+      background-color: #45b7e5;
+      color: white;
+      margin-bottom: 10px;
 
-.tab button.active:hover {
-  color: #45b7e5;
-}
+    }
 
-/* Ativa a aba com cor de fundo diferente */
-.tab button.active {
-  background-color: #f2f3f8;
-  color: #242527;
-}
+    /* Altera a cor de fundo dos botões ao passar o mouse */
+    .tab button:hover {
+      background-color: #1b3556;
+    }
 
-/* Estilo do conteúdo das abas */
-.tabcontent {
-  display: none;
-  padding: 0 20px;
-  border-top: none;
-  height: 200px;
-  max-width: 960px;
-  margin: auto;
-  box-sizing: border-box;
-  background-color: #f2f3f8;
-  border-radius: 0 0 5px 5px;
-  overflow-y: auto;
-  text-align: justify;
-  color: #242527;
-  position: relative; /* Posicionamento relativo para o pseudo-elemento */
-}
+    .tab button.active:hover {
+      color: #45b7e5;
+    }
 
-.scroll-container {
-  position: relative;
-  max-width: 960px;
-  margin: 0 auto;
-  background-color: #f2f3f8;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
+    /* Ativa a aba com cor de fundo diferente */
+    .tab button.active {
+      background-color: #f2f3f8;
+      color: #242527;
+    }
 
-}
+    /* Estilo do conteúdo das abas */
+    .tabcontent {
+      display: none;
+      padding: 0 20px;
+      border-top: none;
+      height: 200px;
+      max-width: 960px;
+      margin: auto;
+      box-sizing: border-box;
+      background-color: #f2f3f8;
+      border-radius: 0 0 5px 5px;
+      overflow-y: auto;
+      text-align: justify;
+      color: #242527;
+      position: relative;
+      /* Posicionamento relativo para o pseudo-elemento */
+    }
 
-.tabcontent::-webkit-scrollbar {
-  width: 10px;
-  }
+    .scroll-container {
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto;
+      background-color: #f2f3f8;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
 
-  .tabcontent::-webkit-scrollbar-track {
-  background-color: #f2f3f8;
-  border-radius: 50px;
-  }
+    }
 
-  .tabcontent::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.253);
-  border: 3px solid #f2f3f8;
-        border-radius: 50px;
-  }
-    </style>
+    .tabcontent::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    .tabcontent::-webkit-scrollbar-track {
+      background-color: #f2f3f8;
+      border-radius: 50px;
+    }
+
+    .tabcontent::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.253);
+      border: 3px solid #f2f3f8;
+      border-radius: 50px;
+    }
+
+    .slide-container {
+      max-width: 960px;
+      width: 100%;
+      padding: 40px 0;
+
+    }
+
+    .slide-content {
+      margin: 0 40px;
+      overflow: hidden;
+
+    }
+
+    .card {
+      border-radius: 10px 0 10px 0;
+      background-color: #f2f3f8;
+    }
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 14px;
+    }
+
+    .name {
+      font-size: 18px;
+      font-weight: 500;
+      color: #333;
+      font-family: 'Source Sans 3', sans-serif;
+
+    }
+
+    .description {
+      font-size: 14px;
+      color: #707070;
+      text-align: center;
+      font-family: 'Source Sans 3', sans-serif;
+
+    }
+
+    .button {
+      border: none;
+      font-size: 16px;
+      color: #FFF;
+      padding: 8px 16px;
+      background-color: #4070F4;
+      border-radius: 6px;
+      margin: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'Source Sans 3', sans-serif;
+
+    }
+
+    .button:hover {
+      background: #265DF2;
+    }
+
+    .swiper-navBtn {
+      color: #6E93f7;
+      transition: color 0.3s ease;
+    }
+
+    .swiper-navBtn:hover {
+      color: #4070F4;
+    }
+
+    .swiper-navBtn::before,
+    .swiper-navBtn::after {
+      font-size: 38px;
+
+    }
+
+    .swiper-pagination-bullet {
+      background-color: #6E93f7;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #4070F4;
+    }
+
+    @media screen and (max-width: 768px) {
+      .slide-content {
+        margin: 0 10px;
+      }
+
+      .swiper-navBtn {
+        display: none;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <div id="top-header"></div>
-    <div id="sticky-header" class="header">
-      <div class="header-container">
-        <div class="title-container">
-          <h1>Administração</h1>
-          <h2>Bacharelado</h2>
-        </div>
-        <button class="inscreva-btn">Inscreva-se</button>
+  <div id="top-header"></div>
+  <div id="sticky-header" class="header">
+    <div class="header-container">
+      <div class="title-container">
+        <h1>Administração</h1>
+        <h2>Bacharelado</h2>
       </div>
+      <button class="inscreva-btn">Inscreva-se</button>
     </div>
-<main>
-      <section>
-        <div class="containerinfo">
-            <div class="caixainfo">
-                <div class="texto-cima">8</div>
-                <div class="texto-baixo">Semestres</div>
-            </div>
-            <div class="caixainfo">
-                <div class="texto-cima">Noturno</div>
-                <div class="texto-baixo">Presencial</div>
-            </div>
-            <div class="caixainfo">
-                <div class="texto-cima">Reconhecido</div>
-                <div class="texto-baixo">MEC</div>
-            </div>
-            <div class="caixainfo">
-                <div class="texto-cima"><a class="piquininha">R$ </a>
-                  <div id="produtofinalcursos"></div>*</div>
-                <div class="texto-baixo">Mensais</div>
-            </div>
+  </div>
+  <main>
+    <section>
+      <div class="containerinfo">
+        <div class="caixainfo">
+          <div class="texto-cima">8</div>
+          <div class="texto-baixo">Semestres</div>
         </div>
+        <div class="caixainfo">
+          <div class="texto-cima">Noturno</div>
+          <div class="texto-baixo">Presencial</div>
+        </div>
+        <div class="caixainfo">
+          <div class="texto-cima">Reconhecido</div>
+          <div class="texto-baixo">MEC</div>
+        </div>
+        <div class="caixainfo">
+          <div class="texto-cima"><a class="piquininha">R$ </a>
+            <div id="produtofinalcursos"></div>*
+          </div>
+          <div class="texto-baixo">Mensais</div>
+        </div>
+      </div>
     </section>
     <section>
       <div class="scroll-container">
         <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'Curso')">Sobre o curso</button>
-            <button class="tablinks" onclick="openTab(event, 'FAM')">Sobre a FAM</button>
+          <button class="tablinks" onclick="openTab(event, 'Curso')">Sobre o curso</button>
+          <button class="tablinks" onclick="openTab(event, 'FAM')">Sobre a FAM</button>
         </div>
-        
-          <div id="Curso" class="tabcontent">
-            
-            <p>Maecenas pretium elit ut orci tempor tristique. Aliquam laoreet lacus eu massa sollicitudin ornare. Nunc consectetur urna sed vehicula pellentesque. Suspendisse suscipit turpis sit amet molestie sagittis. Proin est est, eleifend vitae placerat in, egestas ac nibh. Nullam nec fringilla justo. Nunc maximus nisl tincidunt felis consectetur, in tincidunt felis rutrum. Praesent pellentesque ullamcorper ipsum, ultrices fermentum ante sagittis quis. Integer justo dolor, consequat a gravida vel, viverra eu dolor. Quisque at sapien vel nibh placerat semper ac ut turpis. Integer pharetra justo elit, eu pellentesque erat auctor vitae. In vehicula velit non orci imperdiet dapibus. Pellentesque mauris ipsum, egestas efficitur pharetra vitae, finibus ac justo. Sed nec lectus ac neque ultrices posuere. Nullam quam ligula, molestie ut libero id, tristique lobortis neque.
 
-              Etiam feugiat per. Ut eget quam erat.</p>
-          </div>
-          
-          <div id="FAM" class="tabcontent">
-            
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et sollicitudin metus. Donec aliquet est nisl, ac porttitor tellus fringilla eget. Fusce blandit nisl vitae vehicula rutrum. Proin cursus cursus nisi at auctor. Curabitur aliquam ac leo ac lobortis. Proin quis vehicula sem, ut placerat mi. Sed lacinia eget magna eget convallis. Cras consequat, diam quis rutrum pretium, erat metus egestas mi, ullamcorper commodo est est eu felis. Maecenas gravida dignissim purus sed ultricies. Cras ut orci quam.
+        <div id="Curso" class="tabcontent">
 
-                Duis feugiat ex non lorem aliquet ornare. Mauris nec accumsan nibh. Proin eleifend lacus et tincidunt feugiat. Etiam imperdiet rutrum tortor, at cursus lacus pretium eget. Maecenas interdum et enim id sollicitudin. Maecenas eleifend tellus a lectus imperdiet, vel hendrerit mauris iaculis. Aenean tristique augue malesuada, lobortis nulla et, laoreet velit. Sed hendrerit, urna ut placerat ornare, ipsum turpis pulvinar neque, at sagittis dolor lectus sit amet arcu. Nulla quis finibus erat. Mauris elementum dui pretium mi varius, id laoreet tortor fringilla. Quisque ipsum massa, molestie et elit ac, feugiat aliquet arcu. Pellentesque sollicitudin arcu at mi aliquam aliquam. Aenean vitae ornare justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et sollicitudin metus. Donec aliquet est nisl, ac porttitor tellus fringilla eget. Fusce blandit nisl vitae vehicula rutrum. Proin cursus cursus nisi at auctor. Curabitur aliquam ac leo ac lobortis. Proin quis vehicula sem, ut placerat mi. Sed lacinia eget magna eget convallis. Cras consequat, diam quis rutrum pretium, erat metus egestas mi, ullamcorper commodo est est eu felis. Maecenas gravida dignissim purus sed ultricies. Cras ut orci quam.
+          <p>Maecenas pretium elit ut orci tempor tristique. Aliquam laoreet lacus eu massa sollicitudin ornare. Nunc
+            consectetur urna sed vehicula pellentesque. Suspendisse suscipit turpis sit amet molestie sagittis. Proin
+            est est, eleifend vitae placerat in, egestas ac nibh. Nullam nec fringilla justo. Nunc maximus nisl
+            tincidunt felis consectetur, in tincidunt felis rutrum. Praesent pellentesque ullamcorper ipsum, ultrices
+            fermentum ante sagittis quis. Integer justo dolor, consequat a gravida vel, viverra eu dolor. Quisque at
+            sapien vel nibh placerat semper ac ut turpis. Integer pharetra justo elit, eu pellentesque erat auctor
+            vitae. In vehicula velit non orci imperdiet dapibus. Pellentesque mauris ipsum, egestas efficitur pharetra
+            vitae, finibus ac justo. Sed nec lectus ac neque ultrices posuere. Nullam quam ligula, molestie ut libero
+            id, tristique lobortis neque.
 
-                Duis feugiat ex non lorem aliquet ornare. Mauris nec accumsan nibh. Proin eleifend lacus et tincidunt feugiat. Etiam imperdiet rutrum tortor, at cursus lacus pretium eget. Maecenas interdum et enim id sollicitudin. Maecenas eleifend tellus a lectus imperdiet, vel hendrerit mauris iaculis. Aenean tristique augue malesuada, lobortis nulla et, laoreet velit. Sed hendrerit, urna ut placerat ornare, ipsum turpis pulvinar neque, at sagittis dolor lectus sit amet arcu. Nulla quis finibus erat. Mauris elementum dui pretium mi varius, id laoreet tortor fringilla. Quisque ipsum massa, molestie et elit ac, feugiat aliquet arcu. Pellentesque sollicitudin arcu at mi aliquam aliquam. Aenean vitae ornare justo.</p>
-          
-          </div>
+            Etiam feugiat per. Ut eget quam erat.</p>
+        </div>
+
+        <div id="FAM" class="tabcontent">
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et sollicitudin metus. Donec aliquet est
+            nisl, ac porttitor tellus fringilla eget. Fusce blandit nisl vitae vehicula rutrum. Proin cursus cursus nisi
+            at auctor. Curabitur aliquam ac leo ac lobortis. Proin quis vehicula sem, ut placerat mi. Sed lacinia eget
+            magna eget convallis. Cras consequat, diam quis rutrum pretium, erat metus egestas mi, ullamcorper commodo
+            est est eu felis. Maecenas gravida dignissim purus sed ultricies. Cras ut orci quam.
+
+            Duis feugiat ex non lorem aliquet ornare. Mauris nec accumsan nibh. Proin eleifend lacus et tincidunt
+            feugiat. Etiam imperdiet rutrum tortor, at cursus lacus pretium eget. Maecenas interdum et enim id
+            sollicitudin. Maecenas eleifend tellus a lectus imperdiet, vel hendrerit mauris iaculis. Aenean tristique
+            augue malesuada, lobortis nulla et, laoreet velit. Sed hendrerit, urna ut placerat ornare, ipsum turpis
+            pulvinar neque, at sagittis dolor lectus sit amet arcu. Nulla quis finibus erat. Mauris elementum dui
+            pretium mi varius, id laoreet tortor fringilla. Quisque ipsum massa, molestie et elit ac, feugiat aliquet
+            arcu. Pellentesque sollicitudin arcu at mi aliquam aliquam. Aenean vitae ornare justo. Lorem ipsum dolor sit
+            amet, consectetur adipiscing elit. Morbi et sollicitudin metus. Donec aliquet est nisl, ac porttitor tellus
+            fringilla eget. Fusce blandit nisl vitae vehicula rutrum. Proin cursus cursus nisi at auctor. Curabitur
+            aliquam ac leo ac lobortis. Proin quis vehicula sem, ut placerat mi. Sed lacinia eget magna eget convallis.
+            Cras consequat, diam quis rutrum pretium, erat metus egestas mi, ullamcorper commodo est est eu felis.
+            Maecenas gravida dignissim purus sed ultricies. Cras ut orci quam.
+
+            Duis feugiat ex non lorem aliquet ornare. Mauris nec accumsan nibh. Proin eleifend lacus et tincidunt
+            feugiat. Etiam imperdiet rutrum tortor, at cursus lacus pretium eget. Maecenas interdum et enim id
+            sollicitudin. Maecenas eleifend tellus a lectus imperdiet, vel hendrerit mauris iaculis. Aenean tristique
+            augue malesuada, lobortis nulla et, laoreet velit. Sed hendrerit, urna ut placerat ornare, ipsum turpis
+            pulvinar neque, at sagittis dolor lectus sit amet arcu. Nulla quis finibus erat. Mauris elementum dui
+            pretium mi varius, id laoreet tortor fringilla. Quisque ipsum massa, molestie et elit ac, feugiat aliquet
+            arcu. Pellentesque sollicitudin arcu at mi aliquam aliquam. Aenean vitae ornare justo.</p>
+
+        </div>
       </div>
-  </section>
+    </section>
+
     <section>
-        <div class="titulo">Nossos profissionais</div>
-        <div id="produtofinalprofessores"></div>
-      </section>
+      <div class="titulo">Nossos profissionais</div>
+      <div id="produtofinalprofessores"></div>
+    </section>
 
-      <section>
-        <div class="titulo2">A FAM não para!</div>
-        <div class="button-containercalendario">
-          <a class="responsive-button um">Calendário Acadêmico</a>
-          <a class="responsive-button dois">Calendário de Eventos</a>
+
+    <section>
+      <div class="slide-container swiper">
+        <div class="slide-content">
+          <div class="card-wrapper swiper-wrapper">
+            <div class="card swiper-slide">
+
+
+              <div class="card-content">
+                <h2 class="name">Mohamed Yousef
+                </h2>
+                <p class="description">The lorem text the section that contains header with having open functionality.
+                  Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                <button class="button">View More</button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+              </div>
+
+              <div class="card-content">
+                <h2 class="name">Mohamed Yousef
+                </h2>
+                <p class="description">The lorem text the section that contains header with having open functionality.
+                  Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                <button class="button">View More</button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+
+
+              </div>
+
+              <div class="card-content">
+                <h2 class="name">Mohamed Yousef
+                </h2>
+                <p class="description">The lorem text the section that contains header with having open functionality.
+                  Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                <button class="button">View More</button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+
+
+              </div>
+
+              <div class="card-content">
+                <h2 class="name">Mohamed Yousef
+                </h2>
+                <p class="description">The lorem text the section that contains header with having open functionality.
+                  Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                <button class="button">View More</button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+
+              </div>
+
+              <div class="card-content">
+                <h2 class="name">Mohamed Yousef
+                </h2>
+                <p class="description">The lorem text the section that contains header with having open functionality.
+                  Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                <button class="button">View More</button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+
+
+              </div>
+
+              <div class="card-content">
+                <h2 class="name">Mohamed Yousef
+                </h2>
+                <p class="description">The lorem text the section that contains header with having open functionality.
+                  Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                <button class="button">View More</button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+
+              </div>
+
+              <div class="card-content">
+                <h2 class="name">Mohamed Yousef
+                </h2>
+                <p class="description">The lorem text the section that contains header with having open functionality.
+                  Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                <button class="button">View More</button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-content">
+                <span class="overlay"></span>
+
+              </div>
+
+              <div class="card-content">
+                <h2 class="name">Mohamed Yousef
+                </h2>
+                <p class="description">The lorem text the section that contains header with having open functionality.
+                  Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                <button class="button">View More</button>
+              </div>
+            </div>
+          </div>
+
+          <!--<div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>-->
+          <div class="swiper-pagination"></div>
         </div>
-      </section>
-</main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-        <script>
-      const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vREDH7BTr9H2Um4BgNp45XYW1ybvS1qBIWACK2eElc7pmra17fwwcVBp3Um-GD6_wOF_N_FquXS1Rx9/pub?output=csv';
-    
-      Papa.parse(url, {
-  download: true,
-  header: true,
-  complete: function(results) {
-    var data = results.data;
-    var contentDiv = document.createElement('div');
-    contentDiv.className = 'containercursos';
+    </section>
+    <section>
+      <div class="titulo2">A FAM não para!</div>
+      <div class="button-containercalendario">
+        <a class="responsive-button um">Calendário Acadêmico</a>
+        <a class="responsive-button dois">Calendário de Eventos</a>
+      </div>
+    </section>
+  </main>
 
-    data.filter(row => row['Cursos'] === 'Administração').forEach(row => {
-      var cardDiv = document.createElement('div');
-      cardDiv.className = 'cursos';
-      
-      // Agora, apenas pegamos o valor associado ao curso
-      cardDiv.innerHTML = `<p>${row['Valor']}</p>`;
-      
-      contentDiv.appendChild(cardDiv);
-      });
+  <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
+
+  <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script>
+    const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vREDH7BTr9H2Um4BgNp45XYW1ybvS1qBIWACK2eElc7pmra17fwwcVBp3Um-GD6_wOF_N_FquXS1Rx9/pub?output=csv';
+
+    Papa.parse(url, {
+      download: true,
+      header: true,
+      complete: function (results) {
+        var data = results.data;
+        var contentDiv = document.createElement('div');
+        contentDiv.className = 'containercursos';
+
+        data.filter(row => row['Cursos'] === 'Administração').forEach(row => {
+          var cardDiv = document.createElement('div');
+          cardDiv.className = 'cursos';
+
+          // Agora, apenas pegamos o valor associado ao curso
+          cardDiv.innerHTML = `<p>${row['Valor']}</p>`;
+
+          contentDiv.appendChild(cardDiv);
+        });
 
 
-    var meuLocal = document.getElementById('produtofinalcursos');
-    meuLocal.appendChild(contentDiv);
-  }
-});
-    </script>
-    <script>
-      const url2 = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQH-5xZmTNIodFoD19mUspRd7kW7HDrRQ5QnCf41Y3BIqjlP4fFyESgfE90HyCTveLQm1ySS28xzs7q/pub?output=csv';
+        var meuLocal = document.getElementById('produtofinalcursos');
+        meuLocal.appendChild(contentDiv);
+      }
+    });
+  </script>
+  <script>
+    const url2 = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQH-5xZmTNIodFoD19mUspRd7kW7HDrRQ5QnCf41Y3BIqjlP4fFyESgfE90HyCTveLQm1ySS28xzs7q/pub?output=csv';
 
-      Papa.parse(url2, {
-        download: true,
-        header: true,
-        complete: function(results) {
-          var data = results.data;
-          var contentDiv = document.createElement('div');
-          contentDiv.className = 'containerprofessores';
-          data.forEach(row => {
-            var cardDiv = document.createElement('div');
-            cardDiv.className = 'professores';
-            cardDiv.innerHTML = `
+    Papa.parse(url2, {
+      download: true,
+      header: true,
+      complete: function (results) {
+        var data = results.data;
+        var contentDiv = document.createElement('div');
+        contentDiv.className = 'containerprofessores';
+        data.forEach(row => {
+          var cardDiv = document.createElement('div');
+          cardDiv.className = 'professores';
+          cardDiv.innerHTML = `
                         <img src="${row['Foto ADM']}" alt="${row['Nome']}">
                         <h2>${row['Nome ADM']}</h2>
                         <h3>${row['Cargo ADM']}</h3>
@@ -605,55 +873,90 @@
                             <a class="professorescurriculo-links" href="${row['Currículo ADM']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
                         </div>
                     `;
-            contentDiv.appendChild(cardDiv);
-          });
-          var meuLocal = document.getElementById('produtofinalprofessores');
-          meuLocal.appendChild(contentDiv);
-        }
-      });
+          contentDiv.appendChild(cardDiv);
+        });
+        var meuLocal = document.getElementById('produtofinalprofessores');
+        meuLocal.appendChild(contentDiv);
+      }
+    });
 
-    </script>
-    <script>
-    window.onscroll = function() {scrollFunction()};
+  </script>
+  <script>
+    window.onscroll = function () { scrollFunction() };
 
-        function scrollFunction() {
-          var header = document.getElementById("sticky-header");
-          var topHeader = document.getElementById("top-header");
-          
-          // Definir limite para quando o cabeçalho deve encolher
-          var shrinkBoundary = topHeader.offsetHeight + 50;
-        
-          if (window.pageYOffset > topHeader.offsetHeight) {
-            header.classList.add("sticky");
-          } else {
-            header.classList.remove("sticky");
-            header.classList.remove("shrink");
-          }
-        
-          if (window.pageYOffset > shrinkBoundary) {
-            header.classList.add("shrink");
-          }
-        }
-    </script>
-    <script>
-      function openTab(evt, tabName) {
+    function scrollFunction() {
+      var header = document.getElementById("sticky-header");
+      var topHeader = document.getElementById("top-header");
+
+      // Definir limite para quando o cabeçalho deve encolher
+      var shrinkBoundary = topHeader.offsetHeight + 50;
+
+      if (window.pageYOffset > topHeader.offsetHeight) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+        header.classList.remove("shrink");
+      }
+
+      if (window.pageYOffset > shrinkBoundary) {
+        header.classList.add("shrink");
+      }
+    }
+  </script>
+  <script>
+    function openTab(evt, tabName) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
       for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
+        tabcontent[i].style.display = "none";
       }
       tablinks = document.getElementsByClassName("tablinks");
       for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
       }
       document.getElementById(tabName).style.display = "block";
       evt.currentTarget.className += " active";
-      }
+    }
 
-      // Abre a primeira aba por padrão
-      document.addEventListener("DOMContentLoaded", function() {
+    // Abre a primeira aba por padrão
+    document.addEventListener("DOMContentLoaded", function () {
       document.getElementsByClassName("tablinks")[0].click();
-      });
-    </script>
+    });
+  </script>
+
+  <script>
+
+    var swiper = new Swiper(".slide-content", {
+      slidesPerView: 3,
+      spaceBetween: 25,
+      loop: true,
+      centerSlide: 'true',
+      fade: 'true',
+      grabCursor: 'true',
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        520: {
+          slidesPerView: 2,
+        },
+        950: {
+          slidesPerView: 3,
+        },
+      },
+    });
+
+  </script>
 </body>
+
 </html>
