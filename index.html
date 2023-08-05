@@ -215,21 +215,21 @@
       margin: 0 auto;
       position: relative;
     }
-    .teacherSection h6 {
+    .teacherSection h3 {
       color: #777a7e;
       font-weight: 400;
+      font-size: 14px;
     }
     .teacherSection h2 {
       color: #1b3556;
     }
     .teacherSection h2,
-    .teacherSection h4 {
+    .teacherSection h3 {
       margin: 0;
       padding: 20px;
       margin-top: -30px;
       text-align: center;
       font-family: 'Source Sans 3', sans-serif;
-      font-weight: 400;
     }
     .teacherSection img {
       margin-bottom: 20px;
@@ -966,7 +966,7 @@
                   cardDiv.innerHTML = `
                       <img class="teacherImg" src="${row['Foto ADM']}" alt="${row['Nome']}">
                       <h2>${row['Nome ADM']}</h2>
-                      <h4>${row['Cargo ADM']}</h4>
+                      <h3>${row['Cargo ADM']}</h3>
                       <div class="teacherCurriculum">
                           <a class="teacherCurriculumLinks" href="${row['Contato ADM']}" target="_blank"><i class="fa fa-envelope"></i></a>
                           <a class="teacherCurriculumLinks" href="${row['Currículo ADM']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
