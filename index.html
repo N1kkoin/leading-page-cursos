@@ -38,8 +38,7 @@
 
     h2 {
       color: #45b7e5;
-      font-weight: 400;
-      font-size: 20px;
+      font-weight: 700;
     }
 
     #top-header {
@@ -216,21 +215,21 @@
       margin: 0 auto;
       position: relative;
     }
-    .teacherSection h3 {
+    .teacherSection h6 {
       color: #777a7e;
       font-weight: 400;
-      font-size: 14px;
     }
     .teacherSection h2 {
       color: #1b3556;
     }
     .teacherSection h2,
-    .teacherSection h3 {
+    .teacherSection h4 {
       margin: 0;
       padding: 20px;
       margin-top: -30px;
       text-align: center;
       font-family: 'Source Sans 3', sans-serif;
+      font-weight: 400;
     }
     .teacherSection img {
       margin-bottom: 20px;
@@ -244,7 +243,7 @@
     .teacherCurriculum {
       padding: 20px;
       margin: 0 20px 0 20px;
-      border-top: 2px solid #eee;
+      border-top: 2px solid #45b7e5;
       text-align: center;
     }
     .teacherCurriculumLinks {
@@ -261,7 +260,7 @@
       margin-right: 5px;
     }
     .teacherCurriculumLinks {
-      margin-right: 10px;
+      margin-right: 0;
     }
 
     .titulo {
@@ -967,7 +966,7 @@
                   cardDiv.innerHTML = `
                       <img class="teacherImg" src="${row['Foto ADM']}" alt="${row['Nome']}">
                       <h2>${row['Nome ADM']}</h2>
-                      <h3>${row['Cargo ADM']}</h3>
+                      <h4>${row['Cargo ADM']}</h4>
                       <div class="teacherCurriculum">
                           <a class="teacherCurriculumLinks" href="${row['Contato ADM']}" target="_blank"><i class="fa fa-envelope"></i></a>
                           <a class="teacherCurriculumLinks" href="${row['Currículo ADM']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
