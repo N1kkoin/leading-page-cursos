@@ -580,7 +580,17 @@
 
     }
 
-
+    .bubble::after {
+    content: '';
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    background-color: #0f0f10;
+    height: 10%;
+}
 
     @media screen and (max-width: 768px) {
       .slide-content {
@@ -592,9 +602,11 @@
       }
     }
   </style>
+
+
 </head>
 
-<body>
+<body class="bubble">
   <div id="top-header"></div>
   <div id="sticky-header" class="header">
     <div class="header-container">
