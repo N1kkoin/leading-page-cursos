@@ -38,7 +38,8 @@
 
     h2 {
       color: #45b7e5;
-      font-weight: 700;
+      font-weight: 400;
+      font-size: 20px;
     }
 
     #top-header {
@@ -127,122 +128,124 @@
       padding: 20px;
     }
 
-    .slideContainer{
-  max-width: 960px;
-  width: 100%;
-  padding: 20px 0 40px  0;
-}
-.slideContent{
-  margin: 0 40px;
-  overflow: hidden;
-}
-.cardBox{
-  border-radius: 10px 10px 10px 0;
-  background-color: #f2f3f8;
-}
-.cardDetails{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-.slideContent.swiper-initialized.swiper-horizontal{
-      margin: 0;
-    }
-
-.name{
-  font-size: 18px;
-  font-weight: 500;
-  color: #333;
-  font-family: 'Source Sans 3', sans-serif;
-}
-.description{
-  font-size: 14px;
-  color: #707070;
-  text-align: center;
-  font-family: 'Source Sans 3', sans-serif;
-}
-
-@media screen and (max-width: 768px) {
-  .slideContent{
-    margin: 0 10px;
-  }
-  .swiperNavBtn{
-    display: none;
-  }
-}
-.teacherImg {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    width: 200px;
-}
-.teacherSection {
-      border-radius: 10px 0 10px 0;
+    .containerprofessores {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: start;
+      overflow-x: auto;
+      overflow-y: hidden;
+      background-color: white;
+      max-width: 960px;
+      margin-left: 20px;
+      margin-right: 15px;
       margin: 0 auto;
       position: relative;
+      border-radius: 0 0 5px 5px;
+      margin-bottom: 20px;
+      background-color: #f2f3f8;
+      z-index: 1;
+
     }
-    .teacherSection h3 {
+
+    .containerprofessores::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    .containerprofessores::-webkit-scrollbar-thumb {
+      border: 3px solid #f2f3f8;
+      border-radius: 50px;
+    }
+
+    .containerprofessores::-webkit-scrollbar {
+      height: 10px;
+    }
+
+    .professores:first-child {
+      margin-left: 20px;
+    }
+
+
+    .professores:last-child {
+      margin-right: 20px;
+    }
+
+    .professores {
+      background-color: #ffffff;
+      border-radius: 10px 0 10px 0;
+      display: inline-block;
+      height: 440px;
+      margin: 20px 10px 20px 10px;
+      position: relative;
+      border: 2px solid #ffffff;
+    }
+
+    .professores h3 {
       color: #777a7e;
       font-weight: 400;
       font-size: 14px;
     }
-    .teacherSection h2 {
+
+    .professores h2 {
       color: #1b3556;
     }
-    .teacherSection h2,
-    .teacherSection h3 {
+
+    .professores h2,
+    .professores h3 {
       margin: 0;
-      padding: 15px 0 20px 0;
+      padding: 20px;
       margin-top: -30px;
       text-align: center;
       font-family: 'Source Sans 3', sans-serif;
     }
-    .teacherSection img {
-      margin-bottom: 20px;
-      height: 260px;
-      border-radius: 5px;
+
+    .professores img {
+      width: 250px;
+      margin: 20px;
+      height: 230px;
+      border-radius: 5px 0 5px 0;
       object-fit: cover;
       object-position: top;
-      width: 100%;
-
+      border: 2px solid #1b3556;
     }
-    .teacherCurriculum {
-      padding: 20px 0 5px;
+
+    .professorescurriculo {
+      padding: 20px;
       margin: 0 20px 0 20px;
-      border-top: 2px solid #d7dee7;
+      border-top: 2px solid #eee;
       text-align: center;
     }
-    .teacherCurriculumLinks {
+
+    .professorescurriculo-links {
       color: #666;
       text-decoration: none;
       font-family: 'Source Sans 3', sans-serif;
       display: inline-block;
+
     }
-    .teacherCurriculumLinks:hover {
+
+    .professorescurriculo-links:hover {
       color: #1b3556;
     }
-    .teacherCurriculum i {
-      font-size: 20px;
+
+    .professorescurriculo i {
+      font-size: 18px;
       margin-right: 5px;
     }
-    .teacherCurriculumLinks {
-      margin-right: 0;
-    }
-
 
     .titulo {
+      box-sizing: border-box;
       font-family: 'Source Sans 3', sans-serif;
       font-size: 26px;
       font-weight: 700;
       max-width: 960px;
       margin: 0 auto;
       padding-left: 20px;
-      padding-bottom: 10px;
+      padding-top: 20px;
       color: #242527;
-      border-bottom: 2px solid #d7dee7;
+      background-color: #f2f3f8;
       border-radius: 5px 5px 0 0;
+
     }
 
     .titulo2 {
@@ -561,19 +564,19 @@
     }
 
     .swiper-pagination-bullet {
-      background-color: #45b7e5;
+      background-color: #6E93f7;
       opacity: 1;
     }
 
     .swiper-pagination-bullet-active {
-      background-color: #1b3556;
+      background-color: #4070F4;
     }
 
     div.slide-container.swiper{
       padding-top: 0;
     }
 
-    .slide-content.swiper-initialized.swiper-horizontal{
+    .slide-content.swiper-initialized.swiper-horizontal.swiper-pointer-events{
       margin: 0;
     }
 
@@ -815,17 +818,15 @@
     </section>
 
     <section>
-      <div class="titulo">Nossos profissionais</div>
-      <div class="slideContainer swiper">
-        <div class="slideContent">
-            <div class="cardHolder swiper-wrapper">
-
-            </div>
-
-        <div class="swiper-pagination"></div>
+        <div class="slideContainer swiper">
+            <div class="slideContent">
+                <div class="cardHolder swiper-wrapper">
+    
+                </div>
+    
+            <div class="swiper-pagination"></div>
+        </div>
     </div>
-</div>
-
     </section>
 
     <section>
@@ -868,7 +869,36 @@
       }
     });
   </script>
- 
+  <script>
+    const url2 = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQH-5xZmTNIodFoD19mUspRd7kW7HDrRQ5QnCf41Y3BIqjlP4fFyESgfE90HyCTveLQm1ySS28xzs7q/pub?output=csv';
+
+    Papa.parse(url2, {
+      download: true,
+      header: true,
+      complete: function (results) {
+        var data = results.data;
+        var contentDiv = document.createElement('div');
+        contentDiv.className = 'containerprofessores';
+        data.forEach(row => {
+          var cardDiv = document.createElement('div');
+          cardDiv.className = 'professores';
+          cardDiv.innerHTML = `
+                        <img src="${row['Foto ADM']}" alt="${row['Nome']}">
+                        <h2>${row['Nome ADM']}</h2>
+                        <h3>${row['Cargo ADM']}</h3>
+                        <div class="professorescurriculo">
+                            <a class="professorescurriculo-links" href="${row['Contato ADM']}" target="_blank"><i class="fa fa-envelope"></i></a>
+                            <a class="professorescurriculo-links" href="${row['Currículo ADM']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
+                        </div>
+                    `;
+          contentDiv.appendChild(cardDiv);
+        });
+        var meuLocal = document.getElementById('produtofinalprofessores');
+        meuLocal.appendChild(contentDiv);
+      }
+    });
+
+  </script>
   <script>
     window.onscroll = function () { scrollFunction() };
 
@@ -911,70 +941,7 @@
       document.getElementsByClassName("tablinks")[0].click();
     });
   </script>
-    <script>
-      const url3 = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQH-5xZmTNIodFoD19mUspRd7kW7HDrRQ5QnCf41Y3BIqjlP4fFyESgfE90HyCTveLQm1ySS28xzs7q/pub?output=csv';
 
-      Papa.parse(url3, {
-          download: true,
-          header: true,
-          complete: function (results) {
-              var data = results.data;
-              var cardHolder = document.querySelector('.cardHolder');
-
-              data.forEach(row => {
-                  var cardBox = document.createElement('div');
-                  cardBox.className = 'cardBox swiper-slide'; 
-
-                  var cardDetails = document.createElement('div');
-                  cardDetails.className = 'cardDetails';
-
-                  var cardDiv = document.createElement('div');
-                  cardDiv.className = 'teacherSection';
-                  cardDiv.innerHTML = `
-                      <img class="teacherImg" src="${row['Foto ADM']}" alt="${row['Nome']}">
-                      <h2>${row['Nome ADM']}</h2>
-                      <h3>${row['Cargo ADM']}</h3>
-                      <div class="teacherCurriculum">
-                          <a class="teacherCurriculumLinks" href="${row['Contato ADM']}" target="_blank"><i class="fa fa-envelope"></i></a>
-                          <a class="teacherCurriculumLinks" href="${row['Currículo ADM']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
-                      </div>
-                  `;
-                  cardDetails.appendChild(cardDiv);
-                  cardBox.appendChild(cardDetails);
-                  cardHolder.appendChild(cardBox);
-              });
-
-              var swiper = new Swiper(".slideContent", {
-                  slidesPerView: 3,
-                  spaceBetween: 20,
-                  loop: true,
-                  centerSlide: 'true',
-                  fade: 'true',
-                  grabCursor: 'true',
-                  pagination: {
-                      el: ".swiper-pagination",
-                      clickable: true,
-                      dynamicBullets: true,
-                  },
-                  navigation: {
-                      nextEl: ".swiper-button-next",
-                      prevEl: ".swiper-button-prev",
-                  },
-                  breakpoints:{
-                      0: {
-                          slidesPerView: 1,
-                      },
-                      520: {
-                          slidesPerView: 2,
-                      },
-                      950: {
-                          slidesPerView: 3,
-                      },
-                  },
-              });
-          }
-      });
-  </script>
   <script>
 
     var swiper = new Swiper(".slide-content", {

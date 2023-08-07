@@ -15,45 +15,38 @@
             background-color: #333;
         }
 
-
-.slide-container{
+.slideContainer{
   max-width: 960px;
   width: 100%;
   padding: 40px 0;
-
 }
-.slide-content{
+.slideContent{
   margin: 0 40px;
   overflow: hidden;
-  
 }
-.card{
+.cardBox{
   border-radius: 25px 25px 25px 0;
   background-color: #FFF;
 }
-
-.card-content{
+.cardDetails{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 14px;
+  padding: 20px;
 }
-
 .name{
   font-size: 18px;
   font-weight: 500;
   color: #333;
   font-family: 'Source Sans 3', sans-serif;
-
 }
 .description{
   font-size: 14px;
   color: #707070;
   text-align: center;
   font-family: 'Source Sans 3', sans-serif;
-
 }
-.button{
+.buttonClick{
   border: none;
   font-size: 16px;
   color: #FFF;
@@ -64,216 +57,184 @@
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: 'Source Sans 3', sans-serif;
-
 }
-.button:hover{
+.buttonClick:hover{
   background: #265DF2;
 }
-
-.swiper-navBtn{
+.swiperNavBtn{
   color: #6E93f7;
   transition: color 0.3s ease;
 }
-.swiper-navBtn:hover{
+.swiperNavBtn:hover{
   color: #4070F4;
 }
-.swiper-navBtn::before,
-.swiper-navBtn::after{
+.swiperNavBtn::before,
+.swiperNavBtn::after{
   font-size: 38px;
-
 }
-
-.swiper-pagination-bullet{
+.swiperPaginationBullet{
   background-color: #6E93f7;
   opacity: 1;
 }
-.swiper-pagination-bullet-active{
+.swiperPaginationBulletActive{
   background-color: #4070F4;
 }
-
 @media screen and (max-width: 768px) {
-  .slide-content{
+  .slideContent{
     margin: 0 10px;
   }
-  .swiper-navBtn{
+  .swiperNavBtn{
     display: none;
   }
 }
+.teacherImg {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    width: 200px;
+}
+.teacherSection {
+      background-color: #ffffff;
+      border-radius: 10px 0 10px 0;
+      margin: 0 auto;
+      position: relative;
+      border: 2px solid #ffffff;
+    }
+    .teacherSection h3 {
+      color: #777a7e;
+      font-weight: 400;
+      font-size: 14px;
+    }
+    .teacherSection h2 {
+      color: #1b3556;
+    }
+    .teacherSection h2,
+    .teacherSection h3 {
+      margin: 0;
+      padding: 20px;
+      margin-top: -30px;
+      text-align: center;
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .teacherSection img {
+      margin-bottom: 20px;
+      height: 260px;
+      border-radius: 15px;
+      object-fit: cover;
+      object-position: top;
+      width: 100%;
 
-
+    }
+    .teacherCurriculum {
+      padding: 20px;
+      margin: 0 20px 0 20px;
+      border-top: 2px solid #eee;
+      text-align: center;
+    }
+    .teacherCurriculumLinks {
+      color: #666;
+      text-decoration: none;
+      font-family: 'Source Sans 3', sans-serif;
+      display: inline-block;
+    }
+    .teacherCurriculumLinks:hover {
+      color: #1b3556;
+    }
+    .teacherCurriculum i {
+      font-size: 20px;
+      margin-right: 5px;
+    }
+    .teacherCurriculumLinks {
+      margin-right: 10px;
+    }
     </style>
 </head>
 <body>
-    <main>
-    <section>
 
-                <div class="slide-container swiper">
-                    <div class="slide-content">
-                        <div class="card-wrapper swiper-wrapper">
-                            <div class="card swiper-slide">
+    <div class="slideContainer swiper">
+        <div class="slideContent">
+            <div class="cardHolder swiper-wrapper">
 
-        
-                                <div class="card-content">
-                                    <h2 class="name">Mohamed Yousef
-        </h2>
-                                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-        
-                                    <button class="button">View More</button>
-                                </div>
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <span class="overlay"></span>                      
-                                </div>
-        
-                                <div class="card-content">
-                                    <h2 class="name">Mohamed Yousef
-        </h2>
-                                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-        
-                                    <button class="button">View More</button>
-                                </div>
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <span class="overlay"></span>
-        
-                          
-                                </div>
-        
-                                <div class="card-content">
-                                    <h2 class="name">Mohamed Yousef
-        </h2>
-                                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-        
-                                    <button class="button">View More</button>
-                                </div>
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <span class="overlay"></span>
-        
-                              
-                                </div>
-        
-                                <div class="card-content">
-                                    <h2 class="name">Mohamed Yousef
-        </h2>
-                                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-        
-                                    <button class="button">View More</button>
-                                </div>
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <span class="overlay"></span>
-        
-                                </div>
-        
-                                <div class="card-content">
-                                    <h2 class="name">Mohamed Yousef
-        </h2>
-                                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-        
-                                    <button class="button">View More</button>
-                                </div>
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <span class="overlay"></span>
-        
-                              
-                                </div>
-        
-                                <div class="card-content">
-                                    <h2 class="name">Mohamed Yousef
-        </h2>
-                                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-        
-                                    <button class="button">View More</button>
-                                </div>
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <span class="overlay"></span>
-        
-                                </div>
-        
-                                <div class="card-content">
-                                    <h2 class="name">Mohamed Yousef
-        </h2>
-                                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-        
-                                    <button class="button">View More</button>
-                                </div>
-                            </div>
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <span class="overlay"></span>
-        
-                                </div>
-        
-                                <div class="card-content">
-                                    <h2 class="name">Mohamed Yousef
-        </h2>
-                                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-        
-                                    <button class="button">View More</button>
-                                </div>
-                            </div>                      
-                    </div>
-        
-                    <!--<div class="swiper-button-next swiper-navBtn"></div>
-                    <div class="swiper-button-prev swiper-navBtn"></div>-->
-                    <div class="swiper-pagination"></div>
-                </div>
-                
+            </div>
 
-        
-            <!-- Swiper JS -->
-           <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
-        
-            <!-- JavaScript -->
-              <!--Uncomment this line-->
-            <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
-   
-        
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+    <!-- Swiper JS -->
+    <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
     </section>
     </main>
     <script>
- 
- var swiper = new Swiper(".slide-content", {
-    slidesPerView: 3,
-    spaceBetween: 25,
-    loop: true,
-    centerSlide: 'true',
-    fade: 'true',
-    grabCursor: 'true',
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+        const url2 = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQH-5xZmTNIodFoD19mUspRd7kW7HDrRQ5QnCf41Y3BIqjlP4fFyESgfE90HyCTveLQm1ySS28xzs7q/pub?output=csv';
 
-    breakpoints:{
-        0: {
-            slidesPerView: 1,
-        },
-        520: {
-            slidesPerView: 2,
-        },
-        950: {
-            slidesPerView: 3,
-        },
-    },
-  });
+        Papa.parse(url2, {
+            download: true,
+            header: true,
+            complete: function (results) {
+                var data = results.data;
+                var cardHolder = document.querySelector('.cardHolder');
 
+                data.forEach(row => {
+                    var cardBox = document.createElement('div');
+                    cardBox.className = 'cardBox swiper-slide'; 
+
+                    var cardDetails = document.createElement('div');
+                    cardDetails.className = 'cardDetails';
+
+                    var cardDiv = document.createElement('div');
+                    cardDiv.className = 'teacherSection';
+                    cardDiv.innerHTML = `
+                        <img class="teacherImg" src="${row['Foto ADM']}" alt="${row['Nome']}">
+                        <h2>${row['Nome ADM']}</h2>
+                        <h3>${row['Cargo ADM']}</h3>
+                        <div class="teacherCurriculum">
+                            <a class="teacherCurriculumLinks" href="${row['Contato ADM']}" target="_blank"><i class="fa fa-envelope"></i></a>
+                            <a class="teacherCurriculumLinks" href="${row['Currículo ADM']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
+                        </div>
+                    `;
+                    cardDetails.appendChild(cardDiv);
+                    cardBox.appendChild(cardDetails);
+                    cardHolder.appendChild(cardBox);
+                });
+
+                var swiper = new Swiper(".slideContent", {
+                    slidesPerView: 3,
+                    spaceBetween: 25,
+                    loop: true,
+                    centerSlide: 'true',
+                    fade: 'true',
+                    grabCursor: 'true',
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                        dynamicBullets: true,
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    breakpoints:{
+                        0: {
+                            slidesPerView: 1,
+                        },
+                        520: {
+                            slidesPerView: 2,
+                        },
+                        950: {
+                            slidesPerView: 3,
+                        },
+                    },
+                });
+            }
+        });
     </script>
-  
 
 </body>
 </html>
