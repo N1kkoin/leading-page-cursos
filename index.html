@@ -27,7 +27,6 @@
     body {
       margin: 0;
       padding: 0;
-      height: 1500px;
       font-family: 'Source Sans 3', sans-serif;
     }
 
@@ -37,7 +36,7 @@
 
     h2 {
       color: #45b7e5;
-      font-weight: 700;
+      font-weight: 400;
     }
 
     #top-header {
@@ -124,20 +123,14 @@
 
 
 
-
     .box {
-      position: relative;
-      overflow-x: hidden;
-      padding: 0 auto;
-      width: auto;
-      z-index: 2;
-      background: linear-gradient(to bottom, white 50%, #1b3556 50%);
-
-    }
-
-
-
-
+    position: relative;
+    overflow-x: hidden;
+    padding: 0 auto;
+    width: auto;
+    z-index: 2;
+    background: linear-gradient(to bottom, white 50%, #1b3556 50%);
+}
 
     .slideContainer {
       max-width: 960px;
@@ -235,7 +228,7 @@
     .teacherCurriculum {
       padding: 20px 0 5px;
       margin: 0 20px 0 20px;
-      border-top: 2px solid #d7dee7;
+      border-top: 1px solid #d7dee7;
       text-align: center;
     }
 
@@ -270,8 +263,22 @@
       padding-left: 20px;
       padding-bottom: 10px;
       color: #242527;
-      border-bottom: 2px solid #d7dee7;
+      border-bottom: 1px solid #45b7e5;
       border-radius: 5px 5px 0 0;
+    }
+
+    .titulo3 {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      max-width: 960px;
+      margin: 0 auto;
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #45b7e5;
+      border-radius: 5px 5px 0 0;
+      color: white;
     }
 
     .titulo2 {
@@ -400,18 +407,23 @@
     }
 
     .texto-cima {
-      background-color: #f2f3f8;
+      color: #1b3556;
+      background-color: white;
       border-radius: 5px;
       border-radius: 5px 5px 0 0;
       font-weight: 600;
-      font-size: 120%;
+      font-size: large;
+      box-shadow: inset 0 0 0 1px #f2f3f8;
     }
 
     .texto-baixo {
       border-radius: 5px;
-      background-color: #1b3556;
+      background-color: #f2f3f8;
       border-radius: 0 0 5px 5px;
-      color: white;
+      color: black;
+      font-weight: 900;
+      text-transform: uppercase;
+
     }
 
     .piquininha {
@@ -610,7 +622,6 @@
 
     .grid-container {
       box-sizing: border-box;
-
       display: grid;
       grid-template-columns: 1fr 1fr;
       /* Dois blocos na horizontal */
@@ -621,8 +632,9 @@
       max-width: 960px;
       margin-top: 20px;
       margin: 0 auto;
-
       background-color: white;
+      border: 1px solid #1b3556;
+
     }
 
     .grid-item {
@@ -695,7 +707,7 @@
       display: none;
       margin: 10px;
       background-color: white;
-      border: 2px solid #f2f3f8;
+      border: 1px solid #f2f3f8;
       padding: 10px;
       border-radius: 5px;
       font-size: 14px;
@@ -717,7 +729,7 @@
       font-size: 20px;
       cursor: pointer;
       transition: color 0.2s;
-      margin-left: 10px;
+      margin-left: 20px;
       font-size: 16px;
 
     }
@@ -754,6 +766,17 @@
         grid-template-columns: 1fr 1fr;
       }
     }
+
+    footer {
+      margin-top: 100px;
+    background-color: #f2f3f8;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top-left-radius: 50% 20px;
+    border-top-right-radius: 50% 20px;
+    height: 100px;
+}
 
     @media (max-width: 600px) {
       .grid-container {
@@ -1002,8 +1025,59 @@
 
     </section>
 
-    <section class="box temqueterpadding">
-      <div class="titulo">Matriz Escolar</div>
+    <section  class=" box temqueterpadding">
+      <svg width="0" height="0">
+        <defs>
+            <clipPath id="curvedPath" clipPathUnits="objectBoundingBox">
+                <path d="M 0,0 Q 0.5,1 1,0 V 1 H 0 Z"></path>
+            </clipPath>
+        </defs>
+    </svg>
+      <div class="motivosfam">
+        <div class="grid-container">
+          <div class="grid-item">
+            <img src="imgs\noun-text-2132279.png" alt="Ícone 1" class="icon">
+            <div class="contentdogrid">
+              <h3>Título 1</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sem non felis malesuada
+                pellentesque. </p>
+            </div>
+          </div>
+
+          <div class="grid-item">
+            <img src="imgs\noun-text-2132279.png" alt="Ícone 2" class="icon">
+            <div class="contentdogrid">
+              <h3>Título 2</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sem non felis malesuada
+                pellentesque. </p>
+            </div>
+          </div>
+
+          <div class="grid-item">
+            <img src="imgs\noun-text-2132279.png" alt="Ícone 3" class="icon">
+            <div class="contentdogrid">
+              <h3>Título 3</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sem non felis malesuada
+                pellentesque. </p>
+            </div>
+          </div>
+
+          <div class="grid-item">
+            <img src="imgs\noun-text-2132279.png" alt="Ícone 4" class="icon">
+            <div class="contentdogrid">
+              <h3>Título 4</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sem non felis malesuada
+                pellentesque. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="azul"></div>
+
+    <section style="background-color: #1b3556;" class=" temqueterpadding">
+      <div class="titulo3">Matriz Escolar</div>
 
       <div id="lista">
         <div class="item">
@@ -1068,51 +1142,6 @@
 
     <div class="azul"></div>
 
-    <section style="background-color: #1b3556;" class=" temqueterpadding">
-      <div class="motivosfam">
-        <div class="grid-container">
-          <div class="grid-item">
-            <img src="imgs\noun-text-2132279.png" alt="Ícone 1" class="icon">
-            <div class="contentdogrid">
-              <h3>Título 1</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sem non felis malesuada
-                pellentesque. </p>
-            </div>
-          </div>
-
-          <div class="grid-item">
-            <img src="imgs\noun-text-2132279.png" alt="Ícone 2" class="icon">
-            <div class="contentdogrid">
-              <h3>Título 2</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sem non felis malesuada
-                pellentesque. </p>
-            </div>
-          </div>
-
-          <div class="grid-item">
-            <img src="imgs\noun-text-2132279.png" alt="Ícone 3" class="icon">
-            <div class="contentdogrid">
-              <h3>Título 3</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sem non felis malesuada
-                pellentesque. </p>
-            </div>
-          </div>
-
-          <div class="grid-item">
-            <img src="imgs\noun-text-2132279.png" alt="Ícone 4" class="icon">
-            <div class="contentdogrid">
-              <h3>Título 4</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sem non felis malesuada
-                pellentesque. </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="azul"></div>
-
-
     <section class="temqueterpadding">
       <div class="titulo">Nossos profissionais</div>
       <div class="slideContainer swiper">
@@ -1136,6 +1165,11 @@
     </section>
 
   </main>
+
+  <footer>
+Ok
+  </footer>
+
 
   <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
 
