@@ -29,7 +29,6 @@
       padding: 0;
       height: 1500px;
       font-family: 'Source Sans 3', sans-serif;
-
     }
 
     h1 {
@@ -123,9 +122,22 @@
       width: 100%;
     }
 
-    main {
-      padding: 20px;
-    }
+    
+
+
+    .box{
+  position: relative;
+  overflow-x: hidden;
+  padding: 0 auto;
+  width: auto;
+  z-index: 2;
+  background: linear-gradient(to bottom, white 50%, #1b3556 50%);
+
+}
+
+
+
+
 
     .slideContainer{
   max-width: 960px;
@@ -282,8 +294,6 @@
         font-size: 22px;
       }
 
-
-
       .containerinfo {
         width: 100%;
         flex-wrap: wrap;
@@ -305,6 +315,7 @@
       max-width: 960px;
       margin: 0 auto;
       gap: 20px;
+
     }
 
     .um {
@@ -347,8 +358,7 @@
       justify-content: space-between;
       max-width: 960px;
       margin: 20px auto;
-      margin-top: 0;
-
+      margin-top: 40px;
       gap: 20px;
     }
 
@@ -581,6 +591,57 @@
 
     }
 
+    .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dois blocos na horizontal */
+    gap: 20px; /* Espaço entre os blocos */
+    padding: 20px;
+    border: 2px solid #1b3556;
+    border-radius: 5px;
+    max-width: 960px;
+    margin: 20px auto;
+    background-color: white;
+}
+
+.grid-item {
+    display: flex;
+    align-items: flex-start; /* Alinha os itens ao topo */
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.icon {
+    width: 50px; /* Largura do ícone */
+    height: 50px; /* Altura do ícone */
+    margin-right: 20px; /* Espaço à direita do ícone */
+    padding: 10px;
+
+}
+
+.contentdogrid h3 {
+    margin: 0; /* Remover a margem do título */
+    margin-bottom: 10px; /* Adicionar uma margem abaixo do título */
+
+  }
+
+.contentdogrid p {
+  text-align: justify;
+    margin: 0; /* Remover a margem da descrição */
+}
+
+section {
+      padding: 0 20px;
+    }
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Apenas um bloco por linha */
+    }
+    .grid-item {
+    width: 90%;
+    }
+}
+
     @media screen and (max-width: 768px) {
       .slide-content {
         margin: 0 10px;
@@ -589,11 +650,13 @@
       .swiper-navBtn {
         display: none;
       }
+
     }
   </style>
+
 </head>
 
-<body>
+<body >
   <div id="top-header"></div>
   <div id="sticky-header" class="header">
     <div class="header-container">
@@ -604,8 +667,9 @@
       <button class="inscreva-btn">Inscreva-se</button>
     </div>
   </div>
+
   <main>
-    <section>
+    <section class="temqueterpadding">
       <div class="containerinfo">
         <div class="caixainfo">
           <div class="texto-cima">8</div>
@@ -628,7 +692,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="temqueterpadding">
       <div class="scroll-container">
         <div class="tab">
           <button class="tablinks" onclick="openTab(event, 'Curso')">Sobre o curso</button>
@@ -683,7 +747,8 @@
       </div>
     </section>
 
-    <section class="selectionumpoucomaior">
+    <section class="temqueterpadding selectionumpoucomaior">
+     
       <div class="slide-container swiper">
         <div class="slide-content">
           <div class="card-wrapper swiper-wrapper">
@@ -810,9 +875,48 @@
           
           <div class="swiper-pagination"></div>
         </div>
+        
     </section>
 
-    <section>
+    <section class="box temqueterpadding">
+      <div class="motivosfam">
+        <div class="grid-container">
+          <div class="grid-item">
+              <img src="imgs\noun-text-2132279.png" alt="Ícone 1" class="icon">
+              <div class="contentdogrid">
+                  <h3>Título 1</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sem non felis malesuada pellentesque. </p>
+              </div>
+          </div>
+      
+          <div class="grid-item">
+              <img src="imgs\noun-text-2132279.png" alt="Ícone 2" class="icon">
+              <div class="contentdogrid">
+                  <h3>Título 2</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sem non felis malesuada pellentesque. </p>
+              </div>
+          </div>
+      
+          <div class="grid-item">
+              <img src="imgs\noun-text-2132279.png" alt="Ícone 3" class="icon">
+              <div class="contentdogrid">
+                  <h3>Título 3</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sem non felis malesuada pellentesque. </p>
+              </div>
+          </div>
+      
+          <div class="grid-item">
+              <img src="imgs\noun-text-2132279.png" alt="Ícone 4" class="icon">
+              <div class="contentdogrid">
+                  <h3>Título 4</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sem non felis malesuada pellentesque. </p>
+              </div>
+          </div>
+      </div>
+      </div>
+      </section>
+
+    <section  class="temqueterpadding">
       <div class="titulo">Nossos profissionais</div>
       <div class="slideContainer swiper">
         <div class="slideContent">
@@ -826,13 +930,14 @@
 
     </section>
 
-    <section>
+    <section class="temqueterpadding">
       <div class="titulo2">A FAM não para!</div>
       <div class="button-containercalendario">
         <a class="responsive-button um">Calendário Acadêmico</a>
         <a class="responsive-button dois">Calendário de Eventos</a>
       </div>
     </section>
+
   </main>
 
   <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
