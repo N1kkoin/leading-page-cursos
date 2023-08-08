@@ -260,7 +260,6 @@
       max-width: 960px;
       margin: 0 auto;
       padding-top: 20px;
-      padding-left: 20px;
       padding-bottom: 10px;
       color: #242527;
       border-bottom: 1px solid #45b7e5;
@@ -274,7 +273,6 @@
       max-width: 960px;
       margin: 0 auto;
       padding-top: 20px;
-      padding-left: 20px;
       padding-bottom: 10px;
       border-bottom: 1px solid #45b7e5;
       border-radius: 5px 5px 0 0;
@@ -289,7 +287,6 @@
       max-width: 960px;
       margin: 0 auto;
       margin-bottom: 10px;
-      padding-left: 20px;
       padding-top: 20px;
       color: #242527;
 
@@ -566,11 +563,10 @@
 
     .button {
       border: none;
-      font-size: 16px;
       color: #FFF;
       padding: 8px 16px;
-      background-color: #4070F4;
-      border-radius: 6px;
+      background-color: #45b7e5;
+      border-radius: 5px;
       margin: 14px;
       cursor: pointer;
       transition: all 0.3s ease;
@@ -718,7 +714,7 @@
       padding: 10px 15px;
       cursor: pointer;
       border: none;
-      background-color: #007BFF;
+      background-color: #45b7e5;
       color: #fff;
       border-radius: 5px;
       text-align: center;
@@ -734,8 +730,8 @@
 
     }
 
-    h3:hover {
-      color: #0056b3;
+    #lista h3:hover {
+      color: #45b7e5;
       /* Uma tonalidade mais escura de azul quando o título é passado com o mouse */
     }
 
@@ -767,15 +763,35 @@
       }
     }
 
+    .footer-container {
+      display: flex;
+      max-width: 960px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+    }
+
     footer {
       margin-top: 100px;
       background-color: #f2f3f8;
-      color: #fff;
+      color: #000;
       padding: 20px;
       text-align: center;
       border-top-left-radius: 50% 20px;
       border-top-right-radius: 50% 20px;
       height: 100px;
+
+    }
+
+
+    .footer-logo img {
+      width: 150px;
+      /* Ajuste o tamanho conforme sua necessidade */
+    }
+
+    .footer-info p {
+      margin: 0 0 10px 0;
     }
 
     @media (max-width: 600px) {
@@ -1026,7 +1042,7 @@
     </section>
 
     <section class=" box temqueterpadding">
-      
+
       <div class="motivosfam">
         <div class="grid-container">
           <div class="grid-item">
@@ -1169,7 +1185,7 @@
       </div>
 
       <div class="botãocentro">
-        <button id="btnExpandir" onclick="expandirRecolher()">Expandir</button>
+        <button id="btnExpandir" onclick="expandirRecolher()">Veja mais</button>
       </div>
     </section>
 
@@ -1200,7 +1216,16 @@
   </main>
 
   <footer>
-    Ok
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="caminho-da-sua-logo-aqui.png" alt="Logo da Empresa">
+      </div>
+      <div class="footer-info">
+        <p>Endereço da Empresa</p>
+        <p>Telefone: (XX) XXXX-XXXX</p>
+        <p>Email: email@empresa.com</p>
+      </div>
+    </div>
   </footer>
 
 
@@ -1258,7 +1283,7 @@
 
       if (lista.style.height === 'auto') {
         lista.style.height = '200px';
-        btn.innerHTML = 'Expandir';
+        btn.innerHTML = 'Veja mais';
 
         // Esconde todas as descrições ao recolher
         let todasDescricoes = document.querySelectorAll('.descricao');
