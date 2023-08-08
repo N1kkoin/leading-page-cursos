@@ -12,229 +12,92 @@
 
         body{
             font-family: 'Source Sans 3', sans-serif;
-            background-color: #333;
+            background-color: white;
         }
+        .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dois blocos na horizontal */
+    gap: 20px; /* Espaço entre os blocos */
+    padding: 20px;
+    border: 2px solid #f2f3f8 ;
+    border-radius: 5px;
+    max-width: 960px;
+    margin: 0 auto;
+}
 
-.slideContainer{
-  max-width: 960px;
-  width: 100%;
-  padding: 40px 0;
+.grid-item {
+    display: flex;
+    align-items: flex-start; /* Alinha os itens ao topo */
+    padding: 10px;
+    margin: 0 auto;
 }
-.slideContent{
-  margin: 0 40px;
-  overflow: hidden;
-}
-.cardBox{
-  border-radius: 25px 25px 25px 0;
-  background-color: #FFF;
-}
-.cardDetails{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-.name{
-  font-size: 18px;
-  font-weight: 500;
-  color: #333;
-  font-family: 'Source Sans 3', sans-serif;
-}
-.description{
-  font-size: 14px;
-  color: #707070;
-  text-align: center;
-  font-family: 'Source Sans 3', sans-serif;
-}
-.buttonClick{
-  border: none;
-  font-size: 16px;
-  color: #FFF;
-  padding: 8px 16px;
-  background-color: #4070F4;
-  border-radius: 6px;
-  margin: 14px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: 'Source Sans 3', sans-serif;
-}
-.buttonClick:hover{
-  background: #265DF2;
-}
-.swiperNavBtn{
-  color: #6E93f7;
-  transition: color 0.3s ease;
-}
-.swiperNavBtn:hover{
-  color: #4070F4;
-}
-.swiperNavBtn::before,
-.swiperNavBtn::after{
-  font-size: 38px;
-}
-.swiperPaginationBullet{
-  background-color: #6E93f7;
-  opacity: 1;
-}
-.swiperPaginationBulletActive{
-  background-color: #4070F4;
-}
-@media screen and (max-width: 768px) {
-  .slideContent{
-    margin: 0 10px;
-  }
-  .swiperNavBtn{
-    display: none;
-  }
-}
-.teacherImg {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    width: 200px;
-}
-.teacherSection {
-      background-color: #ffffff;
-      border-radius: 10px 0 10px 0;
-      margin: 0 auto;
-      position: relative;
-      border: 2px solid #ffffff;
-    }
-    .teacherSection h3 {
-      color: #777a7e;
-      font-weight: 400;
-      font-size: 14px;
-    }
-    .teacherSection h2 {
-      color: #1b3556;
-    }
-    .teacherSection h2,
-    .teacherSection h3 {
-      margin: 0;
-      padding: 20px;
-      margin-top: -30px;
-      text-align: center;
-      font-family: 'Source Sans 3', sans-serif;
-    }
-    .teacherSection img {
-      margin-bottom: 20px;
-      height: 260px;
-      border-radius: 15px;
-      object-fit: cover;
-      object-position: top;
-      width: 100%;
 
+.icon {
+    width: 50px; /* Largura do ícone */
+    height: 50px; /* Altura do ícone */
+    margin-right: 20px; /* Espaço à direita do ícone */
+    padding: 10px;
+
+}
+
+.contentdogrid h3 {
+    margin: 0; /* Remover a margem do título */
+    margin-bottom: 10px; /* Adicionar uma margem abaixo do título */
+
+  }
+
+.contentdogrid p {
+  text-align: justify;
+    margin: 0; /* Remover a margem da descrição */
+}
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Apenas um bloco por linha */
     }
-    .teacherCurriculum {
-      padding: 20px;
-      margin: 0 20px 0 20px;
-      border-top: 2px solid #eee;
-      text-align: center;
+    .grid-item {
+    width: 90%;
     }
-    .teacherCurriculumLinks {
-      color: #666;
-      text-decoration: none;
-      font-family: 'Source Sans 3', sans-serif;
-      display: inline-block;
-    }
-    .teacherCurriculumLinks:hover {
-      color: #1b3556;
-    }
-    .teacherCurriculum i {
-      font-size: 20px;
-      margin-right: 5px;
-    }
-    .teacherCurriculumLinks {
-      margin-right: 10px;
-    }
+}
+
     </style>
 </head>
 <body>
+<section>
+<div class="motivosfam">
+  <div class="grid-container">
+    <div class="grid-item">
+        <img src="imgs\noun-text-2132279.png" alt="Ícone 1" class="icon">
+        <div class="contentdogrid">
+            <h3>Título 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sem non felis malesuada pellentesque. </p>
+        </div>
+    </div>
 
-    <div class="slideContainer swiper">
-        <div class="slideContent">
-            <div class="cardHolder swiper-wrapper">
+    <div class="grid-item">
+        <img src="imgs\noun-text-2132279.png" alt="Ícone 2" class="icon">
+        <div class="contentdogrid">
+            <h3>Título 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sem non felis malesuada pellentesque. </p>
+        </div>
+    </div>
 
-            </div>
+    <div class="grid-item">
+        <img src="imgs\noun-text-2132279.png" alt="Ícone 3" class="icon">
+        <div class="contentdogrid">
+            <h3>Título 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sem non felis malesuada pellentesque. </p>
+        </div>
+    </div>
 
-        <div class="swiper-pagination"></div>
+    <div class="grid-item">
+        <img src="imgs\noun-text-2132279.png" alt="Ícone 4" class="icon">
+        <div class="contentdogrid">
+            <h3>Título 4</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sem non felis malesuada pellentesque. </p>
+        </div>
     </div>
 </div>
-
-    <!-- Swiper JS -->
-    <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
-
-    <!-- JavaScript -->
-    <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-
-    </section>
-    </main>
-    <script>
-        const url2 = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQH-5xZmTNIodFoD19mUspRd7kW7HDrRQ5QnCf41Y3BIqjlP4fFyESgfE90HyCTveLQm1ySS28xzs7q/pub?output=csv';
-
-        Papa.parse(url2, {
-            download: true,
-            header: true,
-            complete: function (results) {
-                var data = results.data;
-                var cardHolder = document.querySelector('.cardHolder');
-
-                data.forEach(row => {
-                    var cardBox = document.createElement('div');
-                    cardBox.className = 'cardBox swiper-slide'; 
-
-                    var cardDetails = document.createElement('div');
-                    cardDetails.className = 'cardDetails';
-
-                    var cardDiv = document.createElement('div');
-                    cardDiv.className = 'teacherSection';
-                    cardDiv.innerHTML = `
-                        <img class="teacherImg" src="${row['Foto ADM']}" alt="${row['Nome']}">
-                        <h2>${row['Nome ADM']}</h2>
-                        <h3>${row['Cargo ADM']}</h3>
-                        <div class="teacherCurriculum">
-                            <a class="teacherCurriculumLinks" href="${row['Contato ADM']}" target="_blank"><i class="fa fa-envelope"></i></a>
-                            <a class="teacherCurriculumLinks" href="${row['Currículo ADM']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
-                        </div>
-                    `;
-                    cardDetails.appendChild(cardDiv);
-                    cardBox.appendChild(cardDetails);
-                    cardHolder.appendChild(cardBox);
-                });
-
-                var swiper = new Swiper(".slideContent", {
-                    slidesPerView: 3,
-                    spaceBetween: 25,
-                    loop: true,
-                    centerSlide: 'true',
-                    fade: 'true',
-                    grabCursor: 'true',
-                    pagination: {
-                        el: ".swiper-pagination",
-                        clickable: true,
-                        dynamicBullets: true,
-                    },
-                    navigation: {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
-                    },
-                    breakpoints:{
-                        0: {
-                            slidesPerView: 1,
-                        },
-                        520: {
-                            slidesPerView: 2,
-                        },
-                        950: {
-                            slidesPerView: 3,
-                        },
-                    },
-                });
-            }
-        });
-    </script>
-
+</div>
+</section>
 </body>
 </html>
