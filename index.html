@@ -566,7 +566,7 @@
       color: #FFF;
       padding: 8px 16px;
       background-color: #45b7e5;
-      border-radius: 5px;
+      border-radius: 50px;
       margin: 14px;
       cursor: pointer;
       transition: all 0.3s ease;
@@ -716,7 +716,7 @@
       border: none;
       background-color: #45b7e5;
       color: #fff;
-      border-radius: 5px;
+      border-radius: 50px;
       text-align: center;
       font-family: 'Source Sans 3', sans-serif;
     }
@@ -763,12 +763,17 @@
       }
     }
 
+    i{
+      padding-right: 5px;
+      border-radius: 2px;
+    }
+
     .footer-container {
       display: flex;
       max-width: 960px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      justify-content: flex-start;  
+      justify-content: center; 
+       align-items: center;
       margin: 0 auto;
     }
 
@@ -787,11 +792,13 @@
 
     .footer-logo img {
       width: 150px;
-      /* Ajuste o tamanho conforme sua necessidade */
+      margin: 20px;
     }
 
     .footer-info p {
       margin: 0 0 10px 0;
+      text-align: left;
+      line-height: 0.7;
     }
 
     @media (max-width: 600px) {
@@ -1218,12 +1225,15 @@
   <footer>
     <div class="footer-container">
       <div class="footer-logo">
-        <img src="caminho-da-sua-logo-aqui.png" alt="Logo da Empresa">
+        <img src="fegferfam.svg" alt="Logo da Empresa">
       </div>
       <div class="footer-info">
-        <p>Endereço da Empresa</p>
-        <p>Telefone: (XX) XXXX-XXXX</p>
-        <p>Email: email@empresa.com</p>
+        <p><i class="fa fa-phone"></i>  19 3465.8100 | <i class="fa fa-instagram"></i><i class="fa fa-facebook-square"></i>
+
+
+        </p>
+        <p><i class="fa fa-map-marker"></i> Av. Joaquim Bôer, 733 - Jardim Luciane, Americana - SP, 13477-360</p>
+
       </div>
     </div>
   </footer>
