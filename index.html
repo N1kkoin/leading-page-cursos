@@ -122,87 +122,97 @@
       width: 100%;
     }
 
-    
-
-
-    .box{
-  position: relative;
-  overflow-x: hidden;
-  padding: 0 auto;
-  width: auto;
-  z-index: 2;
-  background: linear-gradient(to bottom, white 50%, #1b3556 50%);
-
-}
 
 
 
+    .box {
+      position: relative;
+      overflow-x: hidden;
+      padding: 0 auto;
+      width: auto;
+      z-index: 2;
+      background: linear-gradient(to bottom, white 50%, #1b3556 50%);
+
+    }
 
 
-    .slideContainer{
-  max-width: 960px;
-  width: 100%;
-  padding: 20px 0 40px  0;
-}
-.slideContent{
-  margin: 0 40px;
-  overflow: hidden;
-}
-.cardBox{
-  border-radius: 10px 0px 10px 0;
-  background-color: #f2f3f8;
-}
-.cardDetails{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
 
-.slideContent.swiper-initialized.swiper-horizontal{
+
+
+    .slideContainer {
+      max-width: 960px;
+      width: 100%;
+      padding: 20px 0 40px 0;
+    }
+
+    .slideContent {
+      margin: 0 40px;
+      overflow: hidden;
+    }
+
+    .cardBox {
+      border-radius: 10px 0px 10px 0;
+      background-color: #f2f3f8;
+    }
+
+    .cardDetails {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .slideContent.swiper-initialized.swiper-horizontal {
       margin: 0;
     }
 
-.name{
-  font-size: 18px;
-  font-weight: 500;
-  color: #333;
-  font-family: 'Source Sans 3', sans-serif;
-}
-.description{
-  font-size: 14px;
-  color: #707070;
-  text-align: center;
-  font-family: 'Source Sans 3', sans-serif;
-}
+    .name {
+      font-size: 18px;
+      font-weight: 500;
+      color: #333;
+      font-family: 'Source Sans 3', sans-serif;
+    }
 
-@media screen and (max-width: 768px) {
-  .slideContent{
-    margin: 0 10px;
-  }
-  .swiperNavBtn{
-    display: none;
-  }
-}
-.teacherImg {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    width: 200px;
-}
-.teacherSection {
+    .description {
+      font-size: 14px;
+      color: #707070;
+      text-align: center;
+      font-family: 'Source Sans 3', sans-serif;
+    }
+
+    @media screen and (max-width: 768px) {
+      .slideContent {
+        margin: 0 10px;
+      }
+
+      .swiperNavBtn {
+        display: none;
+      }
+    }
+
+    .teacherImg {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      width: 200px;
+    }
+
+    .teacherSection {
       border-radius: 10px 0 10px 0;
       margin: 0 auto;
       position: relative;
     }
+
     .teacherSection h3 {
       color: #777a7e;
       font-weight: 400;
       font-size: 14px;
     }
+
     .teacherSection h2 {
       color: #1b3556;
     }
+
     .teacherSection h2,
     .teacherSection h3 {
       margin: 0;
@@ -211,6 +221,7 @@
       text-align: center;
       font-family: 'Source Sans 3', sans-serif;
     }
+
     .teacherSection img {
       margin-bottom: 20px;
       height: 260px;
@@ -220,25 +231,30 @@
       width: 100%;
 
     }
+
     .teacherCurriculum {
       padding: 20px 0 5px;
       margin: 0 20px 0 20px;
       border-top: 2px solid #d7dee7;
       text-align: center;
     }
+
     .teacherCurriculumLinks {
       color: #666;
       text-decoration: none;
       font-family: 'Source Sans 3', sans-serif;
       display: inline-block;
     }
+
     .teacherCurriculumLinks:hover {
       color: #1b3556;
     }
+
     .teacherCurriculum i {
       font-size: 20px;
       margin-right: 5px;
     }
+
     .teacherCurriculumLinks {
       margin-right: 0;
     }
@@ -250,6 +266,7 @@
       font-weight: 700;
       max-width: 960px;
       margin: 0 auto;
+      padding-top: 20px;
       padding-left: 20px;
       padding-bottom: 10px;
       color: #242527;
@@ -577,70 +594,177 @@
       background-color: #1b3556;
     }
 
-    div.slide-container.swiper{
+    div.slide-container.swiper {
       padding-top: 0;
     }
 
-    .slide-content.swiper-initialized.swiper-horizontal{
+    .slide-content.swiper-initialized.swiper-horizontal {
       margin: 0;
     }
 
-    .selectionumpoucomaior{
+    .selectionumpoucomaior {
       padding-top: 100px;
       padding-bottom: 100px;
 
     }
 
     .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Dois blocos na horizontal */
-    gap: 20px; /* Espaço entre os blocos */
-    padding: 20px;
-    border: 2px solid #1b3556;
-    border-radius: 5px;
-    max-width: 960px;
-    margin: 20px auto;
-    background-color: white;
-}
+      box-sizing: border-box;
 
-.grid-item {
-    display: flex;
-    align-items: flex-start; /* Alinha os itens ao topo */
-    padding: 10px;
-    margin: 0 auto;
-}
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      /* Dois blocos na horizontal */
+      gap: 20px;
+      /* Espaço entre os blocos */
+      padding: 20px;
+      border-radius: 5px;
+      max-width: 960px;
+      margin-top: 20px;
+      margin: 0 auto;
 
-.icon {
-    width: 50px; /* Largura do ícone */
-    height: 50px; /* Altura do ícone */
-    margin-right: 20px; /* Espaço à direita do ícone */
-    padding: 10px;
+      background-color: white;
+    }
 
-}
+    .grid-item {
+      display: flex;
+      align-items: flex-start;
+      /* Alinha os itens ao topo */
+      padding: 10px;
+      margin: 0 auto;
+    }
 
-.contentdogrid h3 {
-    margin: 0; /* Remover a margem do título */
-    margin-bottom: 10px; /* Adicionar uma margem abaixo do título */
+    .icon {
+      width: 50px;
+      /* Largura do ícone */
+      height: 50px;
+      /* Altura do ícone */
+      margin-right: 20px;
+      /* Espaço à direita do ícone */
+      padding: 10px;
 
-  }
+    }
 
-.contentdogrid p {
-  text-align: justify;
-    margin: 0; /* Remover a margem da descrição */
-}
+    .contentdogrid h3 {
+      margin: 0;
+      /* Remover a margem do título */
+      margin-bottom: 10px;
+      /* Adicionar uma margem abaixo do título */
 
-section {
+    }
+
+    .contentdogrid p {
+      text-align: justify;
+      margin: 0;
+      /* Remover a margem da descrição */
+    }
+
+    section {
       padding: 0 20px;
     }
 
-@media (max-width: 600px) {
-    .grid-container {
-        grid-template-columns: 1fr; /* Apenas um bloco por linha */
+    #lista {
+      box-sizing: border-box;
+      border-radius: 5px;
+      max-width: 960px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      height: 200px;
+      overflow: hidden;
+      /* Isso esconderá o conteúdo que excede a altura */
+      display: grid;
+      grid-template-columns: 1fr;
+      background-color: white;
     }
-    .grid-item {
-    width: 90%;
+
+    #lista .item:nth-child(odd) {
+      background-color: white;
+      /* Cor para os itens ímpares */
     }
-}
+
+    #lista .item:nth-child(even) {
+      background-color: #f2f3f8;
+      /* Cor para os itens pares */
+    }
+
+    #lista .item .descricao {
+      color: #000;
+    }
+
+    .descricao {
+      display: none;
+      margin: 10px;
+      background-color: white;
+      border: 2px solid #f2f3f8;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    #btnExpandir {
+      margin-top: 10px;
+      padding: 10px 15px;
+      cursor: pointer;
+      border: none;
+      background-color: #007BFF;
+      color: #fff;
+      border-radius: 5px;
+      text-align: center;
+      font-family: 'Source Sans 3', sans-serif;
+    }
+
+    #lista h3 {
+      font-size: 20px;
+      cursor: pointer;
+      transition: color 0.2s;
+      margin-left: 10px;
+      font-size: 16px;
+
+    }
+
+    h3:hover {
+      color: #0056b3;
+      /* Uma tonalidade mais escura de azul quando o título é passado com o mouse */
+    }
+
+    .botãocentro {
+      display: flex;
+      justify-content: center;
+      /* Alinha horizontalmente ao centro */
+    }
+
+    .azul {
+      background-color: #1b3556;
+      width: 100%;
+      height: 50px;
+    }
+
+    @media (min-width: 701px) {
+
+      #lista .item:nth-child(4n),
+      #lista .item:nth-child(4n-3) {
+        background-color: white;
+      }
+
+      #lista .item:not(:nth-child(4n)):not(:nth-child(4n-3)) {
+        background-color: #f2f3f8;
+      }
+
+      #lista {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+        /* Apenas um bloco por linha */
+      }
+
+      .grid-item {
+        width: 90%;
+      }
+    }
 
     @media screen and (max-width: 768px) {
       .slide-content {
@@ -656,7 +780,7 @@ section {
 
 </head>
 
-<body >
+<body>
   <div id="top-header"></div>
   <div id="sticky-header" class="header">
     <div class="header-container">
@@ -748,7 +872,7 @@ section {
     </section>
 
     <section class="temqueterpadding selectionumpoucomaior">
-     
+
       <div class="slide-container swiper">
         <div class="slide-content">
           <div class="card-wrapper swiper-wrapper">
@@ -872,61 +996,134 @@ section {
               </div>
             </div>
           </div>
-          
+
           <div class="swiper-pagination"></div>
         </div>
-        
+
     </section>
 
     <section class="box temqueterpadding">
+      <div class="titulo">Matriz Escolar</div>
+
+      <div id="lista">
+        <div class="item">
+          <h3 onclick="mostrarDescricao(this)">Título 1</h3>
+          <div class="descricao">Descrição do Título 1.</div>
+        </div>
+        <div class="item">
+          <h3 onclick="mostrarDescricao(this)">Título 2</h3>
+          <div class="descricao">Descrição do Título 2.</div>
+        </div>
+        <div class="item">
+          <h3 onclick="mostrarDescricao(this)">Título 3</h3>
+          <div class="descricao">Descrição do Título 1.</div>
+        </div>
+        <div class="item">
+          <h3 onclick="mostrarDescricao(this)">Título 4</h3>
+          <div class="descricao">Descrição do Título 1.</div>
+        </div>
+        <div class="item">
+          <h3 onclick="mostrarDescricao(this)">Título 5</h3>
+          <div class="descricao">Descrição do Título 1.</div>
+        </div>
+        <div class="item">
+          <h3 onclick="mostrarDescricao(this)">Título 6</h3>
+          <div class="descricao">Descrição do Título 1.</div>
+        </div>
+        <div class="item">
+          <h3 onclick="mostrarDescricao(this)">Título 7</h3>
+          <div class="descricao">Descrição do Título 1.</div>
+        </div>
+        <div class="item">
+          <h3 onclick="mostrarDescricao(this)">Título 8</h3>
+          <div class="descricao">Descrição do Título 1.</div>
+        </div>
+        <div class="item">
+          <h3 onclick="mostrarDescricao(this)">Título 9</h3>
+          <div class="descricao">Descrição do Título 1.</div>
+        </div>
+        <div class="item">
+          <h3 onclick="mostrarDescricao(this)">Título 10</h3>
+          <div class="descricao">Descrição do Título 1.</div>
+        </div>
+        <div class="item">
+          <h3 onclick="mostrarDescricao(this)">Título 11</h3>
+          <div class="descricao">Descrição do Título 1.</div>
+        </div>
+        <div class="item">
+          <h3 onclick="mostrarDescricao(this)">Título 12</h3>
+          <div class="descricao">Descrição do Título 1.</div>
+        </div>
+        <div class="item">
+          <h3 onclick="mostrarDescricao(this)">Título 13</h3>
+          <div class="descricao">Descrição do Título 1.</div>
+        </div>
+
+      </div>
+
+      <div class="botãocentro">
+        <button id="btnExpandir" onclick="expandirRecolher()">Expandir</button>
+      </div>
+    </section>
+
+    <div class="azul"></div>
+
+    <section style="background-color: #1b3556;" class=" temqueterpadding">
       <div class="motivosfam">
         <div class="grid-container">
           <div class="grid-item">
-              <img src="imgs\noun-text-2132279.png" alt="Ícone 1" class="icon">
-              <div class="contentdogrid">
-                  <h3>Título 1</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sem non felis malesuada pellentesque. </p>
-              </div>
+            <img src="imgs\noun-text-2132279.png" alt="Ícone 1" class="icon">
+            <div class="contentdogrid">
+              <h3>Título 1</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sem non felis malesuada
+                pellentesque. </p>
+            </div>
           </div>
-      
-          <div class="grid-item">
-              <img src="imgs\noun-text-2132279.png" alt="Ícone 2" class="icon">
-              <div class="contentdogrid">
-                  <h3>Título 2</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sem non felis malesuada pellentesque. </p>
-              </div>
-          </div>
-      
-          <div class="grid-item">
-              <img src="imgs\noun-text-2132279.png" alt="Ícone 3" class="icon">
-              <div class="contentdogrid">
-                  <h3>Título 3</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sem non felis malesuada pellentesque. </p>
-              </div>
-          </div>
-      
-          <div class="grid-item">
-              <img src="imgs\noun-text-2132279.png" alt="Ícone 4" class="icon">
-              <div class="contentdogrid">
-                  <h3>Título 4</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sem non felis malesuada pellentesque. </p>
-              </div>
-          </div>
-      </div>
-      </div>
-      </section>
 
-    <section  class="temqueterpadding">
+          <div class="grid-item">
+            <img src="imgs\noun-text-2132279.png" alt="Ícone 2" class="icon">
+            <div class="contentdogrid">
+              <h3>Título 2</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sem non felis malesuada
+                pellentesque. </p>
+            </div>
+          </div>
+
+          <div class="grid-item">
+            <img src="imgs\noun-text-2132279.png" alt="Ícone 3" class="icon">
+            <div class="contentdogrid">
+              <h3>Título 3</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sem non felis malesuada
+                pellentesque. </p>
+            </div>
+          </div>
+
+          <div class="grid-item">
+            <img src="imgs\noun-text-2132279.png" alt="Ícone 4" class="icon">
+            <div class="contentdogrid">
+              <h3>Título 4</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sem non felis malesuada
+                pellentesque. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="azul"></div>
+
+
+    <section class="temqueterpadding">
       <div class="titulo">Nossos profissionais</div>
       <div class="slideContainer swiper">
         <div class="slideContent">
-            <div class="cardHolder swiper-wrapper">
+          <div class="cardHolder swiper-wrapper">
 
-            </div>
+          </div>
 
-        <div class="swiper-pagination"></div>
-    </div>
-</div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
 
     </section>
 
@@ -971,7 +1168,42 @@ section {
       }
     });
   </script>
- 
+  <script>
+    function mostrarDescricao(elemento) {
+      let descricao = elemento.nextElementSibling;
+
+      if (descricao.style.display === 'block') {
+        descricao.style.display = 'none';
+        return;
+      }
+
+      let todasDescricoes = document.querySelectorAll('.descricao');
+      for (let i = 0; i < todasDescricoes.length; i++) {
+        todasDescricoes[i].style.display = 'none';
+      }
+
+      descricao.style.display = 'block';
+    }
+
+    function expandirRecolher() {
+      let lista = document.getElementById('lista');
+      let btn = document.getElementById('btnExpandir');
+
+      if (lista.style.height === 'auto') {
+        lista.style.height = '200px';
+        btn.innerHTML = 'Expandir';
+
+        // Esconde todas as descrições ao recolher
+        let todasDescricoes = document.querySelectorAll('.descricao');
+        for (let i = 0; i < todasDescricoes.length; i++) {
+          todasDescricoes[i].style.display = 'none';
+        }
+      } else {
+        lista.style.height = 'auto';
+        btn.innerHTML = 'Recolher';
+      }
+    }
+  </script>
   <script>
     window.onscroll = function () { scrollFunction() };
 
@@ -1014,26 +1246,26 @@ section {
       document.getElementsByClassName("tablinks")[0].click();
     });
   </script>
-    <script>
-      const url3 = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQH-5xZmTNIodFoD19mUspRd7kW7HDrRQ5QnCf41Y3BIqjlP4fFyESgfE90HyCTveLQm1ySS28xzs7q/pub?output=csv';
+  <script>
+    const url3 = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQH-5xZmTNIodFoD19mUspRd7kW7HDrRQ5QnCf41Y3BIqjlP4fFyESgfE90HyCTveLQm1ySS28xzs7q/pub?output=csv';
 
-      Papa.parse(url3, {
-          download: true,
-          header: true,
-          complete: function (results) {
-              var data = results.data;
-              var cardHolder = document.querySelector('.cardHolder');
+    Papa.parse(url3, {
+      download: true,
+      header: true,
+      complete: function (results) {
+        var data = results.data;
+        var cardHolder = document.querySelector('.cardHolder');
 
-              data.forEach(row => {
-                  var cardBox = document.createElement('div');
-                  cardBox.className = 'cardBox swiper-slide'; 
+        data.forEach(row => {
+          var cardBox = document.createElement('div');
+          cardBox.className = 'cardBox swiper-slide';
 
-                  var cardDetails = document.createElement('div');
-                  cardDetails.className = 'cardDetails';
+          var cardDetails = document.createElement('div');
+          cardDetails.className = 'cardDetails';
 
-                  var cardDiv = document.createElement('div');
-                  cardDiv.className = 'teacherSection';
-                  cardDiv.innerHTML = `
+          var cardDiv = document.createElement('div');
+          cardDiv.className = 'teacherSection';
+          cardDiv.innerHTML = `
                       <img class="teacherImg" src="${row['Foto ADM']}" alt="${row['Nome']}">
                       <h2>${row['Nome ADM']}</h2>
                       <h3>${row['Cargo ADM']}</h3>
@@ -1042,41 +1274,41 @@ section {
                           <a class="teacherCurriculumLinks" href="${row['Currículo ADM']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
                       </div>
                   `;
-                  cardDetails.appendChild(cardDiv);
-                  cardBox.appendChild(cardDetails);
-                  cardHolder.appendChild(cardBox);
-              });
+          cardDetails.appendChild(cardDiv);
+          cardBox.appendChild(cardDetails);
+          cardHolder.appendChild(cardBox);
+        });
 
-              var swiper = new Swiper(".slideContent", {
-                  slidesPerView: 3,
-                  spaceBetween: 20,
-                  loop: true,
-                  centerSlide: 'true',
-                  fade: 'true',
-                  grabCursor: 'true',
-                  pagination: {
-                      el: ".swiper-pagination",
-                      clickable: true,
-                      dynamicBullets: true,
-                  },
-                  navigation: {
-                      nextEl: ".swiper-button-next",
-                      prevEl: ".swiper-button-prev",
-                  },
-                  breakpoints:{
-                      0: {
-                          slidesPerView: 1,
-                      },
-                      520: {
-                          slidesPerView: 2,
-                      },
-                      950: {
-                          slidesPerView: 3,
-                      },
-                  },
-              });
-          }
-      });
+        var swiper = new Swiper(".slideContent", {
+          slidesPerView: 3,
+          spaceBetween: 20,
+          loop: true,
+          centerSlide: 'true',
+          fade: 'true',
+          grabCursor: 'true',
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+            0: {
+              slidesPerView: 1,
+            },
+            520: {
+              slidesPerView: 2,
+            },
+            950: {
+              slidesPerView: 3,
+            },
+          },
+        });
+      }
+    });
   </script>
   <script>
 
