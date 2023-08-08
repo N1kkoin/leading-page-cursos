@@ -122,9 +122,22 @@
       width: 100%;
     }
 
-    main {
-      padding: 20px;
-    }
+    
+
+
+    .box{
+  position: relative;
+  overflow-x: hidden;
+  padding: 0 auto;
+  width: auto;
+  z-index: 2;
+  background: linear-gradient(to bottom, white 50%, #1b3556 50%);
+
+}
+
+
+
+
 
     .slideContainer{
   max-width: 960px;
@@ -580,10 +593,7 @@
 
     }
 
-    .fundolegal{
-      background-color: #1b3556;
-      
-    }
+
     @media screen and (max-width: 768px) {
       .slide-content {
         margin: 0 10px;
@@ -592,7 +602,18 @@
       .swiper-navBtn {
         display: none;
       }
+
     }
+
+    @media screen and (max-width: 1000px) {
+      
+      .temqueterpadding {
+      padding: 0 20px;
+    }
+
+    }
+
+
   </style>
 
 
@@ -609,8 +630,9 @@
       <button class="inscreva-btn">Inscreva-se</button>
     </div>
   </div>
+
   <main>
-    <section>
+    <section class="temqueterpadding">
       <div class="containerinfo">
         <div class="caixainfo">
           <div class="texto-cima">8</div>
@@ -633,7 +655,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="temqueterpadding">
       <div class="scroll-container">
         <div class="tab">
           <button class="tablinks" onclick="openTab(event, 'Curso')">Sobre o curso</button>
@@ -688,7 +710,7 @@
       </div>
     </section>
 
-    <section class="selectionumpoucomaior">
+    <section class="temqueterpadding selectionumpoucomaior">
      
       <div class="slide-container swiper">
         <div class="slide-content">
@@ -819,7 +841,7 @@
         
     </section>
 
-    <section>
+    <section  class="box temqueterpadding">
       <div class="titulo">Nossos profissionais</div>
       <div class="slideContainer swiper">
         <div class="slideContent">
@@ -833,7 +855,7 @@
 
     </section>
 
-    <section >
+    <section class="temqueterpadding">
       <div class="titulo2">A FAM não para!</div>
       <div class="button-containercalendario">
         <a class="responsive-button um">Calendário Acadêmico</a>
@@ -842,11 +864,6 @@
     </section>
 
   </main>
-  <div class="fundolegal">
-    <svg viewBox="0 0 500 100">
-    <path d="M 0 30 C 150 100 280 0 500 20 L 500 0 L 0 0" fill="#fff"></path>
-    </svg>
-  </div>
 
   <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
 
