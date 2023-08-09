@@ -744,8 +744,11 @@
 
     .azul {
       background-color: #1b3556;
-      width: 100%;
-      height: 50px;
+    }
+
+    .espaçoazul{
+      height: 60px;
+      background-color: #1b3556;
     }
 
     @media (min-width: 701px) {
@@ -777,6 +780,7 @@
       margin: 0 auto;
       height: 100%;
     }
+
     footer {
       margin-top: 100px;
       background-color: #1b3556;
@@ -787,26 +791,31 @@
       border-top-right-radius: 50% 20px;
       height: 160px;
     }
+
     .footer-logo img {
       width: 150px;
       margin: 20px;
       padding-right: 20px;
       border-right: 1px solid #45b7e5;
     }
+
     .footer-info p {
       margin: 0 0 10px 0;
       text-align: left;
       color: white;
     }
+
     .footer-info p i {
       color: #45b7e5;
     }
+
     .footer-info p svg {
       margin-right: 4px;
       width: 15px;
       height: 15px;
       fill: #f9e20f;
     }
+
     .frasedeefeito {
       text-align: center;
       color: #000;
@@ -814,6 +823,7 @@
       margin: 0 auto;
       padding: 20px;
     }
+
     @media (max-width: 600px) {
       .grid-container {
         grid-template-columns: 1fr;
@@ -835,6 +845,75 @@
       }
 
     }
+
+    #ondeficaovideo {
+      max-width: 960px;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: white;
+    }
+
+    #ondeficaovideo .video-part,
+    #ondeficaovideo .text-part {
+      flex: 1;
+    }
+
+    .text-part {
+      padding: 20px;
+      padding-top: 0;
+      border-radius: 0 5px 5px 0;
+      margin-bottom: 4px;
+      text-align: justify;
+      background-color: #f2f3f8;
+    }
+
+    .video-part {
+      padding-right: 10px;
+      padding-bottom: 0;
+    }
+
+    video {
+      width: 500px;
+      border-radius: 5px 0 0 5px;
+    }
+
+    #ondeficaovideo .text-part h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    /* Media Query para telas com largura até 768px (por exemplo, tablets e smartphones) */
+    @media (max-width:900px) {
+      #ondeficaovideo {
+        flex-direction: column;
+        /* Organiza o vídeo e o texto verticalmente */
+      }
+
+      video {
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+
+      }
+
+      .text-part {
+        border-radius: 0 0 5px 5px;
+      }
+
+      .video-part {
+        padding-bottom: 10px;
+        padding-right: 0;
+      }
+
+      #ondeficaovideo .video-part,
+      #ondeficaovideo .text-part {
+        flex: none;
+        /* Desativamos o flex-grow e flex-shrink aqui para que eles não tentem expandir ou encolher */
+      }
+    }
+
   </style>
 
 </head>
@@ -852,7 +931,7 @@
   </div>
 
   <main>
-    <section class="temqueterpadding">
+    <section >
       <div class="containerinfo">
         <div class="caixainfo">
           <div class="texto-cima">8</div>
@@ -875,7 +954,7 @@
       </div>
     </section>
 
-    <section class="temqueterpadding">
+    <section>
       <div class="scroll-container">
         <div class="tab">
           <button class="tablinks" onclick="openTab(event, 'Curso')">Sobre o curso</button>
@@ -930,7 +1009,7 @@
       </div>
     </section>
 
-    <section class="temqueterpadding selectionumpoucomaior">
+    <section class="selectionumpoucomaior">
 
       <div class="slide-container swiper">
         <div class="slide-content">
@@ -1061,7 +1140,7 @@
 
     </section>
 
-    <section class=" box temqueterpadding">
+    <section class="box">
 
       <div class="motivosfam">
         <div class="grid-container">
@@ -1104,9 +1183,28 @@
       </div>
     </section>
 
-    <div class="azul"></div>
+    <div class="espaçoazul"></div>
 
-    <section style="background-color: #1b3556;" class=" temqueterpadding">
+    <section class="azul">
+      <div id="ondeficaovideo">
+        <div class="video-part">
+          <video controls poster="wow.jpg">
+            <source src="I (Legally) Committed Armed Robbery Against My Sister.mp4" type="video/mp4">
+            Seu navegador não suporta a tag de vídeo.
+          </video>
+        </div>
+        <div class="text-part">
+          <h2>Título do seu texto</h2>
+          <p>
+            Aqui fica o conteúdo do seu texto. Você pode escrever o que quiser e formatar conforme suas necessidades.
+          </p>
+        </div>
+      </div>   
+    </section>
+
+    <div class="espaçoazul"></div>
+
+    <section class="azul">
       <div class="titulo3">Matriz Escolar</div>
 
       <div id="lista">
@@ -1209,7 +1307,7 @@
       </div>
     </section>
 
-    <div class="azul"></div>
+    <div class="espaçoazul"></div>
 
     <section class="temqueterpadding">
       <div class="titulo">Nossos profissionais</div>
