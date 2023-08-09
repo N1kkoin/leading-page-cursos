@@ -11,197 +11,88 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-    body {
-      font-family: 'Source Sans 3', sans-serif;
-      background-color: white;
-      margin: 0;
-      padding: 0;
-    }
+    #ondeficaovideo {
+  max-width: 960px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #444;
+  border-radius: 10px;
+}
 
-    #lista {
-      box-sizing: border-box;
-      border-radius: 5px;
-      max-width: 960px;
-      margin: 0 auto;
-      height: 200px;
-      border: 1px solid #ddd;
-      overflow: hidden;
-      /* Isso esconderá o conteúdo que excede a altura */
-      display: grid;
-      grid-template-columns: 1fr;
+#ondeficaovideo .video-part, #ondeficaovideo .text-part {
+  flex: 1;
+}
 
-    }
+.text-part{
+  background-color: #cacaca;
+  padding: 20px;
+  padding-top: 0;
+  border-radius: 0 5px 5px 0;
+  margin-bottom: 4px;
+  text-align: justify;
+}
+.video-part{
+  padding-right: 10px;
+  padding-bottom: 0;
+}
 
-    #lista .item:nth-child(odd) {
-      background-color: white;
-      /* Cor para os itens ímpares */
-    }
+video{
+  width: 500px;
+  border-radius: 5px 0 0 5px;
+}
+#ondeficaovideo .text-part h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
 
-    #lista .item:nth-child(even) {
-      background-color: #f2f3f8;
-      /* Cor para os itens pares */
-    }
+/* Media Query para telas com largura até 768px (por exemplo, tablets e smartphones) */
+@media (max-width:900px) {
+  #ondeficaovideo {
+    flex-direction: column; /* Organiza o vídeo e o texto verticalmente */
+  }
 
-    #lista .item .descricao {
-      color: #000;
-    }
+  video{
+  width: 100%;
+  border-radius: 5px 5px 0 0;
 
-    .descricao {
-      display: none;
-      margin: 10px;
-      background-color: #f1f1f1;
-      padding: 10px;
-      border-radius: 5px;
-    }
+}
 
-    #btnExpandir {
-      margin-top: 10px;
-      padding: 10px 15px;
-      cursor: pointer;
-      border: none;
-      background-color: #007BFF;
-      color: #fff;
-      border-radius: 5px;
-      text-align: center;
-      font-family: 'Source Sans 3', sans-serif;
-    }
+.text-part{
+  border-radius: 0 0 5px 5px;
+}
 
-    h3 {
-      font-size: 20px;
-      cursor: pointer;
-      transition: color 0.2s;
-      margin-left: 10px;
+  .video-part{
+    padding-bottom: 10px;
+  padding-right: 0;
+}
+  #ondeficaovideo .video-part, #ondeficaovideo .text-part {
+    flex: none; /* Desativamos o flex-grow e flex-shrink aqui para que eles não tentem expandir ou encolher */
+  }
+}
 
-    }
-
-    h3:hover {
-      color: #0056b3;
-      /* Uma tonalidade mais escura de azul quando o título é passado com o mouse */
-    }
-
-    .botãocentro {
-      display: flex;
-      justify-content: center;
-      /* Alinha horizontalmente ao centro */
-    }
-
-    @media (min-width: 701px) {
-
-      #lista .item:nth-child(4n),
-      #lista .item:nth-child(4n-3) {
-        background-color: white;
-      }
-
-      #lista .item:not(:nth-child(4n)):not(:nth-child(4n-3)) {
-        background-color: #f2f3f8;
-      }
-
-      #lista {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
   </style>
 </head>
 
 <body>
   <section>
-    <div id="lista">
-      <div class="item">
-        <h3 onclick="mostrarDescricao(this)">Título 1</h3>
-        <div class="descricao">Descrição do Título 1.</div>
+    <div id="ondeficaovideo">
+      <div class="video-part">
+        <video controls poster="wow.jpg">
+          <source src="I (Legally) Committed Armed Robbery Against My Sister.mp4" type="video/mp4">
+          Seu navegador não suporta a tag de vídeo.
+        </video>
       </div>
-      <div class="item">
-        <h3 onclick="mostrarDescricao(this)">Título 2</h3>
-        <div class="descricao">Descrição do Título 2.</div>
+      <div class="text-part">
+        <h2>Título do seu texto</h2>
+        <p>
+          Aqui fica o conteúdo do seu texto. Você pode escrever o que quiser e formatar conforme suas necessidades.
+        </p>
       </div>
-      <div class="item">
-        <h3 onclick="mostrarDescricao(this)">Título 3</h3>
-        <div class="descricao">Descrição do Título 1.</div>
-      </div>
-      <div class="item">
-        <h3 onclick="mostrarDescricao(this)">Título 4</h3>
-        <div class="descricao">Descrição do Título 1.</div>
-      </div>
-      <div class="item">
-        <h3 onclick="mostrarDescricao(this)">Título 5</h3>
-        <div class="descricao">Descrição do Título 1.</div>
-      </div>
-      <div class="item">
-        <h3 onclick="mostrarDescricao(this)">Título 6</h3>
-        <div class="descricao">Descrição do Título 1.</div>
-      </div>
-      <div class="item">
-        <h3 onclick="mostrarDescricao(this)">Título 7</h3>
-        <div class="descricao">Descrição do Título 1.</div>
-      </div>
-      <div class="item">
-        <h3 onclick="mostrarDescricao(this)">Título 8</h3>
-        <div class="descricao">Descrição do Título 1.</div>
-      </div>
-      <div class="item">
-        <h3 onclick="mostrarDescricao(this)">Título 9</h3>
-        <div class="descricao">Descrição do Título 1.</div>
-      </div>
-      <div class="item">
-        <h3 onclick="mostrarDescricao(this)">Título 10</h3>
-        <div class="descricao">Descrição do Título 1.</div>
-      </div>
-      <div class="item">
-        <h3 onclick="mostrarDescricao(this)">Título 11</h3>
-        <div class="descricao">Descrição do Título 1.</div>
-      </div>
-      <div class="item">
-        <h3 onclick="mostrarDescricao(this)">Título 12</h3>
-        <div class="descricao">Descrição do Título 1.</div>
-      </div>
-      <div class="item">
-        <h3 onclick="mostrarDescricao(this)">Título 13</h3>
-        <div class="descricao">Descrição do Título 1.</div>
-      </div>
-
-    </div>
-
-    <div class="botãocentro">
-      <button id="btnExpandir" onclick="expandirRecolher()">Expandir</button>
-    </div>
+    </div>   
   </section>
 
-  <script>
-    function mostrarDescricao(elemento) {
-      let descricao = elemento.nextElementSibling;
-
-      if (descricao.style.display === 'block') {
-        descricao.style.display = 'none';
-        return;
-      }
-
-      let todasDescricoes = document.querySelectorAll('.descricao');
-      for (let i = 0; i < todasDescricoes.length; i++) {
-        todasDescricoes[i].style.display = 'none';
-      }
-
-      descricao.style.display = 'block';
-    }
-
-    function expandirRecolher() {
-      let lista = document.getElementById('lista');
-      let btn = document.getElementById('btnExpandir');
-
-      if (lista.style.height === 'auto') {
-        lista.style.height = '200px';
-        btn.innerHTML = 'Expandir';
-
-        // Esconde todas as descrições ao recolher
-        let todasDescricoes = document.querySelectorAll('.descricao');
-        for (let i = 0; i < todasDescricoes.length; i++) {
-          todasDescricoes[i].style.display = 'none';
-        }
-      } else {
-        lista.style.height = 'auto';
-        btn.innerHTML = 'Recolher';
-      }
-    }
-  </script>
 </body>
 
 </html>

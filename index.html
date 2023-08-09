@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Por curso</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
-
+  <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -260,7 +261,6 @@
       max-width: 960px;
       margin: 0 auto;
       padding-top: 20px;
-      padding-left: 20px;
       padding-bottom: 10px;
       color: #242527;
       border-bottom: 1px solid #45b7e5;
@@ -274,7 +274,6 @@
       max-width: 960px;
       margin: 0 auto;
       padding-top: 20px;
-      padding-left: 20px;
       padding-bottom: 10px;
       border-bottom: 1px solid #45b7e5;
       border-radius: 5px 5px 0 0;
@@ -289,7 +288,6 @@
       max-width: 960px;
       margin: 0 auto;
       margin-bottom: 10px;
-      padding-left: 20px;
       padding-top: 20px;
       color: #242527;
 
@@ -566,11 +564,10 @@
 
     .button {
       border: none;
-      font-size: 16px;
       color: #FFF;
       padding: 8px 16px;
-      background-color: #4070F4;
-      border-radius: 6px;
+      background-color: #45b7e5;
+      border-radius: 50px;
       margin: 14px;
       cursor: pointer;
       transition: all 0.3s ease;
@@ -718,9 +715,9 @@
       padding: 10px 15px;
       cursor: pointer;
       border: none;
-      background-color: #007BFF;
+      background-color: #45b7e5;
       color: #fff;
-      border-radius: 5px;
+      border-radius: 50px;
       text-align: center;
       font-family: 'Source Sans 3', sans-serif;
     }
@@ -734,8 +731,8 @@
 
     }
 
-    h3:hover {
-      color: #0056b3;
+    #lista h3:hover {
+      color: #45b7e5;
       /* Uma tonalidade mais escura de azul quando o título é passado com o mouse */
     }
 
@@ -747,8 +744,11 @@
 
     .azul {
       background-color: #1b3556;
-      width: 100%;
-      height: 50px;
+    }
+
+    .espaçoazul{
+      height: 60px;
+      background-color: #1b3556;
     }
 
     @media (min-width: 701px) {
@@ -767,15 +767,61 @@
       }
     }
 
+    i {
+      padding-right: 5px;
+      border-radius: 2px;
+    }
+
+    .footer-container {
+      display: flex;
+      max-width: 960px;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      height: 100%;
+    }
+
     footer {
       margin-top: 100px;
-      background-color: #f2f3f8;
-      color: #fff;
-      padding: 20px;
+      background-color: #1b3556;
+      color: #000;
+      padding: 25px;
       text-align: center;
       border-top-left-radius: 50% 20px;
       border-top-right-radius: 50% 20px;
-      height: 100px;
+      height: 160px;
+    }
+
+    .footer-logo img {
+      width: 150px;
+      margin: 20px;
+      padding-right: 20px;
+      border-right: 1px solid #45b7e5;
+    }
+
+    .footer-info p {
+      margin: 0 0 10px 0;
+      text-align: left;
+      color: white;
+    }
+
+    .footer-info p i {
+      color: #45b7e5;
+    }
+
+    .footer-info p svg {
+      margin-right: 4px;
+      width: 15px;
+      height: 15px;
+      fill: #f9e20f;
+    }
+
+    .frasedeefeito {
+      text-align: center;
+      color: #000;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
     }
 
     @media (max-width: 600px) {
@@ -799,6 +845,75 @@
       }
 
     }
+
+    #ondeficaovideo {
+      max-width: 960px;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: white;
+    }
+
+    #ondeficaovideo .video-part,
+    #ondeficaovideo .text-part {
+      flex: 1;
+    }
+
+    .text-part {
+      padding: 20px;
+      padding-top: 0;
+      border-radius: 0 5px 5px 0;
+      margin-bottom: 4px;
+      text-align: justify;
+      background-color: #f2f3f8;
+    }
+
+    .video-part {
+      padding-right: 10px;
+      padding-bottom: 0;
+    }
+
+    video {
+      width: 500px;
+      border-radius: 5px 0 0 5px;
+    }
+
+    #ondeficaovideo .text-part h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    /* Media Query para telas com largura até 768px (por exemplo, tablets e smartphones) */
+    @media (max-width:900px) {
+      #ondeficaovideo {
+        flex-direction: column;
+        /* Organiza o vídeo e o texto verticalmente */
+      }
+
+      video {
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+
+      }
+
+      .text-part {
+        border-radius: 0 0 5px 5px;
+      }
+
+      .video-part {
+        padding-bottom: 10px;
+        padding-right: 0;
+      }
+
+      #ondeficaovideo .video-part,
+      #ondeficaovideo .text-part {
+        flex: none;
+        /* Desativamos o flex-grow e flex-shrink aqui para que eles não tentem expandir ou encolher */
+      }
+    }
+
   </style>
 
 </head>
@@ -816,7 +931,7 @@
   </div>
 
   <main>
-    <section class="temqueterpadding">
+    <section >
       <div class="containerinfo">
         <div class="caixainfo">
           <div class="texto-cima">8</div>
@@ -839,7 +954,7 @@
       </div>
     </section>
 
-    <section class="temqueterpadding">
+    <section>
       <div class="scroll-container">
         <div class="tab">
           <button class="tablinks" onclick="openTab(event, 'Curso')">Sobre o curso</button>
@@ -894,7 +1009,7 @@
       </div>
     </section>
 
-    <section class="temqueterpadding selectionumpoucomaior">
+    <section class="selectionumpoucomaior">
 
       <div class="slide-container swiper">
         <div class="slide-content">
@@ -1025,8 +1140,8 @@
 
     </section>
 
-    <section class=" box temqueterpadding">
-      
+    <section class="box">
+
       <div class="motivosfam">
         <div class="grid-container">
           <div class="grid-item">
@@ -1068,9 +1183,28 @@
       </div>
     </section>
 
-    <div class="azul"></div>
+    <div class="espaçoazul"></div>
 
-    <section style="background-color: #1b3556;" class=" temqueterpadding">
+    <section class="azul">
+      <div id="ondeficaovideo">
+        <div class="video-part">
+          <video controls poster="wow.jpg">
+            <source src="I (Legally) Committed Armed Robbery Against My Sister.mp4" type="video/mp4">
+            Seu navegador não suporta a tag de vídeo.
+          </video>
+        </div>
+        <div class="text-part">
+          <h2>Título do seu texto</h2>
+          <p>
+            Aqui fica o conteúdo do seu texto. Você pode escrever o que quiser e formatar conforme suas necessidades.
+          </p>
+        </div>
+      </div>   
+    </section>
+
+    <div class="espaçoazul"></div>
+
+    <section class="azul">
       <div class="titulo3">Matriz Escolar</div>
 
       <div id="lista">
@@ -1169,11 +1303,11 @@
       </div>
 
       <div class="botãocentro">
-        <button id="btnExpandir" onclick="expandirRecolher()">Expandir</button>
+        <button id="btnExpandir" onclick="expandirRecolher()">Veja mais</button>
       </div>
     </section>
 
-    <div class="azul"></div>
+    <div class="espaçoazul"></div>
 
     <section class="temqueterpadding">
       <div class="titulo">Nossos profissionais</div>
@@ -1198,11 +1332,34 @@
     </section>
 
   </main>
-
+  <h1 class="frasedeefeito">Se vc gosta de fazer tal coisa, outra coisa e outra coisa relacionado ao curso, increva-se
+  </h1>
   <footer>
-    Ok
-  </footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="fegferfam.svg" alt="Logo da Empresa">
+      </div>
+      <div class="footer-info">
+        <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3 7h-1.924c-.615 0-1.076.252-1.076.889v1.111h3l-.238 3h-2.762v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z" />
+          </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M10 9.333l5.333 2.662-5.333 2.672v-5.334zm14-4.333v14c0 2.761-2.238 5-5 5h-14c-2.761 0-5-2.239-5-5v-14c0-2.761 2.239-5 5-5h14c2.762 0 5 2.239 5 5zm-4 7c-.02-4.123-.323-5.7-2.923-5.877-2.403-.164-7.754-.163-10.153 0-2.598.177-2.904 1.747-2.924 5.877.02 4.123.323 5.7 2.923 5.877 2.399.163 7.75.164 10.153 0 2.598-.177 2.904-1.747 2.924-5.877z" />
+          </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M15.233 5.488c-.843-.038-1.097-.046-3.233-.046s-2.389.008-3.232.046c-2.17.099-3.181 1.127-3.279 3.279-.039.844-.048 1.097-.048 3.233s.009 2.389.047 3.233c.099 2.148 1.106 3.18 3.279 3.279.843.038 1.097.047 3.233.047 2.137 0 2.39-.008 3.233-.046 2.17-.099 3.18-1.129 3.279-3.279.038-.844.046-1.097.046-3.233s-.008-2.389-.046-3.232c-.099-2.153-1.111-3.182-3.279-3.281zm-3.233 10.62c-2.269 0-4.108-1.839-4.108-4.108 0-2.269 1.84-4.108 4.108-4.108s4.108 1.839 4.108 4.108c0 2.269-1.839 4.108-4.108 4.108zm4.271-7.418c-.53 0-.96-.43-.96-.96s.43-.96.96-.96.96.43.96.96-.43.96-.96.96zm-1.604 3.31c0 1.473-1.194 2.667-2.667 2.667s-2.667-1.194-2.667-2.667c0-1.473 1.194-2.667 2.667-2.667s2.667 1.194 2.667 2.667zm4.333-12h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm.952 15.298c-.132 2.909-1.751 4.521-4.653 4.654-.854.039-1.126.048-3.299.048s-2.444-.009-3.298-.048c-2.908-.133-4.52-1.748-4.654-4.654-.039-.853-.048-1.125-.048-3.298 0-2.172.009-2.445.048-3.298.134-2.908 1.748-4.521 4.654-4.653.854-.04 1.125-.049 3.298-.049s2.445.009 3.299.048c2.908.133 4.523 1.751 4.653 4.653.039.854.048 1.127.048 3.299 0 2.173-.009 2.445-.048 3.298z" />
+          </svg>
+          /famamericana</p>
+        <p><i class="fa fa-phone"></i> 19 3465.8100 </p>
+        <p><i class="fa fa-map-marker"></i> Av. Joaquim Bôer, 733 - Jardim Luciane, Americana - SP | 13477-360</p>
 
+      </div>
+    </div>
+  </footer>
 
   <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
 
@@ -1258,7 +1415,7 @@
 
       if (lista.style.height === 'auto') {
         lista.style.height = '200px';
-        btn.innerHTML = 'Expandir';
+        btn.innerHTML = 'Veja mais';
 
         // Esconde todas as descrições ao recolher
         let todasDescricoes = document.querySelectorAll('.descricao');
