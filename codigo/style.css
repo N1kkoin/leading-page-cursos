@@ -21,6 +21,9 @@
   --margin-20: 20px;
   --margin-10: 10px;
   --margin-5: 5px;
+  --border-50: 50px;
+  --border-10: 10px;
+  --border-5: 5px;
 
   /* Transições */
   --transition-speed: 0.3s;
@@ -271,7 +274,7 @@ body {
 
 .teacherCurriculum i {
   font-size: 20px;
-  margin-right: 5px;
+  margin-right: 0px;
 }
 
 .teacherCurriculumLinks {
@@ -349,7 +352,7 @@ body {
   }
 
   .containerinfo>* {
-    flex-basis: calc(50% - var(--margin-10));
+    flex-basis: calc(50% - var(--margin-5));
   }
 
   .button-containercalendario {
@@ -363,7 +366,7 @@ body {
   flex-wrap: wrap;
   max-width: var(--container-width);
   margin: 0 auto;
-  gap: var(--margin-20);
+  gap: var(--margin-10);
 
 }
 
@@ -381,6 +384,18 @@ body {
 .dois {
   background-color: var(--azul-principal);
   color: white;
+}
+
+.três {
+  margin-top: var(--margin-10);
+  background-color: #e53888;
+  color: white;
+}
+
+.três:hover {
+  color: #242527;
+  background-color: white;
+  box-shadow: inset 0 0 0 2px #e53888;
 }
 
 .dois:hover {
@@ -408,7 +423,7 @@ body {
   max-width: var(--container-width);
   margin: var(--margin-20) auto;
   margin-top: 40px;
-  gap: var(--margin-20);
+  gap: var(--margin-10);
 }
 
 .caixainfo {
@@ -711,6 +726,7 @@ section {
   display: grid;
   grid-template-columns: 1fr;
   background-color: #f2f3f8;
+  border: 1px solid var(--neutral-light);
 }
 
 #lista .item {
