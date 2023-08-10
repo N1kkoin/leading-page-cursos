@@ -208,15 +208,6 @@ body {
   font-family: var(--primary-font);
 }
 
-@media screen and (max-width: 768px) {
-  .slideContent {
-    margin: 0 var(--margin-10);
-  }
-
-  .swiperNavBtn {
-    display: none;
-  }
-}
 
 .teacherImg {
   width: 100%;
@@ -327,37 +318,6 @@ body {
 
 }
 
-@media only screen and (max-width: 600px) {
-  .containerprofessores::-webkit-scrollbar-track {
-    border-radius: 50px;
-  }
-
-  .containerprofessores::-webkit-scrollbar-track {
-    background-color: #f2f3f8;
-  }
-
-  .titulo_h1 {
-    font-size: 35px;
-
-  }
-
-  #top-header {
-    background-position: 50% 50%;
-    /* Ajuste esses valores para enquadrar a imagem como desejar */
-
-  }
-
-  h1 {
-    font-size: 22px;
-
-  }
-
-
-
-  .button-containercalendario {
-    flex-direction: column;
-  }
-}
 
 .button-containercalendario {
   display: flex;
@@ -368,7 +328,7 @@ body {
   gap: var(--margin-10);
 }
 
-.button-containercalendario a{
+.button-containercalendario a {
   text-decoration: none;
 }
 
@@ -830,16 +790,17 @@ section {
     margin-left: 10px;
   }
 
-  #lista .item:last-child{
+  #lista .item:last-child {
     margin-bottom: 20px;
   }
 
-  #lista .item:nth-last-child(2){
+  #lista .item:nth-last-child(2) {
     margin-bottom: 20px;
   }
 
 
-  #lista .item:nth-child(1), #lista .item:nth-child(2){
+  #lista .item:nth-child(1),
+  #lista .item:nth-child(2) {
     margin-top: 20px;
   }
 
@@ -853,51 +814,6 @@ i {
   border-radius: 2px;
 }
 
-.footer-container {
-  display: flex;
-  max-width: var(--container-width);
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  height: 100%;
-}
-
-footer {
-  margin-top: 100px;
-  background-color: var(--azul-principal);
-  color: #000;
-  padding: 25px;
-  text-align: center;
-  border-top-left-radius: 50% 0px;
-  border-top-right-radius: 50px;
-  height: 160px;
-  margin-right: var(--margin-20);
-}
-
-.footer-logo img {
-  width: 150px;
-  margin: var(--margin-20);
-  padding-right: var(--margin-20);
-  border-right: 1px solid #45b7e5;
-}
-
-.footer-info p {
-  margin: 0 0 var(--margin-10) 0;
-  text-align: left;
-  color: white;
-}
-
-.footer-info p i {
-  color: #45b7e5;
-}
-
-.footer-info p svg {
-  margin-right: 4px;
-  width: 15px;
-  height: 15px;
-  fill: #f9e20f;
-}
-
 .frasedeefeito {
   text-align: center;
   color: #000;
@@ -907,47 +823,17 @@ footer {
   line-height: 0;
 }
 
-.inscreva{
+.inscreva {
   font-size: 30px;
   cursor: pointer;
 }
 
-.inscreva a{
-  text-decoration: none;  
+.inscreva a {
+  text-decoration: none;
   color: #000;
 
 }
 
-@media (max-width: 600px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-    /* Apenas um bloco por linha */
-  }
-
-  .grid-item {
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .containerinfo {
-    width: 100%;
-    flex-wrap: wrap;
-  }
-
-  .containerinfo>* {
-    flex-basis: calc(50% - var(--margin-5));
-  }
-  
-  .slide-content {
-    margin: 0 var(--margin-10);
-  }
-
-  .swiper-navBtn {
-    display: none;
-  }
-
-}
 
 #ondeficaovideo {
   box-sizing: border-box;
@@ -991,6 +877,168 @@ video {
   margin-bottom: var(--margin-20);
 }
 
+
+.highlight {
+  width: max-content;
+  background-size: 200% auto;
+  background-image: linear-gradient(to right, transparent 50%, var(--amarelo) 50%);
+  background-position: 0% 0;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+}
+
+.highlight.active {
+  animation-name: highlight;
+}
+
+@keyframes highlight {
+  from {
+    background-position: 0% 0;
+  }
+
+  to {
+    background-position: -100% 0;
+  }
+}
+
+
+.footer-container {
+  display: flex;
+  max-width: var(--container-width);
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 100%;
+}
+
+footer {
+  margin-top: 100px;
+  background-color: var(--azul-principal);
+  color: #000;
+  padding: 25px;
+  text-align: center;
+  border-top-right-radius: 50px;
+  height: 160px;
+  margin-right: var(--margin-20);
+}
+
+.footer-logo img {
+  width: 150px;
+  margin: var(--margin-20);
+  padding-right: var(--margin-20);
+  border-right: 1px solid #45b7e5;
+}
+
+.footer-info p {
+  margin: 0 0 var(--margin-10) 0;
+  text-align: left;
+  color: white;
+}
+
+.footer-info p i {
+  color: #45b7e5;
+}
+
+.footer-info p svg {
+  margin-right: 4px;
+  width: 15px;
+  height: 15px;
+  fill: #f9e20f;
+}
+
+@media (max-width: 500px) {
+  .footer-container {
+    align-items: flex-start;
+    flex-direction: column; /* Altera para apresentar o conteúdo em coluna (verticalmente) */
+  }
+
+  .footer-logo img {
+    padding: 20px;
+    border-bottom: 1px solid #45b7e5;
+    border-right: 0;
+    margin-left: 0; /* Ajusta a margem esquerda conforme necessário */
+    padding-left: 0; /* Ajusta o padding esquerdo conforme necessário */
+    border-right: none;
+  }
+
+  footer {
+    height: 300px;
+    margin-right: 0;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  .containerprofessores::-webkit-scrollbar-track {
+    border-radius: 50px;
+  }
+
+  .containerprofessores::-webkit-scrollbar-track {
+    background-color: #f2f3f8;
+  }
+
+  .titulo_h1 {
+    font-size: 35px;
+
+  }
+
+  #top-header {
+    background-position: 50% 50%;
+    /* Ajuste esses valores para enquadrar a imagem como desejar */
+
+  }
+
+  h1 {
+    font-size: 22px;
+
+  }
+
+  .button-containercalendario {
+    flex-direction: column;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    /* Apenas um bloco por linha */
+  }
+
+  .grid-item {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .containerinfo {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .containerinfo>* {
+    flex-basis: calc(50% - var(--margin-5));
+  }
+
+  .slide-content {
+    margin: 0 var(--margin-10);
+  }
+
+  .swiper-navBtn {
+    display: none;
+  }
+
+  .slideContent {
+    margin: 0 var(--margin-10);
+  }
+
+  .swiperNavBtn {
+    display: none;
+  }
+
+}
+
 /* Media Query para telas com largura até 768px (por exemplo, tablets e smartphones) */
 @media (max-width:900px) {
   #ondeficaovideo {
@@ -1020,28 +1068,3 @@ video {
   }
 }
 
-.highlight {
-  width: max-content;
-  background-size: 200% auto;
-  background-image: linear-gradient(to right, transparent 50%, var(--amarelo) 50%);
-  background-position: 0% 0;
-  animation-duration: 2s;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  
-}
-
-.highlight.active {
-  animation-name: highlight;
-}
-
-@keyframes highlight {
-  from {
-    background-position: 0% 0;
-  }
-
-  to {
-    background-position: -100% 0;
-  }
-}
