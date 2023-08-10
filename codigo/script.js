@@ -88,3 +88,42 @@ function scrollFunction() {
 }
 
 
+highlight();
+
+$(window).on("scroll", function(){
+  highlight();
+});
+
+function highlight(){
+  var scroll = $(window).scrollTop();
+  var height = $(window).height();
+
+  $(".highlight").each(function(){
+    var pos = $(this).offset().top;
+    if (scroll+height >= pos) {
+      $(this).addClass("active");
+    } 
+    console.log(pos);
+    console.log(scroll);
+  });
+}  
+
+
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Abre a primeira aba por padrão
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementsByClassName("tablinks")[0].click();
+});

@@ -948,3 +948,25 @@ video {
     /* Desativamos o flex-grow e flex-shrink aqui para que eles não tentem expandir ou encolher */
   }
 }
+
+
+
+.highlight{
+  display:block;
+  width: max-content;
+  background-size: 200% auto; 
+  background-image: linear-gradient(to right,#fff 50%, #fff9c4 50%);
+  background-position: 0% 0;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.highlight.active{
+ animation-name: highlight;
+}
+
+@keyframes highlight {
+  from {background-position: 0% 0;}
+  to {background-position: -100% 0;}
+}
