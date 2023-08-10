@@ -724,12 +724,12 @@ section {
 
 #lista .item:nth-child(odd) {
   background-color: white;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 #lista .item:nth-child(even) {
   background-color: white;
-  margin-left: 10px;
+  margin-left: 20px;
 
 }
 
@@ -802,6 +802,21 @@ section {
 
   #lista .item:nth-child(even) {
     background-color: white;
+    margin-right: 20px;
+    margin-left: 10px;
+  }
+
+  #lista .item:last-child{
+    margin-bottom: 20px;
+  }
+
+  #lista .item:nth-last-child(2){
+    margin-bottom: 20px;
+  }
+
+
+  #lista .item:nth-child(1), #lista .item:nth-child(2){
+    margin-top: 20px;
   }
 
   #lista {
