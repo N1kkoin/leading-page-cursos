@@ -778,7 +778,7 @@ section {
     background-color: #f2f3f8;
     margin-right: 0;
   }
-  
+
   #lista .item:nth-child(even) {
     background-color: #f2f3f8;
   }
