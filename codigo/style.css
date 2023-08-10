@@ -894,6 +894,13 @@ footer {
 
 .inscreva{
   font-size: 30px;
+  cursor: pointer;
+}
+
+.inscreva a{
+  text-decoration: none;  
+  color: #000;
+
 }
 
 @media (max-width: 600px) {
@@ -1007,6 +1014,7 @@ video {
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  
 }
 
 .highlight.active {
