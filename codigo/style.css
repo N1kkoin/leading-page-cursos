@@ -201,7 +201,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .slideContent {
-    margin: 0 10px;
+    margin: 0 var(--margin-10);
   }
 
   .swiperNavBtn {
@@ -286,7 +286,7 @@ body {
   max-width: var(--container-width);
   margin: 0 auto;
   padding-top: var(--margin-20);
-  padding-bottom: 10px;
+  padding-bottom: var(--margin-10);
   color: #242527;
   border-bottom: 1px solid #45b7e5;
   border-radius: 5px 5px 0 0;
@@ -299,7 +299,7 @@ body {
   max-width: var(--container-width);
   margin: 0 auto;
   padding-top: var(--margin-20);
-  padding-bottom: 10px;
+  padding-bottom: var(--margin-10);
   border-bottom: 1px solid #45b7e5;
   border-radius: 5px 5px 0 0;
   color: white;
@@ -312,7 +312,7 @@ body {
   font-weight: 700;
   max-width: var(--container-width);
   margin: 0 auto;
-  margin-bottom: 10px;
+  margin-bottom: var(--margin-10);
   padding-top: var(--margin-20);
   color: #242527;
 
@@ -329,7 +329,7 @@ body {
 
   .titulo_h1 {
     font-size: 35px;
-    
+
   }
 
   #top-header {
@@ -340,7 +340,7 @@ body {
 
   h1 {
     font-size: 22px;
-    
+
   }
 
   .containerinfo {
@@ -349,7 +349,7 @@ body {
   }
 
   .containerinfo>* {
-    flex-basis: calc(50% - 10px);
+    flex-basis: calc(50% - var(--margin-10));
   }
 
   .button-containercalendario {
@@ -487,8 +487,8 @@ div.cursos p {
   font-weight: 700;
   background-color: #45b7e5;
   color: white;
-  margin-bottom: 10px;
-  
+  margin-bottom: var(--margin-10);
+
 }
 
 /* Altera a cor de fundo dos botões ao passar o mouse */
@@ -531,7 +531,7 @@ div.cursos p {
   background-color: #f2f3f8;
   border-radius: 5px;
   margin-bottom: var(--margin-20);
-  padding-bottom: 10px;
+  padding-bottom: var(--margin-10);
 
 }
 
@@ -571,7 +571,7 @@ div.cursos p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 14px;
+  padding: var(--margin-10) 14px;
 }
 
 .name {
@@ -645,28 +645,26 @@ div.slide-container.swiper {
 
 }
 
+/*Topicos*/
 .grid-container {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* Dois blocos na horizontal */
   gap: var(--margin-20);
-  /* Espaço entre os blocos */
   padding: var(--margin-20);
   border-radius: 5px;
   max-width: var(--container-width);
   margin-top: var(--margin-20);
   margin: 0 auto;
-  background-color: white;
-  border: 1px solid #f2f3f8;
+  background-color: var(--bg-branco);
+  border: 1px solid var(--azul-claro);
 
 }
 
 .grid-item {
   display: flex;
   align-items: flex-start;
-  /* Alinha os itens ao topo */
-  padding: 10px;
+  padding: var(--margin-10);
   margin: 0 auto;
 }
 
@@ -677,14 +675,14 @@ div.slide-container.swiper {
   /* Altura do ícone */
   margin-right: var(--margin-20);
   /* Espaço à direita do ícone */
-  padding: 10px;
+  padding: var(--margin-10);
 
 }
 
 .contentdogrid h3 {
   margin: 0;
   /* Remover a margem do título */
-  margin-bottom: 10px;
+  margin-bottom: var(--margin-10);
   /* Adicionar uma margem abaixo do título */
 
 }
@@ -717,20 +715,22 @@ section {
 
 #lista .item {
   border-radius: 5px;
-  margin: 10px 10px 0 10px;
+  margin: var(--margin-10) var(--margin-20) 0 var(--margin-20);
 }
 
 #lista .item:last-child {
-  margin-bottom: 10px;
+  margin-bottom: var(--margin-10);
 }
 
 #lista .item:nth-child(odd) {
   background-color: white;
-
+  margin-right: 10px;
 }
 
 #lista .item:nth-child(even) {
   background-color: white;
+  margin-left: 10px;
+
 }
 
 #lista .item .descricao {
@@ -739,17 +739,17 @@ section {
 
 .descricao {
   display: none;
-  margin: 10px;
+  margin: var(--margin-10);
   background-color: white;
   border: 1px solid #f2f3f8;
-  padding: 10px;
+  padding: var(--margin-10);
   border-radius: 5px;
   font-size: 14px;
 }
 
 #btnExpandir {
-  margin-top: 10px;
-  padding: 10px 15px;
+  margin-top: var(--margin-10);
+  padding: var(--margin-10) 15px;
   cursor: pointer;
   border: none;
   background-color: #45b7e5;
@@ -843,7 +843,7 @@ footer {
 }
 
 .footer-info p {
-  margin: 0 0 10px 0;
+  margin: 0 0 var(--margin-10) 0;
   text-align: left;
   color: white;
 }
@@ -880,7 +880,7 @@ footer {
 
 @media screen and (max-width: 768px) {
   .slide-content {
-    margin: 0 10px;
+    margin: 0 var(--margin-10);
   }
 
   .swiper-navBtn {
@@ -905,21 +905,23 @@ footer {
 }
 
 .text-part {
+  margin-top: 5px;
+
   padding: var(--margin-20);
   padding-top: 0;
   border-radius: 0 5px 5px 0;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
   text-align: justify;
   background-color: #f2f3f8;
 }
 
 .video-part {
-  padding-right: 10px;
-  padding-bottom: 0;
+  margin-top: 5px;
+  padding-right: var(--margin-10);
 }
 
 video {
-  width: 500px;
+  width: 480px;
   border-radius: 5px 0 0 5px;
 }
 
@@ -946,7 +948,7 @@ video {
   }
 
   .video-part {
-    padding-bottom: 10px;
+    padding-bottom: var(--margin-10);
     padding-right: 0;
   }
 
@@ -957,11 +959,9 @@ video {
   }
 }
 
-
-
-.highlight{
+.highlight {
   width: max-content;
-  background-size: 200% auto; 
+  background-size: 200% auto;
   background-image: linear-gradient(to right, var(--neutral-light) 50%, var(--amarelo) 50%);
   background-position: 0% 0;
   animation-duration: 2s;
@@ -969,11 +969,17 @@ video {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
-.highlight.active{
- animation-name: highlight;
+
+.highlight.active {
+  animation-name: highlight;
 }
 
 @keyframes highlight {
-  from {background-position: 0% 0;}
-  to {background-position: -100% 0;}
+  from {
+    background-position: 0% 0;
+  }
+
+  to {
+    background-position: -100% 0;
+  }
 }
