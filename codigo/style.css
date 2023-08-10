@@ -683,6 +683,7 @@ section {
   padding: 0 20px;
 }
 
+/*MATRIZ ESCOLAR*/
 #lista {
   box-sizing: border-box;
   border-radius: 5px;
@@ -698,14 +699,22 @@ section {
   background-color: white;
 }
 
+#lista .item {
+  border-radius: 5px;
+  margin: 10px 10px 0 10px;
+}
+
+#lista .item:last-child {
+  margin-bottom: 10px;
+}
+
 #lista .item:nth-child(odd) {
-  background-color: white;
-  /* Cor para os itens ímpares */
+  background-color: #f2f3f8;
+
 }
 
 #lista .item:nth-child(even) {
   background-color: #f2f3f8;
-  /* Cor para os itens pares */
 }
 
 #lista .item .descricao {
@@ -758,19 +767,19 @@ section {
   background-color: #1b3556;
 }
 
-.espaçoazul{
+.espaçoazul {
   height: 60px;
   background-color: #1b3556;
 }
 
 @media (min-width: 701px) {
 
-  #lista .item:nth-child(4n),
-  #lista .item:nth-child(4n-3) {
-    background-color: white;
+  #lista .item:nth-child(odd) {
+    background-color: #f2f3f8;
+    margin-right: 0;
   }
 
-  #lista .item:not(:nth-child(4n)):not(:nth-child(4n-3)) {
+  #lista .item:nth-child(even) {
     background-color: #f2f3f8;
   }
 
