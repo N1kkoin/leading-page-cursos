@@ -820,12 +820,12 @@ i {
   max-width: var(--container-width);
   margin: 0 auto;
   padding: var(--margin-20);
-  line-height: 0;
 }
 
 .inscreva {
   font-size: 30px;
   cursor: pointer;
+  line-height: 0;
 }
 
 .inscreva a {
