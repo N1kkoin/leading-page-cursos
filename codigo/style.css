@@ -905,6 +905,7 @@ footer {
 }
 
 #ondeficaovideo {
+  box-sizing: border-box;
   max-width: var(--container-width);
   display: flex;
   justify-content: space-between;
@@ -936,7 +937,7 @@ footer {
 }
 
 video {
-  width: 480px;
+  width: 100%;
   border-radius: 5px 0 0 5px;
 }
 
