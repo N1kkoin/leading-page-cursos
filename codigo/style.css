@@ -208,15 +208,6 @@ body {
   font-family: var(--primary-font);
 }
 
-@media screen and (max-width: 768px) {
-  .slideContent {
-    margin: 0 var(--margin-10);
-  }
-
-  .swiperNavBtn {
-    display: none;
-  }
-}
 
 .teacherImg {
   width: 100%;
@@ -823,51 +814,6 @@ i {
   border-radius: 2px;
 }
 
-.footer-container {
-  display: flex;
-  max-width: var(--container-width);
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  height: 100%;
-}
-
-footer {
-  margin-top: 100px;
-  background-color: var(--azul-principal);
-  color: #000;
-  padding: 25px;
-  text-align: center;
-  border-top-left-radius: 50% 0px;
-  border-top-right-radius: 50px;
-  height: 160px;
-  margin-right: var(--margin-20);
-}
-
-.footer-logo img {
-  width: 150px;
-  margin: var(--margin-20);
-  padding-right: var(--margin-20);
-  border-right: 1px solid #45b7e5;
-}
-
-.footer-info p {
-  margin: 0 0 var(--margin-10) 0;
-  text-align: left;
-  color: white;
-}
-
-.footer-info p i {
-  color: #45b7e5;
-}
-
-.footer-info p svg {
-  margin-right: 4px;
-  width: 15px;
-  height: 15px;
-  fill: #f9e20f;
-}
-
 .frasedeefeito {
   text-align: center;
   color: #000;
@@ -931,34 +877,6 @@ video {
   margin-bottom: var(--margin-20);
 }
 
-/* Media Query para telas com largura até 768px (por exemplo, tablets e smartphones) */
-@media (max-width:900px) {
-  #ondeficaovideo {
-    flex-direction: column;
-    /* Organiza o vídeo e o texto verticalmente */
-  }
-
-  video {
-    width: 100%;
-    border-radius: 5px 5px 0 0;
-
-  }
-
-  .text-part {
-    border-radius: 0 0 5px 5px;
-  }
-
-  .video-part {
-    padding-bottom: var(--margin-10);
-    padding-right: 0;
-  }
-
-  #ondeficaovideo .video-part,
-  #ondeficaovideo .text-part {
-    flex: none;
-    /* Desativamos o flex-grow e flex-shrink aqui para que eles não tentem expandir ou encolher */
-  }
-}
 
 .highlight {
   width: max-content;
@@ -987,22 +905,68 @@ video {
 }
 
 
-@media screen and (max-width: 768px) {
-  .containerinfo {
-    width: 100%;
-    flex-wrap: wrap;
+.footer-container {
+  display: flex;
+  max-width: var(--container-width);
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 100%;
+}
+
+footer {
+  margin-top: 100px;
+  background-color: var(--azul-principal);
+  color: #000;
+  padding: 25px;
+  text-align: center;
+  border-top-right-radius: 50px;
+  height: 160px;
+  margin-right: var(--margin-20);
+}
+
+.footer-logo img {
+  width: 150px;
+  margin: var(--margin-20);
+  padding-right: var(--margin-20);
+  border-right: 1px solid #45b7e5;
+}
+
+.footer-info p {
+  margin: 0 0 var(--margin-10) 0;
+  text-align: left;
+  color: white;
+}
+
+.footer-info p i {
+  color: #45b7e5;
+}
+
+.footer-info p svg {
+  margin-right: 4px;
+  width: 15px;
+  height: 15px;
+  fill: #f9e20f;
+}
+
+@media (max-width: 500px) {
+  .footer-container {
+    align-items: flex-start;
+    flex-direction: column; /* Altera para apresentar o conteúdo em coluna (verticalmente) */
   }
 
-  .containerinfo>* {
-    flex-basis: calc(50% - var(--margin-5));
+  .footer-logo img {
+    padding: 20px;
+    border-bottom: 1px solid #45b7e5;
+    border-right: 0;
+    margin-left: 0; /* Ajusta a margem esquerda conforme necessário */
+    padding-left: 0; /* Ajusta o padding esquerdo conforme necessário */
+    border-right: none;
   }
 
-  .slide-content {
-    margin: 0 var(--margin-10);
-  }
-
-  .swiper-navBtn {
-    display: none;
+  footer {
+    height: 300px;
+    margin-right: 0;
   }
 
 }
@@ -1046,3 +1010,61 @@ video {
     width: 90%;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .containerinfo {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .containerinfo>* {
+    flex-basis: calc(50% - var(--margin-5));
+  }
+
+  .slide-content {
+    margin: 0 var(--margin-10);
+  }
+
+  .swiper-navBtn {
+    display: none;
+  }
+
+  .slideContent {
+    margin: 0 var(--margin-10);
+  }
+
+  .swiperNavBtn {
+    display: none;
+  }
+
+}
+
+/* Media Query para telas com largura até 768px (por exemplo, tablets e smartphones) */
+@media (max-width:900px) {
+  #ondeficaovideo {
+    flex-direction: column;
+    /* Organiza o vídeo e o texto verticalmente */
+  }
+
+  video {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+
+  }
+
+  .text-part {
+    border-radius: 0 0 5px 5px;
+  }
+
+  .video-part {
+    padding-bottom: var(--margin-10);
+    padding-right: 0;
+  }
+
+  #ondeficaovideo .video-part,
+  #ondeficaovideo .text-part {
+    flex: none;
+    /* Desativamos o flex-grow e flex-shrink aqui para que eles não tentem expandir ou encolher */
+  }
+}
+
