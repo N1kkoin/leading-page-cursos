@@ -126,6 +126,7 @@ body {
   font-size: 18px;
   font-weight: 500;
   border-radius: 5px;
+  text-transform: var(--caixatexto);
 }
 
 #sticky-header.shrink h1,
@@ -406,7 +407,6 @@ body {
   cursor: pointer;
   transition: 0.5s;
   font-family: var(--primary-font);
-  font-size: 18px;
   font-weight: 400;
   border-radius: 5px;
   flex: 1 0 auto;
@@ -448,7 +448,7 @@ body {
   border-radius: 5px;
   border-radius: 5px 5px 0 0;
   font-weight: 600;
-  font-size: large;
+  font-size: larger;
   box-shadow: inset 0 0 0 1px #f2f3f8;
 }
 
@@ -465,6 +465,7 @@ body {
 .piquininha {
   font-size: xx-small;
   margin-right: 2px;
+  margin-top: -px;
 }
 
 div.cursos p {
