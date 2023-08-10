@@ -27,7 +27,6 @@
 
   /* Transições */
   --transition-speed: 0.3s;
-  --btn-transition-speed: 0.5s;
 }
 
 ::-webkit-scrollbar {
@@ -115,17 +114,24 @@ body {
 }
 
 .inscreva-btn {
-  background-color: #f9e20f;
+  background-color: var(--amarelo);
   color: var(--azul-principal);
   border: none;
   padding: 5px var(--margin-20);
   cursor: pointer;
-  transition: 0.5s;
+  transition: all 0.3s;
   margin-right: var(--margin-20);
   font-family: var(--primary-font);
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   border-radius: 5px;
+  text-transform: var(--caixatexto);
+}
+
+.inscreva-btn:hover {
+  color: var(--amarelo);
+  background-color: transparent;
+  box-shadow: inset 0 0 0 2px var(--amarelo);
 }
 
 #sticky-header.shrink h1,
@@ -360,7 +366,10 @@ body {
   max-width: var(--container-width);
   margin: 0 auto;
   gap: var(--margin-10);
+}
 
+.button-containercalendario a{
+  text-decoration: none;
 }
 
 .um {
@@ -401,9 +410,8 @@ body {
   border: none;
   padding: var(--margin-20);
   cursor: pointer;
-  transition: 0.5s;
+  transition: all 0.3s;
   font-family: var(--primary-font);
-  font-size: 18px;
   font-weight: 400;
   border-radius: 5px;
   flex: 1 0 auto;
@@ -445,7 +453,7 @@ body {
   border-radius: 5px;
   border-radius: 5px 5px 0 0;
   font-weight: 600;
-  font-size: large;
+  font-size: larger;
   box-shadow: inset 0 0 0 1px #f2f3f8;
 }
 
@@ -462,6 +470,7 @@ body {
 .piquininha {
   font-size: xx-small;
   margin-right: 2px;
+  margin-top: -px;
 }
 
 div.cursos p {
@@ -486,8 +495,8 @@ div.cursos p {
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
+  transition: all 0.3s;
+  font-size: 16px;
   text-align: center;
   box-sizing: border-box;
   font-family: var(--primary-font);
@@ -598,30 +607,25 @@ div.cursos p {
 
 }
 
+.button:hover {
+  color: #242527;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 2px #1b3556;
+}
+
 .button {
+  color: white;
   border: none;
-  color: #FFF;
   padding: 8px 16px;
-  background-color: #45b7e5;
-  border-radius: 50px;
+  background-color: var(--azul-claro);
+  border-radius: var(--border-5);
   margin: 14px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s;
   font-family: var(--primary-font);
   text-transform: var(--caixatexto);
-}
-
-.button:hover {
-  background: #265DF2;
-}
-
-.swiper-navBtn {
-  color: #6E93f7;
-  transition: color 0.3s ease;
-}
-
-.swiper-navBtn:hover {
-  color: #4070F4;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .swiper-navBtn::before,
@@ -763,9 +767,20 @@ section {
   border: none;
   background-color: #45b7e5;
   color: #fff;
-  border-radius: 50px;
+  border-radius: var(--border-5);
   text-align: center;
   font-family: var(--primary-font);
+  font-size: 16px;
+  text-transform: var(--caixatexto);
+  font-weight: 500;
+  transition: all 0.3s;
+
+}
+
+#btnExpandir:hover {
+  color: black;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 2px var(--azul-principal);
 }
 
 #lista h3 {
