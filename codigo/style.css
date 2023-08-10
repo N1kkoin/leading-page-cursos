@@ -13,7 +13,7 @@
 
   /* Tipografia */
   --primary-font: 'Source Sans 3', sans-serif;
-  --title-font-size: 26px;
+  --h1-title-font-size: 26px;
   --caixatexto: uppercase;
 
   /* Medidas */
@@ -48,11 +48,11 @@ body {
   font-family: var(--primary-font);
 }
 
-.h1_header {
+.header-titulo {
   color: white;
 }
 
-.h3_header {
+.header-subtitulo {
   color: #45b7e5;
   font-weight: 400;
   text-transform: var(--caixatexto);
@@ -346,14 +346,7 @@ body {
 
   }
 
-  .containerinfo {
-    width: 100%;
-    flex-wrap: wrap;
-  }
 
-  .containerinfo>* {
-    flex-basis: calc(50% - var(--margin-5));
-  }
 
   .button-containercalendario {
     flex-direction: column;
@@ -447,7 +440,7 @@ body {
 }
 
 .texto-cima {
-  color: var(--azul-principal);
+  color: black;
   background-color: white;
   border-radius: 5px;
   border-radius: 5px 5px 0 0;
@@ -896,6 +889,11 @@ footer {
   max-width: var(--container-width);
   margin: 0 auto;
   padding: var(--margin-20);
+  line-height: 0;
+}
+
+.inscreva{
+  font-size: 30px;
 }
 
 @media (max-width: 600px) {
@@ -910,6 +908,15 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  .containerinfo {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .containerinfo>* {
+    flex-basis: calc(50% - var(--margin-5));
+  }
+  
   .slide-content {
     margin: 0 var(--margin-10);
   }
@@ -994,7 +1001,7 @@ video {
 .highlight {
   width: max-content;
   background-size: 200% auto;
-  background-image: linear-gradient(to right, var(--neutral-light) 50%, var(--amarelo) 50%);
+  background-image: linear-gradient(to right, transparent 50%, var(--amarelo) 50%);
   background-position: 0% 0;
   animation-duration: 2s;
   animation-delay: 0s;
