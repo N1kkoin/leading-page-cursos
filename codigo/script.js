@@ -127,3 +127,9 @@ function openTab(evt, tabName) {
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementsByClassName("tablinks")[0].click();
 });
+
+fetch('/codigo/footer.html')
+.then(response => response.text())
+.then(content => {
+  document.getElementById('footerContainer').innerHTML = content;
+});
