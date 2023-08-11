@@ -132,6 +132,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 $(document).ready(function(){
   // Carregando o footer.html no elemento com ID "meuFooter"
-  $("#meuFooter").load("https://cdn.jsdelivr.net/gh/famamericana/leading-page-cursos@main/codigo/footer.html");
+  $("#meuFooter").load("https://cdn.jsdelivr.net/gh/famamericana/leading-page-cursos@latest/codigo/footer.html");
 });
 
