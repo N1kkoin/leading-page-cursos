@@ -138,6 +138,7 @@ p{
   font-weight: 600;
   border-radius: 5px;
   text-transform: var(--caixatexto);
+  text-decoration: none;
 }
 
 .inscreva-btn:hover {

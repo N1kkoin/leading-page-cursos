@@ -1,3 +1,7 @@
+/* Referencias
+https://codepen.io/a7rarpress/pen/MWPgaMq
+*/
+
 function mostrarDescricao(elemento) {
   let descricao = elemento.nextElementSibling;
 
