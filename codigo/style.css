@@ -7,9 +7,9 @@
   --azul-claro: #45b7e5;
   --amarelo: #f9e20f;
   --neutral-light: #f2f3f8;
-  --preto-titulo: #242527;
   --bg-branco: white;
   --bg-scroll: rgba(0, 0, 0, 0.253);
+  --texto-preto: #242527;
 
   /* Tipografia */
   --primary-font: 'Source Sans 3', sans-serif;
@@ -80,6 +80,17 @@ body {
 
 }
 
+h2{
+  color: var(--texto-preto);
+}
+
+h3{
+  color: var(--texto-preto)
+}
+
+p{
+  color: var(--texto-preto);
+}
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -148,8 +159,6 @@ body {
   width: 100%;
 }
 
-
-
 .box {
   position: relative;
   overflow-x: hidden;
@@ -195,21 +204,6 @@ body {
   margin: 0;
 }
 
-.name {
-  font-size: 18px;
-  font-weight: 500;
-  color: #333;
-  font-family: var(--primary-font);
-}
-
-.description {
-  font-size: 14px;
-  color: #707070;
-  text-align: center;
-  font-family: var(--primary-font);
-}
-
-
 .teacherImg {
   width: 100%;
   height: 200px;
@@ -223,18 +217,16 @@ body {
   position: relative;
 }
 
-.teacherSection h3 {
+.teacherSection p {
   color: #777a7e;
-  font-weight: 400;
-  font-size: 14px;
 }
 
-.teacherSection h2 {
+.teacherSection h3 {
   color: var(--azul-principal);
 }
 
-.teacherSection h2,
-.teacherSection h3 {
+.teacherSection h3,
+.teacherSection p {
   margin: 0;
   padding: 15px 0 var(--margin-20) 0;
   margin-top: -30px;
@@ -271,8 +263,7 @@ body {
 }
 
 .teacherCurriculum i {
-  font-size: 20px;
-  margin-right: 0px;
+  font-size: 16px;
 }
 
 .teacherCurriculumLinks {
@@ -282,7 +273,6 @@ body {
 
 .titulo {
   font-family: var(--primary-font);
-  font-size: 26px;
   font-weight: 700;
   max-width: var(--container-width);
   margin: 0 auto;
@@ -295,7 +285,6 @@ body {
 
 .titulo3 {
   font-family: var(--primary-font);
-  font-size: 26px;
   font-weight: 700;
   max-width: var(--container-width);
   margin: 0 auto;
@@ -309,7 +298,6 @@ body {
 .titulo2 {
   box-sizing: border-box;
   font-family: var(--primary-font);
-  font-size: 26px;
   font-weight: 700;
   max-width: var(--container-width);
   margin: 0 auto;
@@ -409,7 +397,7 @@ body {
 }
 
 .texto-cima {
-  color: black;
+  color: var(--texto-preto);
   background-color: white;
   border-radius: 5px;
   border-radius: 5px 5px 0 0;
@@ -422,7 +410,7 @@ body {
   border-radius: 5px;
   background-color: #f2f3f8;
   border-radius: 0 0 5px 5px;
-  color: black;
+  color: var(--texto-preto);
   font-weight: 900;
   text-transform: var(--caixatexto);
 
@@ -552,6 +540,10 @@ div.cursos p {
   padding: var(--margin-10) 14px;
 }
 
+.card-content h3{
+  border-bottom: 1px solid #d7dee7;
+}
+
 .name {
   font-size: 18px;
   font-weight: 500;
@@ -561,12 +553,31 @@ div.cursos p {
 }
 
 .description {
-  font-size: 14px;
-  color: #707070;
+  color: #777a7e;
   text-align: center;
   font-family: var(--primary-font);
+  margin: 0;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0px;
 
 }
+
+.flex-item {
+  flex: 1;
+  margin: var(--margin-5);
+  padding: 10px;
+}
+
+.flex-item h4{
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+
 
 .button:hover {
   color: #242527;
@@ -708,7 +719,7 @@ section {
 }
 
 #lista .item .descricao {
-  color: #000;
+  color: var(--texto-preto);
 }
 
 .descricao {
@@ -739,7 +750,7 @@ section {
 }
 
 #btnExpandir:hover {
-  color: black;
+  color: var(--texto-preto);
   background-color: transparent;
   box-shadow: inset 0 0 0 2px var(--azul-principal);
 }
@@ -810,14 +821,14 @@ section {
   }
 }
 
-i {
+
+.teacherCurriculumLinks i {
   padding-right: 5px;
   border-radius: 2px;
 }
 
 .frasedeefeito {
   text-align: center;
-  color: #000;
   max-width: var(--container-width);
   margin: 0 auto;
   padding: var(--margin-20);
@@ -831,7 +842,7 @@ i {
 
 .inscreva a {
   text-decoration: none;
-  color: #000;
+  color: var(--texto-preto);
 
 }
 
@@ -873,7 +884,6 @@ video {
 }
 
 #ondeficaovideo .text-part h2 {
-  font-size: 24px;
   margin-bottom: var(--margin-20);
 }
 
@@ -917,7 +927,7 @@ video {
 footer {
   margin-top: 100px;
   background-color: var(--azul-principal);
-  color: #000;
+  color: var(--texto-preto);
   padding: 25px;
   text-align: center;
   border-top-right-radius: 50px;
