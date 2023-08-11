@@ -1,5 +1,6 @@
 /* Referencias
 https://codepen.io/a7rarpress/pen/MWPgaMq
+https://jsfiddle.net/4vm1sht5/3/
 */
 
 function mostrarDescricao(elemento) {
@@ -92,8 +93,6 @@ function scrollFunction() {
 }
 
 
-highlight();
-
 $(window).on("scroll", function(){
   highlight();
 });
@@ -110,8 +109,7 @@ function highlight(){
     console.log(pos);
     console.log(scroll);
   });
-}  
-
+}
 
 function openTab(evt, tabName) {
   var i, tabcontent, tablinks;
