@@ -128,8 +128,8 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementsByClassName("tablinks")[0].click();
 });
 
-fetch('/codigo/footer.html')
-.then(response => response.text())
-.then(content => {
-  document.getElementById('footerContainer').innerHTML = content;
+$(document).ready(function(){
+  // Carregando o footer.html no elemento com ID "meuFooter"
+  $("#meuFooter").load("https://cdn.jsdelivr.net/gh/famamericana/leading-page-cursos@main/codigo/footer.html");
 });
+
