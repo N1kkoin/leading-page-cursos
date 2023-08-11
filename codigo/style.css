@@ -915,6 +915,21 @@ video {
   }
 }
 
+.créditos{
+  color: #3a6092;
+  font-size: small;
+}
+
+.azulclarinho{
+  color: var(--azul-claro);
+}
+
+.footer-c{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -20px;
+}
 
 .footer-container {
   display: flex;
@@ -922,7 +937,6 @@ video {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  height: 100%;
 }
 
 footer {
@@ -976,7 +990,7 @@ footer {
   }
 
   footer {
-    height: 300px;
+    height: 320px;
     margin-right: 0;
   }
 
