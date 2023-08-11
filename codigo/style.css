@@ -82,10 +82,13 @@ body {
 
 h2{
   color: var(--texto-preto);
+  font-size: 30px;
 }
 
 h3{
-  color: var(--texto-preto)
+  color: var(--texto-preto);
+  font-size: 22px;
+
 }
 
 p{
@@ -282,6 +285,8 @@ p{
   color: #242527;
   border-bottom: 1px solid #45b7e5;
   border-radius: 5px 5px 0 0;
+  font-size: 30px;
+
 }
 
 .titulo3 {
@@ -294,6 +299,8 @@ p{
   border-bottom: 1px solid #45b7e5;
   border-radius: 5px 5px 0 0;
   color: white;
+  font-size: 30px;
+
 }
 
 .titulo2 {
@@ -305,6 +312,7 @@ p{
   margin-bottom: var(--margin-10);
   padding-top: var(--margin-20);
   color: #242527;
+  font-size: 30px;
 
 }
 
@@ -446,7 +454,6 @@ div.cursos p {
   cursor: pointer;
   padding: 14px 16px;
   transition: all 0.3s;
-  font-size: 16px;
   text-align: center;
   box-sizing: border-box;
   font-family: var(--primary-font);
@@ -455,7 +462,7 @@ div.cursos p {
   background-color: #45b7e5;
   color: white;
   margin-bottom: var(--margin-10);
-
+  font-size: 22px;
 }
 
 /* Altera a cor de fundo dos botões ao passar o mouse */
@@ -717,7 +724,6 @@ section {
 #lista .item:nth-child(even) {
   background-color: white;
   margin-left: 20px;
-
 }
 
 #lista .item .descricao {
@@ -731,7 +737,6 @@ section {
   border: 1px solid #f2f3f8;
   padding: var(--margin-10);
   border-radius: 5px;
-  font-size: 14px;
 }
 
 #btnExpandir {
@@ -762,12 +767,11 @@ section {
   cursor: pointer;
   transition: color 0.2s;
   margin-left: var(--margin-20);
-  font-size: 16px;
-
+  color: var(--azul-principal);
 }
 
 #lista h3:hover {
-  color: #45b7e5;
+  color: var(--azul-claro);
   /* Uma tonalidade mais escura de azul quando o título é passado com o mouse */
 }
 
