@@ -19,6 +19,8 @@ function mostrarDescricao(elemento) {
   descricao.style.display = 'block';
 }
 
+let posicaoAnterior = 0;  // Armazena a posição anterior da rolagem
+
 function expandirRecolher() {
   let lista = document.getElementById('lista');
   let btn = document.getElementById('btnExpandir');
@@ -32,11 +34,19 @@ function expandirRecolher() {
     for (let i = 0; i < todasDescricoes.length; i++) {
       todasDescricoes[i].style.display = 'none';
     }
+
+    // Move a rolagem de volta para a posição anterior
+    window.scrollTo(0, posicaoAnterior);
+
   } else {
+    // Armazena a posição atual da rolagem
+    posicaoAnterior = window.scrollY;
+
     lista.style.height = 'auto';
     btn.innerHTML = 'Recolher';
   }
 }
+
 
 
 
