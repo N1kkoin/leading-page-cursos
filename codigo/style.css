@@ -435,7 +435,7 @@ div.cursos p {
   margin: 0;
 }
 
-/* Estilo das abas */
+/* Abas Sobre a FAM e Sobre o curso*/
 .tab {
   display: flex;
   overflow: hidden;
@@ -495,7 +495,6 @@ div.cursos p {
   text-align: justify;
   color: #242527;
   position: relative;
-  /* Posicionamento relativo para o pseudo-elemento */
 }
 
 .scroll-container {
@@ -663,27 +662,21 @@ div.slide-container.swiper {
 
 .icon {
   width: 50px;
-  /* Largura do ícone */
   height: 50px;
-  /* Altura do ícone */
   margin-right: var(--margin-20);
-  /* Espaço à direita do ícone */
   padding: var(--margin-10);
 
 }
 
 .contentdogrid h3 {
   margin: 0;
-  /* Remover a margem do título */
   margin-bottom: var(--margin-10);
-  /* Adicionar uma margem abaixo do título */
 
 }
 
 .contentdogrid p {
   text-align: justify;
   margin: 0;
-  /* Remover a margem da descrição */
 }
 
 section {
@@ -700,7 +693,6 @@ section {
   margin-top: var(--margin-20);
   height: 200px;
   overflow: hidden;
-  /* Isso esconderá o conteúdo que excede a altura */
   display: grid;
   grid-template-columns: 1fr;
   background-color: #f2f3f8;
@@ -772,13 +764,11 @@ section {
 
 #lista h3:hover {
   color: var(--azul-claro);
-  /* Uma tonalidade mais escura de azul quando o título é passado com o mouse */
 }
 
 .botãocentro {
   display: flex;
   justify-content: center;
-  /* Alinha horizontalmente ao centro */
 }
 
 .azul {
@@ -938,7 +928,6 @@ video {
 
   #top-header {
     background-position: 50% 50%;
-    /* Ajuste esses valores para enquadrar a imagem como desejar */
 
   }
 
@@ -953,7 +942,6 @@ video {
 
   .grid-container {
     grid-template-columns: 1fr;
-    /* Apenas um bloco por linha */
   }
 
   .grid-item {
@@ -989,11 +977,9 @@ video {
 
 }
 
-/* Media Query para telas com largura até 768px (por exemplo, tablets e smartphones) */
 @media (max-width:900px) {
   #ondeficaovideo {
     flex-direction: column;
-    /* Organiza o vídeo e o texto verticalmente */
   }
 
   video {
@@ -1014,7 +1000,6 @@ video {
   #ondeficaovideo .video-part,
   #ondeficaovideo .text-part {
     flex: none;
-    /* Desativamos o flex-grow e flex-shrink aqui para que eles não tentem expandir ou encolher */
   }
 }
 
