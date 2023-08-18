@@ -38,7 +38,7 @@
     width: 150px;
     margin: var(--margin-20);
     padding-right: var(--margin-20);
-    border-right: 1px solid #45b7e5;
+    border-right: 1px solid var(--azul-claro);
   }
   
   .footer-info p {
@@ -48,7 +48,10 @@
   }
   
   .footer-info p i {
-    color: #45b7e5;
+    color: var(--azul-claro);
+    font-size: 12px;
+    margin-right: 4px;
+
   }
   
   .footer-info p svg {
@@ -66,7 +69,7 @@
   
     .footer-logo img {
       padding: 20px;
-      border-bottom: 1px solid #45b7e5;
+      border-bottom: 1px solid var(--azul-claro);
       border-right: 0;
       margin-left: 0; /* Ajusta a margem esquerda conforme necessário */
       padding-left: 0; /* Ajusta o padding esquerdo conforme necessário */
