@@ -53,7 +53,7 @@ body {
 }
 
 .header-subtitulo {
-  color: #45b7e5;
+  color: var(--azul-claro);
   font-weight: 400;
   text-transform: var(--caixatexto);
   font-size: medium;
@@ -283,7 +283,7 @@ p{
   padding-top: var(--margin-20);
   padding-bottom: var(--margin-10);
   color: #242527;
-  border-bottom: 1px solid #45b7e5;
+  border-bottom: 1px solid var(--azul-claro);
   border-radius: 5px 5px 0 0;
   font-size: 30px;
 
@@ -296,7 +296,7 @@ p{
   margin: 0 auto;
   padding-top: var(--margin-20);
   padding-bottom: var(--margin-10);
-  border-bottom: 1px solid #45b7e5;
+  border-bottom: 1px solid var(--azul-claro);
   border-radius: 5px 5px 0 0;
   color: white;
   font-size: 30px;
@@ -459,7 +459,7 @@ div.cursos p {
   font-family: var(--primary-font);
   font-size: larger;
   font-weight: 700;
-  background-color: #45b7e5;
+  background-color: var(--azul-claro);
   color: white;
   margin-bottom: var(--margin-10);
   font-size: 22px;
@@ -471,7 +471,7 @@ div.cursos p {
 }
 
 .tab button.active:hover {
-  color: #45b7e5;
+  color: var(--azul-claro);
 }
 
 /* Ativa a aba com cor de fundo diferente */
@@ -615,7 +615,7 @@ div.cursos p {
 }
 
 .swiper-pagination-bullet {
-  background-color: #45b7e5;
+  background-color: var(--azul-claro);
   opacity: 1;
 }
 
@@ -736,7 +736,7 @@ section {
   padding: var(--margin-10) 15px;
   cursor: pointer;
   border: none;
-  background-color: #45b7e5;
+  background-color: var(--azul-claro);
   color: #fff;
   border-radius: var(--border-5);
   text-align: center;
