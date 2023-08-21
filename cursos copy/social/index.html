@@ -39,7 +39,7 @@
           <div class="texto-baixo">MEC</div>
         </div>
         <div class="caixainfo">
-          <div class="texto-cima"><a class="piquininha">R$ </a>
+          <div class="texto-cima"><a class="piquininha"> </a>
             <div id="produtofinalcursos"></div>*
           </div>
           <div class="texto-baixo">Mensais</div>
@@ -288,15 +288,18 @@
           <p><span class="highlight">*VALORES PARA PAGAMENTO ATÉ O DIA 07 DE CADA MÊS.</span></p>
           <p>
 
-            Maecenas pretium elit ut orci tempor tristique. Aliquam laoreet lacus eu massa sollicitudin ornare. Nunc
-            consectetur urna sed vehicula pellentesque. Suspendisse suscipit turpis sit amet molestie sagittis. Proin
-            est est, eleifend vitae placerat in, egestas ac nibh. Nullam nec fringilla justo. Nunc maximus nisl
-            tincidunt felis consectetur, in tincidunt felis rutrum. Praesent pellentesque ullamcorper ipsum, ultrices
-            fermentum ante sagittis quis. Integer justo dolor, consequat a gravida vel, viverra eu dolor. Quisque at
-            sapien vel nibh placerat semper ac ut turpis. Integer pharetra justo elit, eu pellentesque erat auctor
-            vitae. In vehicula velit non orci imperdiet dapibus. Pellentesque mauris ipsum, egestas efficitur pharetra
-            vitae, finibus ac justo. Sed nec lectus ac neque ultrices posuere. Nullam quam ligula, molestie ut libero
-            id, tristique lobortis neque.
+            A Comunicação Social é a área da Ciência Social Aplicada que estuda os diversos meios de comunicação de
+            massa, sejam eles sociais, corporativos, em organizações privadas, públicas ou do terceiro setor. É um curso
+            concentrado na produção, distribuição e consumo de mídia, de maneira ampla, como: Audiovisual, Editoração,
+            Eventos, Jornalismo, Internet, Marketing, Publicidade e propaganda, Radialismo, TV, entre outros.
+            O Publicitário formado pela FAM sai da faculdade com um conhecimento maior em marketing e promove o
+            aprendizado focado em identidade corporativa, eventos, patrocínio e atividades de marketing e assessoria.
+            Além de estar habilitado para criar, planejar, realizar e divulgar campanhas publicitárias e desenvolvimento
+            de posicionamento de marca.
+            O curso é focado na prática, com projetos em grupo para empresas reais. É a graduação ideal para quem se
+            identifica com pesquisa, estratégias, criatividade e tem interesse no comportamento do consumidor frente às
+            marcas.
+
 
             Etiam feugiat per. Ut eget quam erat.</p>
         </div>
@@ -522,7 +525,7 @@
         var contentDiv = document.createElement('div');
         contentDiv.className = 'containercursos';
 
-        data.filter(row => row['Cursos'] === 'Administração').forEach(row => {
+        data.filter(row => row['Cursos'] === 'Comunicação Social').forEach(row => {
           var cardDiv = document.createElement('div');
           cardDiv.className = 'cursos';
 
@@ -558,12 +561,12 @@
           var cardDiv = document.createElement('div');
           cardDiv.className = 'teacherSection';
           cardDiv.innerHTML = `
-                      <img class="teacherImg" src="${row['Foto ADM']}" alt="${row['Nome']}">
-                      <h3>${row['Nome ADM']}</h3>
-                      <p>${row['Cargo ADM']}</p>
+                      <img class="teacherImg" src="${row['Foto social']}" alt="${row['Nome']}">
+                      <h3>${row['Nome social']}</h3>
+                      <p>${row['Cargo social']}</p>
                       <div class="teacherCurriculum">
-                          <a class="teacherCurriculumLinks" href="${row['Contato ADM']}" target="_blank"><i class="fa fa-envelope"></i></a>
-                          <a class="teacherCurriculumLinks" href="${row['Currículo ADM']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
+                          <a class="teacherCurriculumLinks" href="${row['Contato social']}" target="_blank"><i class="fa fa-envelope"></i></a>
+                          <a class="teacherCurriculumLinks" href="${row['Currículo social']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
                       </div>
                   `;
           cardDetails.appendChild(cardDiv);
