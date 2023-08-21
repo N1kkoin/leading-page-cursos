@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <link rel="icon" href="https://i.postimg.cc/8P2rwWhK/famlogo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ciência da Computação FAM</title>
+  <title>Publicidade e Propaganda</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="/codigo/cursos_style.css">
@@ -16,7 +16,7 @@
   <div id="sticky-header" class="header">
     <div class="header-container">
       <div class="title-container">
-        <h1 class="header-titulo">Ciência da Computação</h1>
+        <h1 class="header-titulo">Publicidade e Propaganda</h1>
         <h2 class="header-subtitulo">Bacharelado</h2>
       </div>
       <a href="https://vestibularfam.com.br" class="inscreva-btn">Inscreva-se</a>
@@ -98,18 +98,17 @@
 
             <div class="card swiper-slide">
               <div class="card-content">
-                <h3>Programador de Multimídia
+                <h3>Líder Administrativo
                 </h3>
                 <div class="flex-row">
                   <div class="flex-item">
                     <h4>Piso</h4>
-                    <p class="description">R$ 4.710,95</p>
+                    <p class="description">R$ 1.600,00</p>
                   </div>
 
                   <div class="flex-item">
                     <h4>Teto</h4>
-                    <p class="description">R$ 7.066,43
-                    </p>
+                    <p class="description">R$ 2.600,00</p>
                   </div>
                 </div>
 
@@ -121,17 +120,17 @@
 
             <div class="card swiper-slide">
               <div class="card-content">
-                <h3>Cientista da Computação
+                <h3>Gerente Administrativo
                 </h3>
                 <div class="flex-row">
                   <div class="flex-item">
                     <h4>Piso</h4>
-                    <p class="description">R$ 7.707,76</p>
+                    <p class="description">R$ 2.800,00</p>
                   </div>
 
                   <div class="flex-item">
                     <h4>Teto</h4>
-                    <p class="description">R$ 8.259,86</p>
+                    <p class="description">R$ 4.200,00</p>
                   </div>
                 </div>
 
@@ -289,13 +288,15 @@
           <p><span class="highlight">*VALORES PARA PAGAMENTO ATÉ O DIA 07 DE CADA MÊS.</span></p>
           <p>
 
-            A ciência da computação é um campo fascinante que abrange o estudo e desenvolvimento de algoritmos,
-            programas, sistemas de computador e suas aplicações. Este curso combina conhecimentos de matemática, lógica
-            e programação, preparando os alunos para enfrentar os desafios do mundo digital em constante mudança.
-            Ao longo do curso de ciência da computação, os alunos aprendem a projetar e implementar soluções para
-            problemas complexos usando diversas linguagens de programação e tecnologias. Além disso, eles exploram
-            tópicos como inteligência artificial, aprendizado de máquina, segurança da informação, redes de computadores
-            e engenharia de software.
+            Maecenas pretium elit ut orci tempor tristique. Aliquam laoreet lacus eu massa sollicitudin ornare. Nunc
+            consectetur urna sed vehicula pellentesque. Suspendisse suscipit turpis sit amet molestie sagittis. Proin
+            est est, eleifend vitae placerat in, egestas ac nibh. Nullam nec fringilla justo. Nunc maximus nisl
+            tincidunt felis consectetur, in tincidunt felis rutrum. Praesent pellentesque ullamcorper ipsum, ultrices
+            fermentum ante sagittis quis. Integer justo dolor, consequat a gravida vel, viverra eu dolor. Quisque at
+            sapien vel nibh placerat semper ac ut turpis. Integer pharetra justo elit, eu pellentesque erat auctor
+            vitae. In vehicula velit non orci imperdiet dapibus. Pellentesque mauris ipsum, egestas efficitur pharetra
+            vitae, finibus ac justo. Sed nec lectus ac neque ultrices posuere. Nullam quam ligula, molestie ut libero
+            id, tristique lobortis neque.
 
             Etiam feugiat per. Ut eget quam erat.</p>
         </div>
@@ -521,7 +522,7 @@
         var contentDiv = document.createElement('div');
         contentDiv.className = 'containercursos';
 
-        data.filter(row => row['Cursos'] === 'Ciência da Computação').forEach(row => {
+        data.filter(row => row['Cursos'] === 'Administração').forEach(row => {
           var cardDiv = document.createElement('div');
           cardDiv.className = 'cursos';
 
@@ -557,12 +558,12 @@
           var cardDiv = document.createElement('div');
           cardDiv.className = 'teacherSection';
           cardDiv.innerHTML = `
-                      <img class="teacherImg" src="${row['Foto COMPU']}" alt="${row['Nome']}">
-                      <h3>${row['Nome COMPU']}</h3>
-                      <p>${row['Cargo COMPU']}</p>
+                      <img class="teacherImg" src="${row['Foto ADM']}" alt="${row['Nome']}">
+                      <h3>${row['Nome ADM']}</h3>
+                      <p>${row['Cargo ADM']}</p>
                       <div class="teacherCurriculum">
-                          <a class="teacherCurriculumLinks" href="${row['Contato COMPU']}" target="_blank"><i class="fa fa-envelope"></i></a>
-                          <a class="teacherCurriculumLinks" href="${row['Currículo COMPU']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
+                          <a class="teacherCurriculumLinks" href="${row['Contato ADM']}" target="_blank"><i class="fa fa-envelope"></i></a>
+                          <a class="teacherCurriculumLinks" href="${row['Currículo ADM']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
                       </div>
                   `;
           cardDetails.appendChild(cardDiv);
