@@ -142,6 +142,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 $(document).ready(function(){
   // Carregando o footer.html no elemento com ID "meuFooter"
-  $("#meuFooter").load("codigo/footer.html");
+  $("#meuFooter").load("/codigo/footer.html");
 });
 
