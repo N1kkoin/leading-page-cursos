@@ -2,10 +2,12 @@
 .créditos{
     color: #3a6092;
     font-size: small;
+    margin-top: 10px;
+
   }
   
   .azulclarinho{
-    color: var(--azul-claro);
+    color: #45b7e5;
   }
   
   .footer-c{
@@ -17,7 +19,7 @@
   
   .footer-container {
     display: flex;
-    max-width: var(--container-width);
+    max-width: 960px;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
@@ -25,30 +27,30 @@
   
   footer {
     margin-top: 100px;
-    background-color: var(--azul-principal);
-    color: var(--texto-preto);
+    background-color: #1b3556;
+    color: #242527;
     padding: 25px;
     text-align: center;
     border-top-right-radius: 50px;
-    height: 160px;
-    margin-right: var(--margin-20);
+    height: fit-content;
+    margin-right: 20px;
   }
   
   .footer-logo img {
-    width: 150px;
-    margin: var(--margin-20);
-    padding-right: var(--margin-20);
-    border-right: 1px solid var(--azul-claro);
+    width: 180px;
+    margin: 20px;
+    padding-right: 20px;
+    border-right: 1px solid #45b7e5;
   }
   
   .footer-info p {
-    margin: 0 0 var(--margin-10) 0;
+    margin: 0 0 10px 0;
     text-align: left;
     color: white;
   }
   
   .footer-info p i {
-    color: var(--azul-claro);
+    color: #45b7e5;
     font-size: 12px;
     margin-right: 4px;
 
@@ -69,7 +71,7 @@
   
     .footer-logo img {
       padding: 20px;
-      border-bottom: 1px solid var(--azul-claro);
+      border-bottom: 1px solid #45b7e5;
       border-right: 0;
       margin-left: 0; /* Ajusta a margem esquerda conforme necessário */
       padding-left: 0; /* Ajusta o padding esquerdo conforme necessário */
@@ -77,7 +79,7 @@
     }
   
     footer {
-      height: 340px;
+      height: fit-content;
       margin-right: 0;
     }
   
