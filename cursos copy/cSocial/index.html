@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <link rel="icon" href="https://i.postimg.cc/8P2rwWhK/famlogo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biomedicina FAM</title>
+  <title>Publicidade e Propaganda</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="/codigo/cursos_style.css">
@@ -16,7 +16,7 @@
   <div id="sticky-header" class="header">
     <div class="header-container">
       <div class="title-container">
-        <h1 class="header-titulo">Biomedicina</h1>
+        <h1 class="header-titulo">Publicidade e Propaganda</h1>
         <h2 class="header-subtitulo">Bacharelado</h2>
       </div>
       <a href="https://vestibularfam.com.br" class="inscreva-btn">Inscreva-se</a>
@@ -39,7 +39,7 @@
           <div class="texto-baixo">MEC</div>
         </div>
         <div class="caixainfo">
-          <div class="texto-cima"><a class="piquininha">R$ </a>
+          <div class="texto-cima"><a class="piquininha"> </a>
             <div id="produtofinalcursos"></div>*
           </div>
           <div class="texto-baixo">Mensais</div>
@@ -288,21 +288,17 @@
           <p><span class="highlight">*VALORES PARA PAGAMENTO ATÉ O DIA 07 DE CADA MÊS.</span></p>
           <p>
 
-            A Biomedicina é uma carreira situada entre a Biologia e a Medicina. Com foco em pesquisa, identificação e
-            classificação de microrganismos causadores de enfermidades, no desenvolvimento e evolução de remédios e
-            vacinas.
-            O bacharel em Biomedicina é o responsável por estudar patologias que podem afetar a saúde humana, de animais
-            e de plantas com o objetivo de buscar a cura. É uma profissão fundamental para a compreensão das doenças,
-            bem como para a prevenção, o diagnóstico, o tratamento e a cura, com uma rotina formada por pesquisa, estudo
-            e análise. O profissional se dedica à atualização frequente para encontrar os melhores tratamentos,
-            procedimentos e soluções.
-            O Biomédico formado pela FAM poderá trabalhar em hospitais, laboratórios e órgãos públicos de saúde, fazendo
-            pesquisas e testes, por isso, o curso foi desenvolvido com aulas presenciais, seguidas das práticas
-            laboratoriais, estágio profissionalizante e atividades vivenciadas fora da sala de aula. Deste modo, o aluno
-            da FAM encontra várias opções para entrar no mercado de trabalho.
-            O biomédico é um profissional com grande impacto e importância na área da saúde, podendo atuar em empresas
-            privadas, laboratórios, hospitais e também órgãos públicos de saúde e vigilâncias sanitárias, monitorando
-            indústrias, empresas e produtos de consumo, evitando riscos à população.
+            A Comunicação Social é a área da Ciência Social Aplicada que estuda os diversos meios de comunicação de
+            massa, sejam eles sociais, corporativos, em organizações privadas, públicas ou do terceiro setor. É um curso
+            concentrado na produção, distribuição e consumo de mídia, de maneira ampla, como: Audiovisual, Editoração,
+            Eventos, Jornalismo, Internet, Marketing, Publicidade e propaganda, Radialismo, TV, entre outros.
+            O Publicitário formado pela FAM sai da faculdade com um conhecimento maior em marketing e promove o
+            aprendizado focado em identidade corporativa, eventos, patrocínio e atividades de marketing e assessoria.
+            Além de estar habilitado para criar, planejar, realizar e divulgar campanhas publicitárias e desenvolvimento
+            de posicionamento de marca.
+            O curso é focado na prática, com projetos em grupo para empresas reais. É a graduação ideal para quem se
+            identifica com pesquisa, estratégias, criatividade e tem interesse no comportamento do consumidor frente às
+            marcas.
 
 
             Etiam feugiat per. Ut eget quam erat.</p>
@@ -496,7 +492,7 @@
       </div>
       <div class="button-containercalendario">
         <a class="responsive-button três">Acompanhe no <i class="fa-brands fa-whatsapp"></i> as vagas que postamos de
-          Biomedicina!</a>
+          Administração!</a>
       </div>
     </section>
 
@@ -529,7 +525,7 @@
         var contentDiv = document.createElement('div');
         contentDiv.className = 'containercursos';
 
-        data.filter(row => row['Cursos'] === 'Biomedicina').forEach(row => {
+        data.filter(row => row['Cursos'] === 'Comunicação Social').forEach(row => {
           var cardDiv = document.createElement('div');
           cardDiv.className = 'cursos';
 
@@ -565,12 +561,12 @@
           var cardDiv = document.createElement('div');
           cardDiv.className = 'teacherSection';
           cardDiv.innerHTML = `
-                      <img class="teacherImg" src="${row['Foto BIO']}" alt="${row['Nome']}">
-                      <h3>${row['Nome BIO']}</h3>
-                      <p>${row['Cargo BIO']}</p>
+                      <img class="teacherImg" src="${row['Foto social']}" alt="${row['Nome']}">
+                      <h3>${row['Nome social']}</h3>
+                      <p>${row['Cargo social']}</p>
                       <div class="teacherCurriculum">
-                          <a class="teacherCurriculumLinks" href="${row['Contato BIO']}" target="_blank"><i class="fa fa-envelope"></i></a>
-                          <a class="teacherCurriculumLinks" href="${row['Currículo BIO']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
+                          <a class="teacherCurriculumLinks" href="${row['Contato social']}" target="_blank"><i class="fa fa-envelope"></i></a>
+                          <a class="teacherCurriculumLinks" href="${row['Currículo social']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
                       </div>
                   `;
           cardDetails.appendChild(cardDiv);
