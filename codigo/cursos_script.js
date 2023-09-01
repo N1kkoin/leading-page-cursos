@@ -140,8 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementsByClassName("tablinks")[0].click();
 });
 
-$(document).ready(function(){
-  // Carregando o footer.html no elemento com ID "meuFooter"
-  $("#meuFooter").load("/codigo/footer.html");
+$(document).ready(function () {
+  $("#meuFooter").load("/codigos-gerais/footer/footer.html");
 });
 
