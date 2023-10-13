@@ -397,14 +397,17 @@ p {
 .caixaead{
   border: 1px solid var(--azul-claro);
   border-radius: 0 0 5px 5px ;
+  max-width: 960px;
+  margin: 0 auto;
+  box-sizing: border-box;
   margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .menosmargin {
   margin-top: 10px;
   margin-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
 .texto-ead {
