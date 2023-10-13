@@ -31,8 +31,8 @@
           <div class="texto-baixo">Semestres</div>
         </div>
         <div class="caixainfo">
-          <div class="texto-cima">Noturno  <span class="rosaead">|</span> Online</div>
-          <div class="texto-baixo">Presencial <span class="rosaead">|</span> EAD</div>
+          <div class="texto-cima">Noturno</div>
+          <div class="texto-baixo">Presencial</div>
         </div>
         <div class="caixainfo">
           <div class="texto-cima"><span class="amarelomec"> ★ ★ ★ ★</span></div>
@@ -40,13 +40,33 @@
         </div>
         <div class="caixainfo">
           <div class="texto-cima"><a class="piquininha">R$ </a>
-            <div id="produtofinalcursos"></div>* <span class="rosaead1">|</span>
-            <a class="piquininha">R$ </a> 280,00*
+            <div id="produtofinalcursos"></div>* 
           </div>
           <div class="texto-baixo">Mensais</div>
         </div>
-        <div class="containerinfo">
+    </section>
+    <section>
+      <div class="texto-ead">Também temos Administração EAD!</div>
 
+      <div class="containerinfo menosmargin">
+        <div class="caixainfo">
+          <div class="texto-cima">8</div>
+          <div class="texto-baixo">Semestres</div>
+        </div>
+        <div class="caixainfo">
+          <div class="texto-cima">Online</div>
+          <div class="texto-baixo">EAD</div>
+        </div>
+        <div class="caixainfo">
+          <div class="texto-cima"><span class="amarelomec"> ★ ★ ★ ★</span></div>
+          <div class="texto-baixo">MEC Reconhecido</div>
+        </div>
+        <div class="caixainfo">
+          <div class="texto-cima"><a class="piquininha">R$ </a>
+            <div id="produtofinalead"></div>* 
+          </div>
+          <div class="texto-baixo">Mensais</div>
+        </div>
     </section>
 
     <section>
@@ -477,7 +497,8 @@
       <div class="button-containercalendario">
         <a target="_blank" href="https://conteudo.fam.br/calendario-academico" class="responsive-button um">Calendário
           Acadêmico</a>
-        <a target="_blank" href="https://conteudo.fam.br/calendario-de-eventos" class="responsive-button dois">Calendário de Eventos</a>
+        <a target="_blank" href="https://conteudo.fam.br/calendario-de-eventos"
+          class="responsive-button dois">Calendário de Eventos</a>
       </div>
       <div class="button-containercalendario">
         <a class="responsive-button três">Acompanhe no <i class="fa-brands fa-whatsapp"></i> as vagas que postamos de
@@ -507,28 +528,42 @@
     const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vREDH7BTr9H2Um4BgNp45XYW1ybvS1qBIWACK2eElc7pmra17fwwcVBp3Um-GD6_wOF_N_FquXS1Rx9/pub?output=csv';
 
     Papa.parse(url, {
-      download: true,
-      header: true,
-      complete: function (results) {
-        var data = results.data;
-        var contentDiv = document.createElement('div');
-        contentDiv.className = 'containercursos';
+  download: true,
+  header: true,
+  complete: function (results) {
+    var data = results.data;
 
-        data.filter(row => row['Cursos'] === 'Administração').forEach(row => {
-          var cardDiv = document.createElement('div');
-          cardDiv.className = 'cursos';
+    // Para "Administração"
+    var contentDivAdmin = document.createElement('div');
+    contentDivAdmin.className = 'containercursos';
 
-          // Agora, apenas pegamos o valor associado ao curso
-          cardDiv.innerHTML = `<p>${row['Valor']}</p>`;
+    data.filter(row => row['Cursos'] === 'Administração').forEach(row => {
+      var cardDiv = document.createElement('div');
+      cardDiv.className = 'cursos';
 
-          contentDiv.appendChild(cardDiv);
-        });
-
-
-        var meuLocal = document.getElementById('produtofinalcursos');
-        meuLocal.appendChild(contentDiv);
-      }
+      cardDiv.innerHTML = `<p>${row['Valor']}</p>`;
+      contentDivAdmin.appendChild(cardDiv);
     });
+
+    var meuLocalAdmin = document.getElementById('produtofinalcursos');
+    meuLocalAdmin.appendChild(contentDivAdmin);
+
+    // Para "Engenharia"
+    var contentDivEng = document.createElement('div');
+    contentDivEng.className = 'containerengenharia';
+
+    data.filter(row => row['Cursos'] === 'Administração EAD').forEach(row => {
+      var cardDiv = document.createElement('div');
+      cardDiv.className = 'cursos';
+
+      cardDiv.innerHTML = `<p>${row['Valor']}</p>`;
+      contentDivEng.appendChild(cardDiv);
+    });
+
+    var meuLocalEng = document.getElementById('produtofinalead');
+    meuLocalEng.appendChild(contentDivEng);
+  }
+});
   </script>
   <script>
     const url3 = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQFQpAPuz3qeeeaVPGRhbC76PJCmu__UDYg99qUuZMnYw6PrdOkZ3jtLCOf9SlcMh3ft7liKV5b0tk4/pub?output=csv';

@@ -393,6 +393,28 @@ p{
   border-radius: 5px;
 }
 
+.menosmargin{
+  margin-top: 20px;
+}
+
+.texto-ead{
+  border-radius: 5px;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  color: white;
+  background-color: var(--azul-claro);
+  border-radius: 5px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: larger;
+  max-width: 960px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
 
 .texto-cima,
 .texto-baixo {
