@@ -80,20 +80,21 @@ body {
 
 }
 
-h2{
+h2 {
   color: var(--texto-preto);
   font-size: 30px;
 }
 
-h3{
+h3 {
   color: var(--texto-preto);
   font-size: 22px;
 
 }
 
-p{
+p {
   color: var(--texto-preto);
 }
+
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -393,6 +394,38 @@ p{
   border-radius: 5px;
 }
 
+.caixaead{
+  border: 1px solid var(--azul-claro);
+  border-radius: 0 0 5px 5px ;
+  max-width: 960px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.menosmargin {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.texto-ead {
+  border-radius: 5px 5px 0 0;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  color: white;
+  background-color: var(--azul-claro);
+  font-weight: 500;
+  font-size: larger;
+  max-width: 960px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
 
 .texto-cima,
 .texto-baixo {
@@ -547,7 +580,7 @@ div.cursos p {
   padding: var(--margin-10) 14px;
 }
 
-.card-content h3{
+.card-content h3 {
   border-bottom: 1px solid #d7dee7;
 }
 
@@ -579,7 +612,7 @@ div.cursos p {
   padding: 10px;
 }
 
-.flex-item h4{
+.flex-item h4 {
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -654,7 +687,7 @@ div.slide-container.swiper {
 }
 
 .grid-item {
-  display: flex;
+  display: block;
   align-items: flex-start;
   padding: var(--margin-10);
   margin: 0 auto;
@@ -871,7 +904,7 @@ section {
   padding-right: var(--margin-10);
 }
 
-.video-part iframe{
+.video-part iframe {
   width: 100%;
   height: 100%;
   border-radius: 5px 0 0 5px;
@@ -945,6 +978,7 @@ section {
   .grid-item {
     width: 90%;
   }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -955,6 +989,9 @@ section {
 
   .containerinfo>* {
     flex-basis: calc(50% - var(--margin-5));
+    flex-grow: 1;
+    /* Isso permitirá que o item cresça para preencher a largura disponível se ele estiver sozinho em uma linha */
+
   }
 
   .slide-content {
@@ -999,3 +1036,19 @@ section {
   }
 }
 
+.rosaead1 {
+  margin-right: 5px;
+  margin-left: 3px;
+  color: #e53888;
+}
+
+.rosaead {
+  color: #e53888;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+
+.amarelomec {
+  color: #f9e20f;
+}
