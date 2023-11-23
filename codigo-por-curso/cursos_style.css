@@ -875,46 +875,6 @@ section {
 
 }
 
-#ondeficaovideo {
-  box-sizing: border-box;
-  max-width: var(--container-width);
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  padding: var(--margin-20);
-  border-radius: 10px;
-  background-color: white;
-}
-
-#ondeficaovideo .video-part,
-#ondeficaovideo .text-part {
-  flex: 1;
-}
-
-.text-part {
-
-  padding: var(--margin-20);
-  padding-top: 0;
-  border-radius: 0 5px 5px 0;
-  text-align: justify;
-  background-color: #f2f3f8;
-}
-
-.video-part {
-  padding-right: var(--margin-10);
-}
-
-.video-part iframe {
-  width: 100%;
-  height: 100%;
-  border-radius: 5px 0 0 5px;
-}
-
-#ondeficaovideo .text-part h2 {
-  margin-bottom: var(--margin-20);
-}
-
-
 .highlight {
   width: max-content;
   background-size: 200% auto;
@@ -1012,29 +972,7 @@ section {
 
 }
 
-@media (max-width:900px) {
-  #ondeficaovideo {
-    flex-direction: column;
-  }
 
-  .video-part video {
-    border-radius: 5px 5px 0 0;
-  }
-
-  .text-part {
-    border-radius: 0 0 5px 5px;
-  }
-
-  .video-part {
-    padding-bottom: var(--margin-10);
-    padding-right: 0;
-  }
-
-  #ondeficaovideo .video-part,
-  #ondeficaovideo .text-part {
-    flex: none;
-  }
-}
 
 .rosaead1 {
   margin-right: 5px;
@@ -1051,4 +989,26 @@ section {
 
 .amarelomec {
   color: #f9e20f;
+}
+
+#ondeficaovideo {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: var(--container-width);
+}
+
+.video-part {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.video-part iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
