@@ -182,3 +182,19 @@ document.addEventListener('DOMContentLoaded', ajustarLogo);
 // Continua a executar ao redimensionar a página
 window.onresize = ajustarLogo;
 
+
+//BOTÃO SETA ---------------------------------------------------------------------------------
+
+document.querySelectorAll('.containerseta').forEach(item => {
+  item.addEventListener('click', () => {
+    const section = document.querySelector('#target-section');
+    if (section) {
+      const offsetTop = section.offsetTop;
+      const offsetToScroll = offsetTop - 100; // Ajuste 100px para o valor desejado
+      window.scrollTo({
+        top: offsetToScroll,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
