@@ -1025,6 +1025,16 @@ header {
   font-size: larger;
 }
 
+.subtitulo1{
+  padding: 5px 10px;
+  border-radius: 5px;
+  max-width: 450px;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+  font-size: larger;
+}
+
 .inscrevase {
   background-color: #f9e20f;
   border: none;
@@ -1149,6 +1159,9 @@ header {
   color: white;
 }
 
+.ladomeio{
+  display: none;
+}
 
 @media (max-width: 960px) {
 
@@ -1173,8 +1186,20 @@ header {
     justify-content: flex-start;
   }
 
+  .ladomeio{
+    display: flex;
+    width: 100%;
+    height: 5%;
+    justify-content: center;
+    align-items: center;
+  }
+  
   .grid-container {
     grid-template-columns: 1fr;
+  }
+
+  .subtitulo{
+    display: none;
   }
 
 }
