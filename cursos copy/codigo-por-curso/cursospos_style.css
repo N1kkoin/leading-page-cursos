@@ -3,7 +3,7 @@
 
 :root {
   /* Cores */
-  --azul-principal: #5d378d;
+  --roxo: #5d378d;
   --azul-claro: #e53888;
   --amarelo: #f9e20f;
   --neutral-light: #f2f3f8;
@@ -70,7 +70,7 @@ body {
 }
 
 #sticky-header {
-  background: var(--azul-principal);
+  background: var(--roxo);
   height: 100px;
   width: 100%;
   position: relative;
@@ -174,7 +174,7 @@ p {
   padding: 0 auto;
   width: auto;
   z-index: 2;
-  background: linear-gradient(to bottom, white 50%, var(--azul-principal) 50%);
+  background: linear-gradient(to bottom, white 50%, var(--roxo) 50%);
 }
 
 .box-inverso {
@@ -183,7 +183,7 @@ p {
   padding: 0 auto;
   width: auto;
   z-index: 2;
-  background: linear-gradient(to bottom, var(--azul-principal) 50%, white 50%);
+  background: linear-gradient(to bottom, var(--roxo) 50%, white 50%);
 }
 
 .slideContainer {
@@ -231,7 +231,7 @@ p {
 }
 
 .teacherSection h3 {
-  color: var(--azul-principal);
+  color: var(--roxo);
 }
 
 .teacherSection h3,
@@ -268,7 +268,7 @@ p {
 }
 
 .teacherCurriculumLinks:hover {
-  color: var(--azul-principal);
+  color: var(--roxo);
 }
 
 .teacherCurriculum i {
@@ -347,7 +347,7 @@ p {
 }
 
 .dois {
-  background-color: var(--azul-principal);
+  background-color: #1b3556;
   color: white;
 }
 
@@ -366,7 +366,7 @@ p {
 .dois:hover {
   color: #242527;
   background-color: white;
-  box-shadow: inset 0 0 0 2px var(--azul-principal);
+  box-shadow: inset 0 0 0 2px #1b3556;
 }
 
 .responsive-button {
@@ -504,7 +504,7 @@ div.cursos p {
 
 /* Altera a cor de fundo dos botões ao passar o mouse */
 .tab button:hover {
-  background-color: var(--azul-principal);
+  background-color: var(--roxo);
 }
 
 .tab button.active:hover {
@@ -657,7 +657,7 @@ div.cursos p {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: var(--azul-principal);
+  background-color: var(--roxo);
 }
 
 div.slide-container.swiper {
@@ -788,7 +788,7 @@ section {
 #btnExpandir:hover {
   color: var(--texto-preto);
   background-color: transparent;
-  box-shadow: inset 0 0 0 2px var(--azul-principal);
+  box-shadow: inset 0 0 0 2px var(--roxo);
 }
 
 #lista h3 {
@@ -796,7 +796,7 @@ section {
   cursor: pointer;
   transition: color 0.2s;
   margin-left: var(--margin-20);
-  color: var(--azul-principal);
+  color: var(--roxo);
 }
 
 #lista h3:hover {
@@ -809,7 +809,7 @@ section {
 }
 
 .azul {
-  background-color: var(--azul-principal);
+  background-color: var(--roxo);
 }
 
 .espaçobranco {
@@ -819,7 +819,7 @@ section {
 
 .espaçoazul {
   height: 80px;
-  background-color: var(--azul-principal);
+  background-color: var(--roxo);
 }
 
 @media (min-width: 701px) {
