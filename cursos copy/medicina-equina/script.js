@@ -9,7 +9,7 @@ Papa.parse(url, {
     var contentDivAdmin = document.createElement('div');
     contentDivAdmin.className = 'containercursos';
 
-    data.filter(row => row['Cursos'] === 'Pós Equino').forEach(row => {
+    data.filter(row => row['Cursos'] === 'Pós Equina').forEach(row => {
       var cardDiv = document.createElement('div');
       cardDiv.className = 'cursos';
 
@@ -32,7 +32,7 @@ Papa.parse(url3, {
     var cardHolder = document.querySelector('.cardHolder');
 
     data.forEach(row => {
-      if (row['Nome PosMarketing'] && row['Foto PosMarketing'] && row['Cargo PosMarketing']) {
+      if (row['Nome Equina'] && row['Foto Equina'] && row['Cargo Equina']) {
         var cardBox = document.createElement('div');
         cardBox.className = 'cardBox swiper-slide';
 
@@ -42,12 +42,12 @@ Papa.parse(url3, {
         var cardDiv = document.createElement('div');
         cardDiv.className = 'teacherSection';
         cardDiv.innerHTML = `
-                  <img class="teacherImg" src="${row['Foto PosMarketing']}" alt="${row['Nome']}">
-                  <h3>${row['Nome PosMarketing']}</h3>
-                  <p>${row['Cargo PosMarketing']}</p>
+                  <img class="teacherImg" src="${row['Foto Equina']}" alt="${row['Nome Equina']}">
+                  <h3>${row['Nome Equina']}</h3>
+                  <p>${row['Cargo Equina']}</p>
                   <div class="teacherCurriculum">
-                      <a class="teacherCurriculumLinks" href="${row['Contato PosMarketing']}" target="_blank"><i class="fa fa-envelope"></i></a>
-                      <a class="teacherCurriculumLinks" href="${row['Currículo PosMarketing']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
+                      <a class="teacherCurriculumLinks" href="${row['Contato Equina']}" target="_blank"><i class="fa fa-envelope"></i></a>
+                      <a class="teacherCurriculumLinks" href="${row['Currículo Equina']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
                   </div>
               `;
         cardDetails.appendChild(cardDiv);
