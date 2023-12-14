@@ -32,7 +32,7 @@ Papa.parse(url3, {
     var cardHolder = document.querySelector('.cardHolder');
 
     data.forEach(row => {
-      if (row['Nome Equina'] && row['Foto Equina'] && row['Cargo Equina']) {
+      if (row['Nome PosNeuro'] && row['Foto PosNeuro'] && row['Cargo PosNeuro']) {
         var cardBox = document.createElement('div');
         cardBox.className = 'cardBox swiper-slide';
 
@@ -42,12 +42,12 @@ Papa.parse(url3, {
         var cardDiv = document.createElement('div');
         cardDiv.className = 'teacherSection';
         cardDiv.innerHTML = `
-                  <img class="teacherImg" src="${row['Foto Equina']}" alt="${row['Nome Equina']}">
-                  <h3>${row['Nome Equina']}</h3>
-                  <p>${row['Cargo Equina']}</p>
+                  <img class="teacherImg" src="${row['Foto PosNeuro']}" alt="${row['Nome PosNeuro']}">
+                  <h3>${row['Nome PosNeuro']}</h3>
+                  <p>${row['Cargo PosNeuro']}</p>
                   <div class="teacherCurriculum">
-                      <a class="teacherCurriculumLinks" href="${row['Contato Equina']}" target="_blank"><i class="fa fa-envelope"></i></a>
-                      <a class="teacherCurriculumLinks" href="${row['Currículo Equina']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
+                      <a class="teacherCurriculumLinks" href="${row['Contato PosNeuro']}" target="_blank"><i class="fa fa-envelope"></i></a>
+                      <a class="teacherCurriculumLinks" href="${row['Currículo PosNeuro']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
                   </div>
               `;
         cardDetails.appendChild(cardDiv);
