@@ -141,9 +141,16 @@ p {
 
 .teacherImg {
   width: 100%;
-  height: 200px;
+  height: 250px;
+  width: 250px;
+}
+
+.teacherSection img {
+  margin-bottom: var(--margin-20);
+
+  border-radius: 5px;
   object-fit: cover;
-  width: 200px;
+  /*object-position: top; */
 }
 
 .teacherSection {
@@ -169,15 +176,6 @@ p {
   font-family: var(--primary-font);
 }
 
-.teacherSection img {
-  margin-bottom: var(--margin-20);
-  height: 260px;
-  border-radius: 5px;
-  object-fit: cover;
-  object-position: top;
-  width: 100%;
-
-}
 
 .teacherCurriculum {
   padding: var(--margin-20) 0 5px;
