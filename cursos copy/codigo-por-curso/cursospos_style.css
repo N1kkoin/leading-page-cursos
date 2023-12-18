@@ -1177,7 +1177,7 @@ header {
     height: 100%;
     align-items: last baseline;
     padding-bottom: 20px;
-    flex: 1;
+    flex: 0.78;
   }
 
   .ladodireito img {
