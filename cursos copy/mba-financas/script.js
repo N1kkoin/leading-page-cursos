@@ -9,7 +9,7 @@ Papa.parse(url, {
     var contentDivAdmin = document.createElement('div');
     contentDivAdmin.className = 'containercursos';
 
-    data.filter(row => row['Cursos'] === 'Pós PsicoEscolar').forEach(row => {
+    data.filter(row => row['Cursos'] === 'Pós MBAFinanças').forEach(row => {
       var cardDiv = document.createElement('div');
       cardDiv.className = 'cursos';
 
@@ -32,7 +32,7 @@ Papa.parse(url3, {
     var cardHolder = document.querySelector('.cardHolder');
 
     data.forEach(row => {
-      if (row['Nome PsicoEscolar'] && row['Foto PsicoEscolar'] && row['Cargo PsicoEscolar']) {
+      if (row['Nome MBAFinanças'] && row['Foto MBAFinanças'] && row['Cargo MBAFinanças']) {
         var cardBox = document.createElement('div');
         cardBox.className = 'cardBox swiper-slide';
 
@@ -42,12 +42,12 @@ Papa.parse(url3, {
         var cardDiv = document.createElement('div');
         cardDiv.className = 'teacherSection';
         cardDiv.innerHTML = `
-                  <img class="teacherImg" src="${row['Foto PsicoEscolar']}" alt="${row['Nome PsicoEscolar']}">
-                  <h3>${row['Nome PsicoEscolar']}</h3>
-                  <p>${row['Cargo PsicoEscolar']}</p>
+                  <img class="teacherImg" src="${row['Foto MBAFinanças']}" alt="${row['Nome MBAFinanças']}">
+                  <h3>${row['Nome MBAFinanças']}</h3>
+                  <p>${row['Cargo MBAFinanças']}</p>
                   <div class="teacherCurriculum">
-                      <a class="teacherCurriculumLinks" href="${row['Contato PsicoEscolar']}" target="_blank"><i class="fa fa-envelope"></i></a>
-                      <a class="teacherCurriculumLinks" href="${row['Currículo PsicoEscolar']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
+                      <a class="teacherCurriculumLinks" href="${row['Contato MBAFinanças']}" target="_blank"><i class="fa fa-envelope"></i></a>
+                      <a class="teacherCurriculumLinks" href="${row['Currículo MBAFinanças']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
                   </div>
               `;
         cardDetails.appendChild(cardDiv);
