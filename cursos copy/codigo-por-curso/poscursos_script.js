@@ -29,6 +29,8 @@ function expandirRecolher() {
     lista.style.height = '400px';
     btn.innerHTML = 'Veja mais';
     btn.classList.remove('btn-fixo');
+    listaExpandida = false; // Lista agora está expandida
+
 
     // Esconde todas as descrições ao recolher
     let todasDescricoes = document.querySelectorAll('.descricao');
@@ -46,26 +48,29 @@ function expandirRecolher() {
     lista.style.height = 'auto';
     btn.innerHTML = 'Recolher';
     btn.classList.add('btn-fixo');
+    listaExpandida = true; // Lista agora está expandida
+
   }
 }
-
 
 window.addEventListener('scroll', function() {
   let espacoBranco = document.querySelector('.espaçobranco');
   let btn = document.getElementById('btnExpandir');
 
-  // Obter a posição do elemento espacoBranco
+  // Verifica a posição do elemento e se a lista está expandida
   let espacoBrancoPosicao = espacoBranco.getBoundingClientRect();
 
-  // Verifica se a parte superior do espacoBranco está abaixo da parte inferior da viewport
-  if (espacoBrancoPosicao.top >= window.innerHeight) {
-    // Adiciona a classe btn-fixo se ela não existir
-    btn.classList.add('btn-fixo');
+  if (listaExpandida) {
+    if (espacoBrancoPosicao.top < window.innerHeight) {
+      btn.classList.remove('btn-fixo');
+    } else {
+      btn.classList.add('btn-fixo');
+    }
   } else {
-    // Remove a classe btn-fixo se ela existir
     btn.classList.remove('btn-fixo');
   }
 });
+
 
 
 var swiper = new Swiper(".slide-content", {
@@ -297,3 +302,5 @@ document.addEventListener("DOMContentLoaded", function() {
     items[items.length - 1].classList.add('item-last-alone');
   }
 });
+
+
