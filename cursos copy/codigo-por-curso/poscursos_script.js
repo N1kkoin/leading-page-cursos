@@ -264,3 +264,9 @@ function topFunction() {
 function topFunction() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+
+//https forçar -------------------------------------------------------------------------------------------------------------------------------
+if (location.protocol !== 'https:') {
+  location.replace(`https:${location.href.substring(location.protocol.length)}`);
+}
