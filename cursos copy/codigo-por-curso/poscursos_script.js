@@ -28,6 +28,7 @@ function expandirRecolher() {
   if (lista.style.height === 'auto') {
     lista.style.height = '400px';
     btn.innerHTML = 'Veja mais';
+    btn.classList.remove('btn-fixo');
 
     // Esconde todas as descrições ao recolher
     let todasDescricoes = document.querySelectorAll('.descricao');
@@ -44,10 +45,27 @@ function expandirRecolher() {
 
     lista.style.height = 'auto';
     btn.innerHTML = 'Recolher';
+    btn.classList.add('btn-fixo');
   }
 }
 
 
+window.addEventListener('scroll', function() {
+  let espacoBranco = document.querySelector('.espaçobranco');
+  let btn = document.getElementById('btnExpandir');
+
+  // Obter a posição do elemento espacoBranco
+  let espacoBrancoPosicao = espacoBranco.getBoundingClientRect();
+
+  // Verifica se a parte superior do espacoBranco está abaixo da parte inferior da viewport
+  if (espacoBrancoPosicao.top >= window.innerHeight) {
+    // Adiciona a classe btn-fixo se ela não existir
+    btn.classList.add('btn-fixo');
+  } else {
+    // Remove a classe btn-fixo se ela existir
+    btn.classList.remove('btn-fixo');
+  }
+});
 
 
 var swiper = new Swiper(".slide-content", {
@@ -267,6 +285,15 @@ function topFunction() {
 
 
 //https forçar -------------------------------------------------------------------------------------------------------------------------------
-if (location.protocol !== 'https:') {
-  location.replace(`https:${location.href.substring(location.protocol.length)}`);
+if (!location.href.startsWith("http://127.0.0.1:5500") && location.protocol !== 'https:') {
+    location.replace(`https:${location.href.substring(location.protocol.length)}`);
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const grid = document.querySelector('#lista');
+  const items = grid.querySelectorAll('.item');
+  if (items.length % 2 !== 0) {
+    items[items.length - 1].classList.add('item-last-alone');
+  }
+});

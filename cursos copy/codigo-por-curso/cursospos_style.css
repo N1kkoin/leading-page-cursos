@@ -669,8 +669,9 @@ section {
   border-radius: 5px;
 }
 
-#lista .item:last-child {
-  grid-column: 1 / span 2;
+/* Nova classe para quando o último item está sozinho na linha */
+#lista .item-last-alone {
+  grid-column: 1 / -1;
 }
 
 #lista .item:nth-child(odd) {
@@ -1257,4 +1258,10 @@ header {
 
 .nav-dot-top{
   color: var(--roxo) !important;  /* Cor da bolinha */
+}
+
+
+.btn-fixo {
+  position: fixed;
+  bottom: 10px; /* ou a distância desejada da borda inferior */
 }
