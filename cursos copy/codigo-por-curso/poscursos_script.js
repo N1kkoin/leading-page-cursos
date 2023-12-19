@@ -53,6 +53,14 @@ function expandirRecolher() {
   }
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+  const grid = document.querySelector('#lista');
+  const items = grid.querySelectorAll('.item');
+  if (items.length % 2 !== 0) {
+    items[items.length - 1].classList.add('item-last-alone');
+  }
+});
+
 window.addEventListener('scroll', function() {
   let espacoBranco = document.querySelector('.espaçobranco');
   let btn = document.getElementById('btnExpandir');
@@ -293,14 +301,5 @@ function topFunction() {
 if (!location.href.startsWith("http://127.0.0.1:5500") && location.protocol !== 'https:') {
     location.replace(`https:${location.href.substring(location.protocol.length)}`);
 }
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  const grid = document.querySelector('#lista');
-  const items = grid.querySelectorAll('.item');
-  if (items.length % 2 !== 0) {
-    items[items.length - 1].classList.add('item-last-alone');
-  }
-});
 
 
