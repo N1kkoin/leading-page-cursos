@@ -298,7 +298,7 @@ function topFunction() {
 
 
 //https forçar -------------------------------------------------------------------------------------------------------------------------------
-if (!location.href.startsWith("http://127.0.0.1:5500") && location.protocol !== 'https:') {
+if (!location.href.startsWith("http://127.0") && location.protocol !== 'https:') {
     location.replace(`https:${location.href.substring(location.protocol.length)}`);
 }
 
