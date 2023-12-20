@@ -148,7 +148,7 @@ p {
   margin-bottom: var(--margin-20);
   border-radius: 5px;
   object-fit: cover;
-  object-position: center; 
+  object-position: center;
 }
 
 .teacherSection {
@@ -759,7 +759,7 @@ section {
   #lista .item:last-child {
     grid-column: 1;
   }
-  
+
 }
 
 
@@ -1231,37 +1231,64 @@ header {
 }
 
 #navDots {
-  position: fixed; /* Fixar na tela */
-  left: -5px; /* Distância da esquerda da tela */
-  top: 50%; /* Centralizar verticalmente */
-  transform: translateY(-50%); /* Ajuste fino para centralização vertical */
-  z-index: 100; /* Garantir que fique acima de outros elementos */
+  position: fixed;
+  /* Fixar na tela */
+  left: -5px;
+  /* Distância da esquerda da tela */
+  top: 50%;
+  /* Centralizar verticalmente */
+  transform: translateY(-50%);
+  /* Ajuste fino para centralização vertical */
+  z-index: 100;
+  /* Garantir que fique acima de outros elementos */
 }
 
 #navDots a {
-  display: block; /* Cada link em sua própria linha */
-  margin-bottom: -20px; /* Espaçamento entre os botões */
-  text-align: center; /* Centralizar o texto (bolinha) */
-  font-size: 40px; /* Tamanho da bolinha */
-  color: var(--amarelo); /* Cor da bolinha */
-  text-decoration: none; /* Remover sublinhado */
+  display: block;
+  /* Cada link em sua própria linha */
+  margin-bottom: -20px;
+  /* Espaçamento entre os botões */
+  text-align: center;
+  /* Centralizar o texto (bolinha) */
+  font-size: 40px;
+  /* Tamanho da bolinha */
+  color: var(--amarelo);
+  /* Cor da bolinha */
+  text-decoration: none;
+  /* Remover sublinhado */
   padding-right: 20px;
 }
 
 #navDots a:hover {
-  color: var(--azul-claro); /* Cor ao passar o mouse */
+  color: var(--azul-claro);
+  /* Cor ao passar o mouse */
 }
 
 .active-dot {
-  color: var(--azul-claro) !important; /* Mude para a cor que desejar */
+  color: var(--azul-claro) !important;
+  /* Mude para a cor que desejar */
 }
 
-.nav-dot-top{
-  color: var(--roxo) !important;  /* Cor da bolinha */
+.nav-dot-top {
+  color: var(--roxo) !important;
+  /* Cor da bolinha */
 }
 
 
 .btn-fixo {
   position: fixed;
-  bottom: 10px; /* ou a distância desejada da borda inferior */
+  bottom: 10px;
+  /* ou a distância desejada da borda inferior */
+}
+
+.tabcontent .produtofinalcursos{
+  display: inline-flex; /* Isso garante que a animação se aplique ao texto inteiro */
+}
+
+.tabcontent .produtofinalcursostotal{
+  display: inline-flex; /* Isso garante que a animação se aplique ao texto inteiro */
+}
+
+.valorhighlight{
+  margin-top: 10px;
 }

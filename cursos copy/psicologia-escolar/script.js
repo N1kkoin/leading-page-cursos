@@ -6,21 +6,43 @@ Papa.parse(url, {
   complete: function (results) {
     var data = results.data;
 
-    var contentDivAdmin = document.createElement('div');
-    contentDivAdmin.className = 'containercursos';
+    // Container para Cursos
+    var contentDivCursos = document.createElement('div');
+    contentDivCursos.className = 'containercursos';
 
+    // Container para Valor Total
+    var contentDivValorTotal = document.createElement('div');
+    contentDivValorTotal.className = 'containercursos';
+
+    // Filtrando e processando dados para o curso especificado
     data.filter(row => row['Cursos'] === 'Pós PsicoEscolar').forEach(row => {
-      var cardDiv = document.createElement('div');
-      cardDiv.className = 'cursos';
+      // Processando para Cursos
+      var cardDivCursos = document.createElement('div');
+      cardDivCursos.className = 'cursos';
+      cardDivCursos.innerHTML = `<p>${row['Valor']}</p>`;
+      contentDivCursos.appendChild(cardDivCursos);
 
-      cardDiv.innerHTML = `<p>${row['Valor']}</p>`;
-      contentDivAdmin.appendChild(cardDiv);
+      // Processando para Valor Total
+      var cardDivValorTotal = document.createElement('div');
+      cardDivValorTotal.className = 'cursos';
+      cardDivValorTotal.innerHTML = `<p>${row['Valor Total']}</p>`;
+      contentDivValorTotal.appendChild(cardDivValorTotal);
     });
 
-    var meuLocalAdmin = document.getElementById('produtofinalcursos');
-    meuLocalAdmin.appendChild(contentDivAdmin);
+    // Adicionando a produtofinalcursos
+    var locaisCursos = document.getElementsByClassName('produtofinalcursos');
+    for (var i = 0; i < locaisCursos.length; i++) {
+      locaisCursos[i].appendChild(contentDivCursos.cloneNode(true));
+    }
+
+    // Adicionando a produtofinalcursostotal
+    var locaisValorTotal = document.getElementsByClassName('produtofinalcursostotal');
+    for (var j = 0; j < locaisValorTotal.length; j++) {
+      locaisValorTotal[j].appendChild(contentDivValorTotal.cloneNode(true));
+    }
   }
 });
+
 
 const url3 = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQFQpAPuz3qeeeaVPGRhbC76PJCmu__UDYg99qUuZMnYw6PrdOkZ3jtLCOf9SlcMh3ft7liKV5b0tk4/pub?output=csv';
 
