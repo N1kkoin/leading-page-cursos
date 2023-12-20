@@ -6,22 +6,45 @@ Papa.parse(url, {
   complete: function (results) {
     var data = results.data;
 
-    // Para "Administração"
-    var contentDivAdmin = document.createElement('div');
-    contentDivAdmin.className = 'containercursos';
+    // Container para Cursos
+    var contentDivCursos = document.createElement('div');
+    contentDivCursos.className = 'containercursos';
 
-    data.filter(row => row['Cursos'] === 'Pós Marketing').forEach(row => {
-      var cardDiv = document.createElement('div');
-      cardDiv.className = 'cursos';
+    // Container para Valor Total
+    var contentDivValorTotal = document.createElement('div');
+    contentDivValorTotal.className = 'containercursos';
 
-      cardDiv.innerHTML = `<p>${row['Valor']}</p>`;
-      contentDivAdmin.appendChild(cardDiv);
+    // Filtrando e processando dados para o curso especificado
+    data.filter(row => row['Cursos'] === 'Pós EstraFiscal').forEach(row => {
+      // Processando para Cursos
+      var cardDivCursos = document.createElement('div');
+      cardDivCursos.className = 'cursos';
+      cardDivCursos.innerHTML = `<p>${row['Valor']}</p>`;
+      contentDivCursos.appendChild(cardDivCursos);
+
+      // Processando para Valor Total
+      var cardDivValorTotal = document.createElement('div');
+      cardDivValorTotal.className = 'cursos';
+      cardDivValorTotal.innerHTML = `<p>${row['Valor Total']}</p>`;
+      contentDivValorTotal.appendChild(cardDivValorTotal);
     });
 
-    var meuLocalAdmin = document.getElementById('produtofinalcursos');
-    meuLocalAdmin.appendChild(contentDivAdmin);
+    // Adicionando a produtofinalcursos
+    var locaisCursos = document.getElementsByClassName('produtofinalcursos');
+    for (var i = 0; i < locaisCursos.length; i++) {
+      locaisCursos[i].appendChild(contentDivCursos.cloneNode(true));
+    }
+
+    // Adicionando a produtofinalcursostotal
+    var locaisValorTotal = document.getElementsByClassName('produtofinalcursostotal');
+    for (var j = 0; j < locaisValorTotal.length; j++) {
+      locaisValorTotal[j].appendChild(contentDivValorTotal.cloneNode(true));
+    }
   }
 });
+
+
+
 
 const url3 = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQFQpAPuz3qeeeaVPGRhbC76PJCmu__UDYg99qUuZMnYw6PrdOkZ3jtLCOf9SlcMh3ft7liKV5b0tk4/pub?output=csv';
 
@@ -33,7 +56,7 @@ Papa.parse(url3, {
     var cardHolder = document.querySelector('.cardHolder');
 
     data.forEach(row => {
-      if (row['Nome PosMarketing'] && row['Foto PosMarketing'] && row['Cargo PosMarketing']) {
+      if (row['Nome EstraFiscal'] && row['Foto EstraFiscal'] && row['Cargo EstraFiscal']) {
         var cardBox = document.createElement('div');
         cardBox.className = 'cardBox swiper-slide';
 
@@ -43,12 +66,12 @@ Papa.parse(url3, {
         var cardDiv = document.createElement('div');
         cardDiv.className = 'teacherSection';
         cardDiv.innerHTML = `
-                  <img class="teacherImg" src="${row['Foto PosMarketing']}" alt="${row['Nome']}">
-                  <h3>${row['Nome PosMarketing']}</h3>
-                  <p>${row['Cargo PosMarketing']}</p>
+                  <img class="teacherImg" src="${row['Foto EstraFiscal']}" alt="${row['Nome']}">
+                  <h3>${row['Nome EstraFiscal']}</h3>
+                  <p>${row['Cargo EstraFiscal']}</p>
                   <div class="teacherCurriculum">
-                      <a class="teacherCurriculumLinks" href="${row['Contato PosMarketing']}" target="_blank"><i class="fa fa-envelope"></i></a>
-                      <a class="teacherCurriculumLinks" href="${row['Currículo PosMarketing']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
+                      <a class="teacherCurriculumLinks" href="${row['Contato EstraFiscal']}" target="_blank"><i class="fa fa-envelope"></i></a>
+                      <a class="teacherCurriculumLinks" href="${row['Currículo EstraFiscal']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
                   </div>
               `;
         cardDetails.appendChild(cardDiv);
