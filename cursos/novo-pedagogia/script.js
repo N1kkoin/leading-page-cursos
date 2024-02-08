@@ -10,7 +10,7 @@ Papa.parse(url, {
     var contentDivAdmin = document.createElement('div');
     contentDivAdmin.className = 'containercursos';
 
-    data.filter(row => row['Cursos'] === 'Administração').forEach(row => {
+    data.filter(row => row['Cursos'] === 'Pedagogia').forEach(row => {
       var cardDiv = document.createElement('div');
       cardDiv.className = 'cursos';
 
@@ -25,7 +25,7 @@ Papa.parse(url, {
     var contentDivEng = document.createElement('div');
     contentDivEng.className = 'containerengenharia';
 
-    data.filter(row => row['Cursos'] === 'Administração EAD').forEach(row => {
+    data.filter(row => row['Cursos'] === 'Pegadogia EAD').forEach(row => {
       var cardDiv = document.createElement('div');
       cardDiv.className = 'cursos';
 
