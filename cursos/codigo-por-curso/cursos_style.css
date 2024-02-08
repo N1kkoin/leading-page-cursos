@@ -1016,3 +1016,37 @@ section {
   height: 100%;
   border-radius: 10px;
 }
+
+
+/* nav dots --------------------------------------------------------------*/
+
+
+#navDots {
+  position: fixed;
+  left: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+#navDots a {
+  display: block;
+  margin-bottom: -20px;
+  text-align: center;
+  font-size: 40px;
+  color: var(--amarelo);
+  text-decoration: none;
+  padding-right: 20px;
+}
+
+#navDots a:hover {
+  color: var(--azul-claro);
+}
+
+.active-dot {
+  color: var(--azul-claro) !important;
+}
+
+.nav-dot-top {
+  color: var(--azul-principal) !important;
+}

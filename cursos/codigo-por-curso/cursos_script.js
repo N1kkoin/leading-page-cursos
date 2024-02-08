@@ -144,3 +144,83 @@ $(document).ready(function () {
   $("#meuFooter").load("/codigos-gerais/footer/footer.html");
 });
 
+
+//MININAVBAR ------------------------------------------------------------------------------------------
+
+document.addEventListener("DOMContentLoaded", function () {
+  var bg = document.getElementById("buttonBackground");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > window.innerHeight) {
+      bg.style.display = "flex";
+    } else {
+      bg.style.display = "none";
+    }
+  });
+});
+
+
+// scroll daora --------------------------------------------------------------------------------------------
+
+
+// Função para verificar qual seção está visível
+function checkSectionInView() {
+  const sections = document.querySelectorAll('section');
+  const navDots = document.querySelectorAll('.nav-dot');
+  const offsetToActive = 100; // Este valor deve ser o mesmo que o deslocamento no clique da bolinha
+
+  sections.forEach((section, index) => {
+    const sectionTop = section.offsetTop - offsetToActive;
+
+    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + section.offsetHeight) {
+      navDots[index].classList.add('active-dot');
+    } else {
+      navDots[index].classList.remove('active-dot');
+    }
+  });
+}
+
+window.addEventListener('scroll', checkSectionInView);
+checkSectionInView(); // Chame a função inicialmente para definir a bolinha ativa
+
+
+
+// Código existente para manipulação dos cliques nas bolinhas
+document.querySelectorAll('.nav-dot').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    const targetSection = document.querySelector(targetId);
+    const offsetTop = targetSection.offsetTop;
+
+    const offsetToScroll = offsetTop - 100; // Ajuste 100px para o valor desejado
+
+    window.scrollTo({
+      top: offsetToScroll,
+      behavior: 'smooth'
+    });
+  });
+});
+
+
+// Quando o usuário rolar para baixo 20px do topo do documento, mostre o botão
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// Quando o usuário clicar no botão, role para o topo do documento
+function topFunction() {
+  document.body.scrollTop = 0; // Para Safari
+  document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE e Opera
+}
+
+
+function topFunction() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
