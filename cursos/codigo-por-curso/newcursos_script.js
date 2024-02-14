@@ -21,38 +21,6 @@ function mostrarDescricao(elemento) {
 
 let posicaoAnterior = 0;  // Armazena a posição anterior da rolagem
 
-function expandirRecolher() {
-  let lista = document.getElementById('lista');
-  let btn = document.getElementById('btnExpandir');
-
-  if (lista.style.height === 'auto') {
-    lista.style.height = '400px';
-    btn.innerHTML = 'Veja mais';
-    btn.classList.remove('btn-fixo');
-    listaExpandida = false; // Lista agora está expandida
-
-
-    // Esconde todas as descrições ao recolher
-    let todasDescricoes = document.querySelectorAll('.descricao');
-    for (let i = 0; i < todasDescricoes.length; i++) {
-      todasDescricoes[i].style.display = 'none';
-    }
-
-    // Move a rolagem de volta para a posição anterior
-    window.scrollTo(0, posicaoAnterior);
-
-  } else {
-    // Armazena a posição atual da rolagem
-    posicaoAnterior = window.scrollY;
-
-    lista.style.height = 'auto';
-    btn.innerHTML = 'Recolher';
-    btn.classList.add('btn-fixo');
-    listaExpandida = true; // Lista agora está expandida
-
-  }
-}
-
 document.addEventListener("DOMContentLoaded", function() {
   const grid = document.querySelector('#lista');
   const items = grid.querySelectorAll('.item');

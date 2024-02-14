@@ -659,7 +659,7 @@ section {
   margin: 0 auto;
   margin-bottom: var(--margin-20);
   margin-top: var(--margin-20);
-  height: 400px;
+  height: fit-content;
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -699,28 +699,6 @@ section {
   border-radius: 5px;
 }
 
-#btnExpandir {
-  margin-top: var(--margin-10);
-  padding: var(--margin-10) 15px;
-  cursor: pointer;
-  border: none;
-  background-color: var(--azul-claro);
-  color: #fff;
-  border-radius: var(--border-5);
-  text-align: center;
-  font-family: var(--primary-font);
-  font-size: 16px;
-  text-transform: var(--caixatexto);
-  font-weight: 500;
-  transition: all 0.3s;
-
-}
-
-#btnExpandir:hover {
-  color: var(--texto-preto);
-  background-color: transparent;
-  box-shadow: inset 0 0 0 2px var(--azul-principal);
-}
 
 #lista h3 {
   font-size: 20px;
