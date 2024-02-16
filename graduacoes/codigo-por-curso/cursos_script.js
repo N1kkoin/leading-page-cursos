@@ -185,15 +185,15 @@ document.addEventListener('DOMContentLoaded', checkSectionInView);
 
 
 
-// Código para manipulação dos cliques nas bolinhas, com rolagem suave
+// Seleciona todos os elementos que devem ter o comportamento de rolagem suave
 document.querySelectorAll('.nav-dot').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
+    console.log("Clicado:", this.getAttribute('href')); // Para depuração
     const targetId = this.getAttribute('href');
     const targetSection = document.querySelector(targetId);
     const offsetTop = targetSection.offsetTop;
 
-    // Ajuste conforme necessário, pode variar com o layout
     const offsetToScroll = offsetTop - 100; 
 
     window.scrollTo({
@@ -202,6 +202,8 @@ document.querySelectorAll('.nav-dot').forEach(anchor => {
     });
   });
 });
+
+
 
 // Função para mostrar/esconder o botão de rolar para o topo
 function scrollFunction() {
