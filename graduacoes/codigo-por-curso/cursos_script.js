@@ -246,3 +246,34 @@ accordionBtns.forEach((accordion) => {
     }
   };
 });
+
+
+// descrição matriz -----------------------------------------------------------------------
+
+function mostrarDescricao(elemento) {
+  let descricao = elemento.nextElementSibling;
+
+  if (descricao.style.display === 'block') {
+    descricao.style.display = 'none';
+    return;
+  }
+
+  let todasDescricoes = document.querySelectorAll('.descricao');
+  for (let i = 0; i < todasDescricoes.length; i++) {
+    todasDescricoes[i].style.display = 'none';
+  }
+
+  descricao.style.display = 'block';
+}
+
+// não deixar sozinho matriz -----------------------------------------------------------------------
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const grid = document.querySelector('#lista');
+  const items = grid.querySelectorAll('.item');
+  if (items.length % 2 !== 0) {
+    items[items.length - 1].classList.add('item-last-alone');
+  }
+});
+
