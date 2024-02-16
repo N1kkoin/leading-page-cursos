@@ -1128,13 +1128,14 @@ header {
 
   .ladodireito {
     width: 100%;
+    height: fit-content;
     align-items: last baseline;
     padding-bottom: 20px;
     flex: 0.9;
   }
 
   .ladodireito img {
-    padding: 50px;
+    padding: 20px;
 
   }
 
