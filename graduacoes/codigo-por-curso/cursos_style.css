@@ -219,7 +219,6 @@ p {
   border-bottom: 1px solid var(--azul-claro);
   border-radius: 5px 5px 0 0;
   font-size: 30px;
-
 }
 
 .titulo3 {
@@ -1248,4 +1247,13 @@ header {
 
 .valorhighlight{
   margin-top: 10px;
+}
+
+.pmercado{
+  max-width: 960px;
+  margin: 0 auto;
+  padding-top: 10px;
+  border-bottom: 1px solid var(--azul-claro);
+  margin-top: -20px;
+  padding-bottom: 18px;
 }
