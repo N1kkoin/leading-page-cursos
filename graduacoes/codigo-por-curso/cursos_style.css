@@ -386,6 +386,9 @@ p {
   text-decoration: none !important;
 }
 
+.coloridinho{
+  color: var(--corsecundaria);
+}
 
 .texto-eadbotao:hover {
   background-color: transparent;
