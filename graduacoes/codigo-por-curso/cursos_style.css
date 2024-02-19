@@ -8,8 +8,8 @@ html {
 
 :root {
   /* Cores */
-  --azulprincipal: #1b3556;
-  --azul-claro: #45b7e5;
+  --corprincipal: #1b3556;
+  --corsecundaria: #45b7e5;
   --amarelo: #f9e20f;
   --neutral-light: #f2f3f8;
   --bg-branco: white;
@@ -54,7 +54,6 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 0, 0, 0.5);
-
 }
 
 body {
@@ -100,7 +99,7 @@ p {
   padding: 0 auto;
   width: auto;
   z-index: 2;
-  background: linear-gradient(to bottom, white 50%, var(--azulprincipal) 50%);
+  background: linear-gradient(to bottom, white 50%, var(--corprincipal) 50%);
 }
 
 .box-inverso {
@@ -109,7 +108,7 @@ p {
   padding: 0 auto;
   width: auto;
   z-index: 2;
-  background: linear-gradient(to bottom, var(--azulprincipal) 50%, white 50%);
+  background: linear-gradient(to bottom, var(--corprincipal) 50%, white 50%);
 }
 
 .slideContainer {
@@ -166,7 +165,7 @@ p {
 }
 
 .teacherSection h3 {
-  color: var(--azulprincipal);
+  color: var(--corprincipal);
   margin-top: -20px !important;
 
 }
@@ -196,7 +195,7 @@ p {
 }
 
 .teacherCurriculumLinks:hover {
-  color: var(--azulprincipal);
+  color: var(--corprincipal);
 }
 
 .teacherCurriculum i {
@@ -216,7 +215,7 @@ p {
   padding-top: var(--margin-20);
   padding-bottom: var(--margin-10);
   color: #242527;
-  border-bottom: 1px solid var(--azul-claro);
+  border-bottom: 1px solid var(--corsecundaria);
   border-radius: 5px 5px 0 0;
   font-size: 30px;
 }
@@ -228,7 +227,7 @@ p {
   margin: 0 auto;
   padding-top: var(--margin-20);
   padding-bottom: var(--margin-10);
-  border-bottom: 1px solid var(--azul-claro);
+  border-bottom: 1px solid var(--corsecundaria);
   border-radius: 5px 5px 0 0;
   color: white;
   font-size: 30px;
@@ -326,7 +325,7 @@ p {
 }
 
 .caixaead {
-  border: 1px solid var(--azul-claro);
+  border: 1px solid var(--corsecundaria);
   border-radius: 0 0 5px 5px;
   max-width: 960px;
   margin: 0 auto;
@@ -350,7 +349,7 @@ p {
   text-align: center;
   padding: 5px;
   color: white;
-  background-color: var(--azul-claro);
+  background-color: var(--corsecundaria);
   font-weight: 500;
   font-size: larger;
   max-width: 960px;
@@ -359,7 +358,7 @@ p {
 }
 
 .texto-eadbotao {
-  background-color: var(--azul-claro);
+  background-color: var(--corsecundaria);
   border: none;
   padding: 5px 20px;
   cursor: pointer;
@@ -376,32 +375,22 @@ p {
   box-sizing: border-box;
   margin-bottom: 20px;
   color: white;
-  animation: glow 2s infinite ease-in-out;
-  text-decoration: none !important;
 
 }
 
-@keyframes glow {
-
-  0%,
-  100% {
-    box-shadow: 0 0 0px var(--azul-claro);
-  }
-
-  50% {
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1), 0 0 2px rgba(0, 0, 0, 0.1), 0 0 2px var(--azul-claro), 0 0 2px var(--azul-claro), 0 0 5px var(--azul-claro), 0 0 2px var(--azul-claro), 0 0 2px var(--azul-claro);
-  }
-}
-
-.texto-eadbotao a {
-  text-decoration: none;
+.texto-eadbotao a{
   transition: all 0.3s;
 }
 
+.nav-dot {
+  text-decoration: none !important;
+}
+
+
 .texto-eadbotao:hover {
   background-color: transparent;
-  box-shadow: inset 0 0 0 2px var(--azulprincipal) !important;
-  color: var(--azulprincipal);
+  box-shadow: inset 0 0 0 2px var(--corprincipal) !important;
+  color: black;
 }
 
 .texto-cima,
@@ -469,7 +458,7 @@ div.cursos p {
   font-family: var(--primary-font);
   font-size: larger;
   font-weight: 700;
-  background-color: var(--azul-claro);
+  background-color: var(--corsecundaria);
   color: white;
   margin-bottom: var(--margin-10);
   font-size: 22px;
@@ -477,11 +466,11 @@ div.cursos p {
 
 /* Altera a cor de fundo dos botões ao passar o mouse */
 .tab button:hover {
-  background-color: var(--azulprincipal);
+  background-color: var(--corprincipal);
 }
 
 .tab button.active:hover {
-  color: var(--azul-claro);
+  color: var(--corsecundaria);
 }
 
 /* Ativa a aba com cor de fundo diferente */
@@ -605,7 +594,7 @@ div.cursos p {
   color: white;
   border: none;
   padding: 8px 16px;
-  background-color: var(--azul-claro);
+  background-color: var(--corsecundaria);
   border-radius: var(--border-5);
   margin: 14px;
   cursor: pointer;
@@ -624,12 +613,12 @@ div.cursos p {
 }
 
 .swiper-pagination-bullet {
-  background-color: var(--azul-claro);
+  background-color: var(--corsecundaria);
   opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: var(--azulprincipal);
+  background-color: var(--corprincipal);
 }
 
 div.slide-container.swiper {
@@ -658,7 +647,7 @@ div.slide-container.swiper {
   margin-top: var(--margin-20);
   margin: 0 auto;
   background-color: var(--bg-branco);
-  border: 1px solid var(--azul-claro);
+  border: 1px solid var(--corsecundaria);
 
 }
 
@@ -745,30 +734,25 @@ section {
   cursor: pointer;
   transition: color 0.2s;
   margin-left: var(--margin-20);
-  color: var(--azulprincipal);
+  color: var(--corprincipal);
 }
 
 #lista h3:hover {
-  color: var(--azul-claro);
-}
-
-.botãocentro {
-  display: flex;
-  justify-content: center;
+  color: var(--corsecundaria);
 }
 
 .azul {
-  background-color: var(--azulprincipal);
+  background-color: var(--corprincipal);
 }
 
-.espaçobranco {
+.espacobranco {
   background-color: var(--bg-branco);
   height: 80px;
 }
 
-.espaçoazul {
+.espacoazul {
   height: 80px;
-  background-color: var(--azulprincipal);
+  background-color: var(--corprincipal);
 }
 
 @media (max-width: 701px) {
@@ -959,7 +943,7 @@ section {
 /*  HEADER ----------------------------------------------------------------------------------------------- */
 
 header {
-  background-color: #1b3556;
+  background-color: var(--corprincipal);
   height: 100dvh;
   padding: 0 20px;
 }
@@ -1089,7 +1073,7 @@ header {
 .button-background {
   top: 0;
   position: fixed;
-  background-color: #1b3556;
+  background-color: var(--corprincipal);
   width: 100%;
   height: 80px;
   z-index: 9;
@@ -1267,11 +1251,11 @@ header {
 }
 
 #navDots a:hover {
-  color: var(--azul-claro);
+  color: var(--corsecundaria);
 }
 
 .nav-dot-top {
-  color: var(--azulprincipal) !important;
+  color: var(--corprincipal) !important;
 }
 
 .btn-fixo {
@@ -1295,7 +1279,7 @@ header {
   max-width: 960px;
   margin: 0 auto;
   padding-top: 10px;
-  border-bottom: 1px solid var(--azul-claro);
+  border-bottom: 1px solid var(--corsecundaria);
   margin-top: -20px;
   padding-bottom: 18px;
 }
@@ -1313,7 +1297,7 @@ header {
   flex-direction: column;
   padding: 0 1rem;
   border-radius: 5px;
-  border: 1px solid var(--azul-claro);
+  border: 1px solid var(--corsecundaria);
   cursor: pointer;
   background: #fff;
   margin-bottom: 0.5em;
@@ -1364,3 +1348,5 @@ header {
 .accordion-content .item-answer {
   color: #8a97a8;
 }
+
+
