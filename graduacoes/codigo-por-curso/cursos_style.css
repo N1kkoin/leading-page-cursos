@@ -404,6 +404,10 @@ p {
 
 }
 
+.texto-baixo a {
+ color: var(--texto-preto);
+}
+
 .texto-cima {
   color: var(--texto-preto);
   background-color: white;
