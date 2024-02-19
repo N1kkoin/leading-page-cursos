@@ -386,6 +386,9 @@ p {
   text-decoration: none !important;
 }
 
+.coloridinho{
+  color: var(--corsecundaria);
+}
 
 .texto-eadbotao:hover {
   background-color: transparent;
@@ -402,6 +405,10 @@ p {
   text-align: center;
   padding: 5px;
 
+}
+
+.texto-baixo a {
+ color: var(--texto-preto);
 }
 
 .texto-cima {
