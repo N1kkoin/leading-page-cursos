@@ -8,8 +8,8 @@ html {
 
 :root {
   /* Cores */
-  --azulprincipal: #1b3556;
-  --azul-claro: #45b7e5;
+  --corprincipal: #15707a;
+  --corsecundaria: #45b7e5;
   --amarelo: #f9e20f;
   --neutral-light: #f2f3f8;
   --bg-branco: white;
@@ -54,7 +54,6 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 0, 0, 0.5);
-
 }
 
 body {
@@ -100,7 +99,7 @@ p {
   padding: 0 auto;
   width: auto;
   z-index: 2;
-  background: linear-gradient(to bottom, white 50%, var(--azulprincipal) 50%);
+  background: linear-gradient(to bottom, white 50%, var(--corprincipal) 50%);
 }
 
 .box-inverso {
@@ -109,7 +108,7 @@ p {
   padding: 0 auto;
   width: auto;
   z-index: 2;
-  background: linear-gradient(to bottom, var(--azulprincipal) 50%, white 50%);
+  background: linear-gradient(to bottom, var(--corprincipal) 50%, white 50%);
 }
 
 .slideContainer {
@@ -166,7 +165,7 @@ p {
 }
 
 .teacherSection h3 {
-  color: var(--azulprincipal);
+  color: var(--corprincipal);
   margin-top: -20px !important;
 
 }
@@ -196,7 +195,7 @@ p {
 }
 
 .teacherCurriculumLinks:hover {
-  color: var(--azulprincipal);
+  color: var(--corprincipal);
 }
 
 .teacherCurriculum i {
@@ -216,10 +215,9 @@ p {
   padding-top: var(--margin-20);
   padding-bottom: var(--margin-10);
   color: #242527;
-  border-bottom: 1px solid var(--azul-claro);
+  border-bottom: 1px solid var(--corsecundaria);
   border-radius: 5px 5px 0 0;
   font-size: 30px;
-
 }
 
 .titulo3 {
@@ -229,7 +227,7 @@ p {
   margin: 0 auto;
   padding-top: var(--margin-20);
   padding-bottom: var(--margin-10);
-  border-bottom: 1px solid var(--azul-claro);
+  border-bottom: 1px solid var(--corsecundaria);
   border-radius: 5px 5px 0 0;
   color: white;
   font-size: 30px;
@@ -327,7 +325,7 @@ p {
 }
 
 .caixaead {
-  border: 1px solid var(--azul-claro);
+  border: 1px solid var(--corsecundaria);
   border-radius: 0 0 5px 5px;
   max-width: 960px;
   margin: 0 auto;
@@ -351,12 +349,48 @@ p {
   text-align: center;
   padding: 5px;
   color: white;
-  background-color: var(--azul-claro);
+  background-color: var(--corsecundaria);
   font-weight: 500;
   font-size: larger;
   max-width: 960px;
   margin: 0 auto;
   box-sizing: border-box;
+}
+
+.texto-eadbotao {
+  background-color: var(--corsecundaria);
+  border: none;
+  padding: 5px 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-right: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  color: white;
+
+}
+
+.texto-eadbotao a{
+  transition: all 0.3s;
+}
+
+.nav-dot {
+  text-decoration: none !important;
+}
+
+
+.texto-eadbotao:hover {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 2px var(--corprincipal) !important;
+  color: black;
 }
 
 .texto-cima,
@@ -424,7 +458,7 @@ div.cursos p {
   font-family: var(--primary-font);
   font-size: larger;
   font-weight: 700;
-  background-color: var(--azul-claro);
+  background-color: var(--corsecundaria);
   color: white;
   margin-bottom: var(--margin-10);
   font-size: 22px;
@@ -432,11 +466,11 @@ div.cursos p {
 
 /* Altera a cor de fundo dos botões ao passar o mouse */
 .tab button:hover {
-  background-color: var(--azulprincipal);
+  background-color: var(--corprincipal);
 }
 
 .tab button.active:hover {
-  color: var(--azul-claro);
+  color: var(--corsecundaria);
 }
 
 /* Ativa a aba com cor de fundo diferente */
@@ -560,7 +594,7 @@ div.cursos p {
   color: white;
   border: none;
   padding: 8px 16px;
-  background-color: var(--azul-claro);
+  background-color: var(--corsecundaria);
   border-radius: var(--border-5);
   margin: 14px;
   cursor: pointer;
@@ -579,12 +613,12 @@ div.cursos p {
 }
 
 .swiper-pagination-bullet {
-  background-color: var(--azul-claro);
+  background-color: var(--corsecundaria);
   opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: var(--azulprincipal);
+  background-color: var(--corprincipal);
 }
 
 div.slide-container.swiper {
@@ -613,7 +647,7 @@ div.slide-container.swiper {
   margin-top: var(--margin-20);
   margin: 0 auto;
   background-color: var(--bg-branco);
-  border: 1px solid var(--azul-claro);
+  border: 1px solid var(--corsecundaria);
 
 }
 
@@ -700,30 +734,25 @@ section {
   cursor: pointer;
   transition: color 0.2s;
   margin-left: var(--margin-20);
-  color: var(--azulprincipal);
+  color: var(--corprincipal);
 }
 
 #lista h3:hover {
-  color: var(--azul-claro);
-}
-
-.botãocentro {
-  display: flex;
-  justify-content: center;
+  color: var(--corsecundaria);
 }
 
 .azul {
-  background-color: var(--azulprincipal);
+  background-color: var(--corprincipal);
 }
 
-.espaçobranco {
+.espacobranco {
   background-color: var(--bg-branco);
   height: 80px;
 }
 
-.espaçoazul {
+.espacoazul {
   height: 80px;
-  background-color: var(--azulprincipal);
+  background-color: var(--corprincipal);
 }
 
 @media (max-width: 701px) {
@@ -738,7 +767,6 @@ section {
   }
 
 }
-
 
 .teacherCurriculumLinks i {
   padding-right: 5px;
@@ -915,7 +943,7 @@ section {
 /*  HEADER ----------------------------------------------------------------------------------------------- */
 
 header {
-  background-color: #1b3556;
+  background-color: var(--corprincipal);
   height: 100dvh;
   padding: 0 20px;
 }
@@ -1045,7 +1073,7 @@ header {
 .button-background {
   top: 0;
   position: fixed;
-  background-color: #1b3556;
+  background-color: var(--corprincipal);
   width: 100%;
   height: 80px;
   z-index: 9;
@@ -1125,18 +1153,20 @@ header {
     width: 100%;
     flex-direction: column;
     justify-content: center;
+
   }
 
   .ladodireito {
     width: 100%;
-    height: 100%;
+    height: fit-content;
     align-items: last baseline;
     padding-bottom: 20px;
     flex: 0.9;
   }
 
   .ladodireito img {
-    transform: scale(0.9);
+    padding: 20px;
+
   }
 
   .ladoesquerdo {
@@ -1221,31 +1251,102 @@ header {
 }
 
 #navDots a:hover {
-  color: var(--azul-claro);
-}
-
-.active-dot {
-  color: var(--azul-claro) !important;
+  color: var(--corsecundaria);
 }
 
 .nav-dot-top {
-  color: var(--azulprincipal) !important;
+  color: var(--corprincipal) !important;
 }
-
 
 .btn-fixo {
   position: fixed;
   bottom: 10px;
 }
 
-.tabcontent .produtofinalcursos{
-  display: inline-flex; 
+.tabcontent .produtofinalcursos {
+  display: inline-flex;
 }
 
-.tabcontent .produtofinalcursostotal{
-  display: inline-flex; 
+.tabcontent .produtofinalcursostotal {
+  display: inline-flex;
 }
 
-.valorhighlight{
+.valorhighlight {
   margin-top: 10px;
 }
+
+.pmercado {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-top: 10px;
+  border-bottom: 1px solid var(--corsecundaria);
+  margin-top: -20px;
+  padding-bottom: 18px;
+}
+
+/* faq --------------------------------------------------------------------------------------------------------------------------*/
+
+
+.accordion-content {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.accordion-content .accordion-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--corsecundaria);
+  cursor: pointer;
+  background: #fff;
+  margin-bottom: 0.5em;
+}
+
+.accordion-content .item-header {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 0.2em;
+}
+
+.accordion-content .item-icon {
+  margin-top: 1rem;
+  flex: 0 0 25px;
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+  height: 25px;
+  width: 25px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.accordion-content .item-icon i {
+  transition: all 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+}
+
+.accordion-content .item-question {
+  font-size: 1em;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.accordion-content .active .item-icon i {
+  transform: rotate(180deg);
+}
+
+.accordion-content .active .item-question {
+  font-weight: 500;
+}
+
+.accordion-content .item-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 300ms ease;
+}
+
+.accordion-content .item-answer {
+  color: #8a97a8;
+}
+
+
