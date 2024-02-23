@@ -15,7 +15,7 @@ Papa.parse(url, {
     contentDivValorTotal.className = 'containercursos';
 
     // Filtrando e processando dados para o curso especificado
-    data.filter(row => row['Cursos'] === 'Pós PequenosAni').forEach(row => {
+    data.filter(row => row['Cursos'] === 'Pós SilvestresExó').forEach(row => {
       // Processando para Cursos
       var cardDivCursos = document.createElement('div');
       cardDivCursos.className = 'cursos';
@@ -54,7 +54,7 @@ Papa.parse(url3, {
     var cardHolder = document.querySelector('.cardHolder');
 
     data.forEach(row => {
-      if (row['Nome PequenosAni'] && row['Foto PequenosAni'] && row['Cargo PequenosAni']) {
+      if (row['Nome SilvestresExó'] && row['Foto SilvestresExó'] && row['Cargo SilvestresExó']) {
         var cardBox = document.createElement('div');
         cardBox.className = 'cardBox swiper-slide';
 
@@ -64,12 +64,12 @@ Papa.parse(url3, {
         var cardDiv = document.createElement('div');
         cardDiv.className = 'teacherSection';
         cardDiv.innerHTML = `
-                  <img class="teacherImg" src="${row['Foto PequenosAni']}" alt="${row['Nome PequenosAni']}">
-                  <h3>${row['Nome PequenosAni']}</h3>
-                  <p>${row['Cargo PequenosAni']}</p>
+                  <img class="teacherImg" src="${row['Foto SilvestresExó']}" alt="${row['Nome SilvestresExó']}">
+                  <h3>${row['Nome SilvestresExó']}</h3>
+                  <p>${row['Cargo SilvestresExó']}</p>
                   <div class="teacherCurriculum">
-                      <a class="teacherCurriculumLinks" href="${row['Contato PequenosAni']}" target="_blank"><i class="fa fa-envelope"></i></a>
-                      <a class="teacherCurriculumLinks" href="${row['Currículo PequenosAni']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
+                      <a class="teacherCurriculumLinks" href="${row['Contato SilvestresExó']}" target="_blank"><i class="fa fa-envelope"></i></a>
+                      <a class="teacherCurriculumLinks" href="${row['Currículo SilvestresExó']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
                   </div>
               `;
         cardDetails.appendChild(cardDiv);
