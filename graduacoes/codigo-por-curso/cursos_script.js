@@ -279,3 +279,30 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
+
+
+// degradê imagens conheça mais cursos -----------------------------------------------------------------------------------------------------------
+
+document.addEventListener("DOMContentLoaded", function() {
+  var images = [
+    "url('/graduacoes/codigo-por-curso/imagescursos/piscina.png')",
+    "url('/graduacoes/codigo-por-curso/imagescursos/vet.png')",
+    "url('/graduacoes/codigo-por-curso/imagescursos/praca.png')",
+    "url('/graduacoes/codigo-por-curso/imagescursos/estacionamento.png')",
+    "url('/graduacoes/codigo-por-curso/imagescursos/bloco2.png')",
+
+    ];
+  var currentIndex = 0;
+  var overlayDiv = document.querySelector('.image-overlay');
+
+  function changeImage() {
+    overlayDiv.style.backgroundImage = images[currentIndex];
+    currentIndex = (currentIndex + 1) % images.length; // Volta para 0 após a última imagem
+  }
+
+  // Inicia com a primeira imagem
+  changeImage();
+  
+  // Muda a imagem a cada 4 segundos
+  setInterval(changeImage, 4000);
+});
