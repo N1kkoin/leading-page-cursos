@@ -290,19 +290,26 @@ document.addEventListener("DOMContentLoaded", function() {
     "url('/graduacoes/codigo-por-curso/imagescursos/praca.png')",
     "url('/graduacoes/codigo-por-curso/imagescursos/estacionamento.png')",
     "url('/graduacoes/codigo-por-curso/imagescursos/bloco2.png')",
-
-    ];
+  ];
   var currentIndex = 0;
   var overlayDiv = document.querySelector('.image-overlay');
+  var nextOverlayDiv = document.querySelector('.overlay-next');
 
   function changeImage() {
-    overlayDiv.style.backgroundImage = images[currentIndex];
-    currentIndex = (currentIndex + 1) % images.length; // Volta para 0 após a última imagem
+    nextOverlayDiv.style.backgroundImage = images[currentIndex];
+    nextOverlayDiv.style.opacity = '1'; // Torna a próxima imagem visível
+
+    // Espera pela transição para completar antes de trocar as imagens e resetar a opacidade
+    setTimeout(function() {
+      overlayDiv.style.backgroundImage = images[currentIndex];
+      nextOverlayDiv.style.opacity = '0'; // Esconde a próxima imagem após a transição
+      currentIndex = (currentIndex + 1) % images.length; // Avança para a próxima imagem
+    }, 1000); // Deve coincidir com a duração da transição CSS
   }
 
   // Inicia com a primeira imagem
   changeImage();
   
-  // Muda a imagem a cada 4 segundos
-  setInterval(changeImage, 4000);
+  // Muda a imagem a cada 4 segundos + 1 segundo de transição
+  setInterval(changeImage, 5000);
 });
