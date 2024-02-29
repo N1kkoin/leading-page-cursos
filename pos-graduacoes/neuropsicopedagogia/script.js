@@ -69,8 +69,8 @@ Papa.parse(url3, {
                   <h3>${row['Nome PosNeuro']}</h3>
                   <p>${row['Cargo PosNeuro']}</p>
                   <div class="teacherCurriculum">
-                      <a class="teacherCurriculumLinks" href="${row['Contato PosNeuro']}" target="_blank"><i class="fa fa-envelope"></i></a>
-                      <a class="teacherCurriculumLinks" href="${row['Currículo PosNeuro']}" target="_blank"><i class="ai ai-lattes"></i>Currículo</a>
+                      <a class="teacherCurriculumLinks" href="${row['Contato PosNeuro']}" target="_blank" title="Contato"><i class="fa-solid fa-comment"></i></a>
+                      <a class="teacherCurriculumLinks" href="${row['Currículo PosNeuro']}" target="_blank" title="Currículo"><i class="ai ai-lattes"></i>Currículo</a>
                   </div>
               `;
         cardDetails.appendChild(cardDiv);
