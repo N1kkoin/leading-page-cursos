@@ -830,6 +830,13 @@ section {
   .grid-item {
     width: 90%;
   }
+  
+.botaoincrevassefalecomcooredenadores .inscrevase {
+  flex: 1 1 100%;
+text-align: center;
+margin-left: 20px;
+margin-right: 20px;
+}
 
 }
 
@@ -1246,3 +1253,19 @@ header {
 .valorhighlight{
   margin-top: 10px;
 }
+
+.botaoincrevassefalecomcooredenadores{
+  display: flex; 
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+
+.botaoincrevassefalecomcooredenadores .inscrevase:last-child {
+background-color: #e53888;
+color: white;
+}
+
+.botaoincrevassefalecomcooredenadores .inscrevase:last-child:hover {
+  background-color: transparent;
+  }
